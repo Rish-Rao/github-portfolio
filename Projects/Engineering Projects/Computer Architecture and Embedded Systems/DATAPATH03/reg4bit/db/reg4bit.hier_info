@@ -1,0 +1,19 @@
+|reg4bit
+C[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+D[3] => inst3.DATAIN
+D[2] => inst2.DATAIN
+D[1] => inst1.DATAIN
+D[0] => inst.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+EN => inst.ENA
+EN => inst1.ENA
+EN => inst2.ENA
+EN => inst3.ENA
+
+

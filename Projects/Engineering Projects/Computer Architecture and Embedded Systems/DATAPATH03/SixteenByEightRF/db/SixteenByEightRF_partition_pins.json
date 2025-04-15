@@ -1,0 +1,161 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "RD1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RD1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RD1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RD1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RD1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RD1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RD1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RD1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RD2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RD2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RD2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RD2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RD2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RD2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RD2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RD2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RA1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RA1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RA1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RA1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RA2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RA2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RA2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RA2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "WA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "WA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "WA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RegWrit",
+					"strict" : false
+				},
+				{
+					"name" : "WA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "IN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "IN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "IN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "IN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "IN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IN[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "EN0",
+					"strict" : false
+				},
+				{
+					"name" : "EN1",
+					"strict" : false
+				},
+				{
+					"name" : "EN2",
+					"strict" : false
+				},
+				{
+					"name" : "EN3",
+					"strict" : false
+				},
+				{
+					"name" : "WA1",
+					"strict" : false
+				},
+				{
+					"name" : "WA2",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

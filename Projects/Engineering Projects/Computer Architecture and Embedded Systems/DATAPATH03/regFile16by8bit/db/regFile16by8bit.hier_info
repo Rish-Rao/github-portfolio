@@ -1,0 +1,7213 @@
+|regFile16by8bit
+RD1[0] <= MUX16:inst17.RD[0]
+RD1[1] <= MUX16:inst17.RD[1]
+RD1[2] <= MUX16:inst17.RD[2]
+RD1[3] <= MUX16:inst17.RD[3]
+RD1[4] <= MUX16:inst17.RD[4]
+RD1[5] <= MUX16:inst17.RD[5]
+RD1[6] <= MUX16:inst17.RD[6]
+RD1[7] <= MUX16:inst17.RD[7]
+CLK => reg8bit:inst.clk
+CLK => reg8bit:inst4.clk
+CLK => reg8bit:inst8.clk
+CLK => reg8bit:inst12.clk
+CLK => reg8bit:inst1.clk
+CLK => reg8bit:inst5.clk
+CLK => reg8bit:inst9.clk
+CLK => reg8bit:inst13.clk
+CLK => reg8bit:inst2.clk
+CLK => reg8bit:inst3.clk
+CLK => reg8bit:inst10.clk
+CLK => reg8bit:inst14.clk
+CLK => reg8bit:inst6.clk
+CLK => reg8bit:inst7.clk
+CLK => reg8bit:inst11.clk
+CLK => reg8bit:inst15.clk
+ENWRT => dcdr4bit:inst16.REGWRITE
+ENWRT => DEMUX8bit16way:inst19.ENWRT
+WA[0] => dcdr4bit:inst16.ADDR[0]
+WA[1] => dcdr4bit:inst16.ADDR[1]
+WA[2] => dcdr4bit:inst16.ADDR[2]
+WA[3] => dcdr4bit:inst16.ADDR[3]
+WD[0] => DEMUX8bit16way:inst19.WD[0]
+WD[1] => DEMUX8bit16way:inst19.WD[1]
+WD[2] => DEMUX8bit16way:inst19.WD[2]
+WD[3] => DEMUX8bit16way:inst19.WD[3]
+WD[4] => DEMUX8bit16way:inst19.WD[4]
+WD[5] => DEMUX8bit16way:inst19.WD[5]
+WD[6] => DEMUX8bit16way:inst19.WD[6]
+WD[7] => DEMUX8bit16way:inst19.WD[7]
+RA1[0] => MUX16:inst17.SEL[0]
+RA1[1] => MUX16:inst17.SEL[1]
+RA1[2] => MUX16:inst17.SEL[2]
+RA1[3] => MUX16:inst17.SEL[3]
+RD2[0] <= MUX16:inst18.RD[0]
+RD2[1] <= MUX16:inst18.RD[1]
+RD2[2] <= MUX16:inst18.RD[2]
+RD2[3] <= MUX16:inst18.RD[3]
+RD2[4] <= MUX16:inst18.RD[4]
+RD2[5] <= MUX16:inst18.RD[5]
+RD2[6] <= MUX16:inst18.RD[6]
+RD2[7] <= MUX16:inst18.RD[7]
+RA2[0] => MUX16:inst18.SEL[0]
+RA2[1] => MUX16:inst18.SEL[1]
+RA2[2] => MUX16:inst18.SEL[2]
+RA2[3] => MUX16:inst18.SEL[3]
+
+
+|regFile16by8bit|MUX16:inst17
+RD[0] <= MUX8bit2way:inst11.Q[0]
+RD[1] <= MUX8bit2way:inst11.Q[1]
+RD[2] <= MUX8bit2way:inst11.Q[2]
+RD[3] <= MUX8bit2way:inst11.Q[3]
+RD[4] <= MUX8bit2way:inst11.Q[4]
+RD[5] <= MUX8bit2way:inst11.Q[5]
+RD[6] <= MUX8bit2way:inst11.Q[6]
+RD[7] <= MUX8bit2way:inst11.Q[7]
+SEL[0] => MUX8bit4way:inst.sel3
+SEL[0] => MUX8bit4way:inst1.sel3
+SEL[1] => MUX8bit4way:inst.sel2
+SEL[1] => MUX8bit4way:inst1.sel2
+SEL[2] => MUX8bit4way:inst.sel1
+SEL[2] => MUX8bit4way:inst1.sel1
+SEL[3] => MUX8bit2way:inst11.SEL
+A0000[0] => MUX8bit4way:inst.A0000[0]
+A0000[1] => MUX8bit4way:inst.A0000[1]
+A0000[2] => MUX8bit4way:inst.A0000[2]
+A0000[3] => MUX8bit4way:inst.A0000[3]
+A0000[4] => MUX8bit4way:inst.A0000[4]
+A0000[5] => MUX8bit4way:inst.A0000[5]
+A0000[6] => MUX8bit4way:inst.A0000[6]
+A0000[7] => MUX8bit4way:inst.A0000[7]
+B0001[0] => MUX8bit4way:inst.B0001[0]
+B0001[1] => MUX8bit4way:inst.B0001[1]
+B0001[2] => MUX8bit4way:inst.B0001[2]
+B0001[3] => MUX8bit4way:inst.B0001[3]
+B0001[4] => MUX8bit4way:inst.B0001[4]
+B0001[5] => MUX8bit4way:inst.B0001[5]
+B0001[6] => MUX8bit4way:inst.B0001[6]
+B0001[7] => MUX8bit4way:inst.B0001[7]
+C0010[0] => MUX8bit4way:inst.C0010[0]
+C0010[1] => MUX8bit4way:inst.C0010[1]
+C0010[2] => MUX8bit4way:inst.C0010[2]
+C0010[3] => MUX8bit4way:inst.C0010[3]
+C0010[4] => MUX8bit4way:inst.C0010[4]
+C0010[5] => MUX8bit4way:inst.C0010[5]
+C0010[6] => MUX8bit4way:inst.C0010[6]
+C0010[7] => MUX8bit4way:inst.C0010[7]
+D0011[0] => MUX8bit4way:inst.D0011[0]
+D0011[1] => MUX8bit4way:inst.D0011[1]
+D0011[2] => MUX8bit4way:inst.D0011[2]
+D0011[3] => MUX8bit4way:inst.D0011[3]
+D0011[4] => MUX8bit4way:inst.D0011[4]
+D0011[5] => MUX8bit4way:inst.D0011[5]
+D0011[6] => MUX8bit4way:inst.D0011[6]
+D0011[7] => MUX8bit4way:inst.D0011[7]
+E0100[0] => MUX8bit4way:inst.E0100[0]
+E0100[1] => MUX8bit4way:inst.E0100[1]
+E0100[2] => MUX8bit4way:inst.E0100[2]
+E0100[3] => MUX8bit4way:inst.E0100[3]
+E0100[4] => MUX8bit4way:inst.E0100[4]
+E0100[5] => MUX8bit4way:inst.E0100[5]
+E0100[6] => MUX8bit4way:inst.E0100[6]
+E0100[7] => MUX8bit4way:inst.E0100[7]
+F0101[0] => MUX8bit4way:inst.F0101[0]
+F0101[1] => MUX8bit4way:inst.F0101[1]
+F0101[2] => MUX8bit4way:inst.F0101[2]
+F0101[3] => MUX8bit4way:inst.F0101[3]
+F0101[4] => MUX8bit4way:inst.F0101[4]
+F0101[5] => MUX8bit4way:inst.F0101[5]
+F0101[6] => MUX8bit4way:inst.F0101[6]
+F0101[7] => MUX8bit4way:inst.F0101[7]
+G0110[0] => MUX8bit4way:inst.G0110[0]
+G0110[1] => MUX8bit4way:inst.G0110[1]
+G0110[2] => MUX8bit4way:inst.G0110[2]
+G0110[3] => MUX8bit4way:inst.G0110[3]
+G0110[4] => MUX8bit4way:inst.G0110[4]
+G0110[5] => MUX8bit4way:inst.G0110[5]
+G0110[6] => MUX8bit4way:inst.G0110[6]
+G0110[7] => MUX8bit4way:inst.G0110[7]
+H0111[0] => MUX8bit4way:inst.H0111[0]
+H0111[1] => MUX8bit4way:inst.H0111[1]
+H0111[2] => MUX8bit4way:inst.H0111[2]
+H0111[3] => MUX8bit4way:inst.H0111[3]
+H0111[4] => MUX8bit4way:inst.H0111[4]
+H0111[5] => MUX8bit4way:inst.H0111[5]
+H0111[6] => MUX8bit4way:inst.H0111[6]
+H0111[7] => MUX8bit4way:inst.H0111[7]
+I1000[0] => MUX8bit4way:inst1.A0000[0]
+I1000[1] => MUX8bit4way:inst1.A0000[1]
+I1000[2] => MUX8bit4way:inst1.A0000[2]
+I1000[3] => MUX8bit4way:inst1.A0000[3]
+I1000[4] => MUX8bit4way:inst1.A0000[4]
+I1000[5] => MUX8bit4way:inst1.A0000[5]
+I1000[6] => MUX8bit4way:inst1.A0000[6]
+I1000[7] => MUX8bit4way:inst1.A0000[7]
+M1001[0] => MUX8bit4way:inst1.B0001[0]
+M1001[1] => MUX8bit4way:inst1.B0001[1]
+M1001[2] => MUX8bit4way:inst1.B0001[2]
+M1001[3] => MUX8bit4way:inst1.B0001[3]
+M1001[4] => MUX8bit4way:inst1.B0001[4]
+M1001[5] => MUX8bit4way:inst1.B0001[5]
+M1001[6] => MUX8bit4way:inst1.B0001[6]
+M1001[7] => MUX8bit4way:inst1.B0001[7]
+K1010[0] => MUX8bit4way:inst1.C0010[0]
+K1010[1] => MUX8bit4way:inst1.C0010[1]
+K1010[2] => MUX8bit4way:inst1.C0010[2]
+K1010[3] => MUX8bit4way:inst1.C0010[3]
+K1010[4] => MUX8bit4way:inst1.C0010[4]
+K1010[5] => MUX8bit4way:inst1.C0010[5]
+K1010[6] => MUX8bit4way:inst1.C0010[6]
+K1010[7] => MUX8bit4way:inst1.C0010[7]
+L1011[0] => MUX8bit4way:inst1.D0011[0]
+L1011[1] => MUX8bit4way:inst1.D0011[1]
+L1011[2] => MUX8bit4way:inst1.D0011[2]
+L1011[3] => MUX8bit4way:inst1.D0011[3]
+L1011[4] => MUX8bit4way:inst1.D0011[4]
+L1011[5] => MUX8bit4way:inst1.D0011[5]
+L1011[6] => MUX8bit4way:inst1.D0011[6]
+L1011[7] => MUX8bit4way:inst1.D0011[7]
+J1100[0] => MUX8bit4way:inst1.E0100[0]
+J1100[1] => MUX8bit4way:inst1.E0100[1]
+J1100[2] => MUX8bit4way:inst1.E0100[2]
+J1100[3] => MUX8bit4way:inst1.E0100[3]
+J1100[4] => MUX8bit4way:inst1.E0100[4]
+J1100[5] => MUX8bit4way:inst1.E0100[5]
+J1100[6] => MUX8bit4way:inst1.E0100[6]
+J1100[7] => MUX8bit4way:inst1.E0100[7]
+N1101[0] => MUX8bit4way:inst1.F0101[0]
+N1101[1] => MUX8bit4way:inst1.F0101[1]
+N1101[2] => MUX8bit4way:inst1.F0101[2]
+N1101[3] => MUX8bit4way:inst1.F0101[3]
+N1101[4] => MUX8bit4way:inst1.F0101[4]
+N1101[5] => MUX8bit4way:inst1.F0101[5]
+N1101[6] => MUX8bit4way:inst1.F0101[6]
+N1101[7] => MUX8bit4way:inst1.F0101[7]
+O1110[0] => MUX8bit4way:inst1.G0110[0]
+O1110[1] => MUX8bit4way:inst1.G0110[1]
+O1110[2] => MUX8bit4way:inst1.G0110[2]
+O1110[3] => MUX8bit4way:inst1.G0110[3]
+O1110[4] => MUX8bit4way:inst1.G0110[4]
+O1110[5] => MUX8bit4way:inst1.G0110[5]
+O1110[6] => MUX8bit4way:inst1.G0110[6]
+O1110[7] => MUX8bit4way:inst1.G0110[7]
+P1111[0] => MUX8bit4way:inst1.H0111[0]
+P1111[1] => MUX8bit4way:inst1.H0111[1]
+P1111[2] => MUX8bit4way:inst1.H0111[2]
+P1111[3] => MUX8bit4way:inst1.H0111[3]
+P1111[4] => MUX8bit4way:inst1.H0111[4]
+P1111[5] => MUX8bit4way:inst1.H0111[5]
+P1111[6] => MUX8bit4way:inst1.H0111[6]
+P1111[7] => MUX8bit4way:inst1.H0111[7]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit2way:inst11
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit2way:inst11|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit2way:inst11|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit2way:inst11|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit2way:inst11|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit2way:inst11|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit2way:inst11|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit2way:inst11|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit2way:inst11|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit2way:inst11|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit2way:inst11|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst
+Q[0] <= MUX8bit2way:inst5.Q[0]
+Q[1] <= MUX8bit2way:inst5.Q[1]
+Q[2] <= MUX8bit2way:inst5.Q[2]
+Q[3] <= MUX8bit2way:inst5.Q[3]
+Q[4] <= MUX8bit2way:inst5.Q[4]
+Q[5] <= MUX8bit2way:inst5.Q[5]
+Q[6] <= MUX8bit2way:inst5.Q[6]
+Q[7] <= MUX8bit2way:inst5.Q[7]
+sel3 => MUX8bit2way:inst5.SEL
+sel2 => MUX8bit2way:inst9.SEL
+sel2 => MUX8bit2way:inst4.SEL
+sel1 => MUX8bit2way:inst.SEL
+sel1 => MUX8bit2way:inst1.SEL
+sel1 => MUX8bit2way:inst2.SEL
+sel1 => MUX8bit2way:inst3.SEL
+A0000[0] => MUX8bit2way:inst.A[0]
+A0000[1] => MUX8bit2way:inst.A[1]
+A0000[2] => MUX8bit2way:inst.A[2]
+A0000[3] => MUX8bit2way:inst.A[3]
+A0000[4] => MUX8bit2way:inst.A[4]
+A0000[5] => MUX8bit2way:inst.A[5]
+A0000[6] => MUX8bit2way:inst.A[6]
+A0000[7] => MUX8bit2way:inst.A[7]
+E0100[0] => MUX8bit2way:inst.B[0]
+E0100[1] => MUX8bit2way:inst.B[1]
+E0100[2] => MUX8bit2way:inst.B[2]
+E0100[3] => MUX8bit2way:inst.B[3]
+E0100[4] => MUX8bit2way:inst.B[4]
+E0100[5] => MUX8bit2way:inst.B[5]
+E0100[6] => MUX8bit2way:inst.B[6]
+E0100[7] => MUX8bit2way:inst.B[7]
+C0010[0] => MUX8bit2way:inst1.A[0]
+C0010[1] => MUX8bit2way:inst1.A[1]
+C0010[2] => MUX8bit2way:inst1.A[2]
+C0010[3] => MUX8bit2way:inst1.A[3]
+C0010[4] => MUX8bit2way:inst1.A[4]
+C0010[5] => MUX8bit2way:inst1.A[5]
+C0010[6] => MUX8bit2way:inst1.A[6]
+C0010[7] => MUX8bit2way:inst1.A[7]
+G0110[0] => MUX8bit2way:inst1.B[0]
+G0110[1] => MUX8bit2way:inst1.B[1]
+G0110[2] => MUX8bit2way:inst1.B[2]
+G0110[3] => MUX8bit2way:inst1.B[3]
+G0110[4] => MUX8bit2way:inst1.B[4]
+G0110[5] => MUX8bit2way:inst1.B[5]
+G0110[6] => MUX8bit2way:inst1.B[6]
+G0110[7] => MUX8bit2way:inst1.B[7]
+B0001[0] => MUX8bit2way:inst2.A[0]
+B0001[1] => MUX8bit2way:inst2.A[1]
+B0001[2] => MUX8bit2way:inst2.A[2]
+B0001[3] => MUX8bit2way:inst2.A[3]
+B0001[4] => MUX8bit2way:inst2.A[4]
+B0001[5] => MUX8bit2way:inst2.A[5]
+B0001[6] => MUX8bit2way:inst2.A[6]
+B0001[7] => MUX8bit2way:inst2.A[7]
+F0101[0] => MUX8bit2way:inst2.B[0]
+F0101[1] => MUX8bit2way:inst2.B[1]
+F0101[2] => MUX8bit2way:inst2.B[2]
+F0101[3] => MUX8bit2way:inst2.B[3]
+F0101[4] => MUX8bit2way:inst2.B[4]
+F0101[5] => MUX8bit2way:inst2.B[5]
+F0101[6] => MUX8bit2way:inst2.B[6]
+F0101[7] => MUX8bit2way:inst2.B[7]
+D0011[0] => MUX8bit2way:inst3.A[0]
+D0011[1] => MUX8bit2way:inst3.A[1]
+D0011[2] => MUX8bit2way:inst3.A[2]
+D0011[3] => MUX8bit2way:inst3.A[3]
+D0011[4] => MUX8bit2way:inst3.A[4]
+D0011[5] => MUX8bit2way:inst3.A[5]
+D0011[6] => MUX8bit2way:inst3.A[6]
+D0011[7] => MUX8bit2way:inst3.A[7]
+H0111[0] => MUX8bit2way:inst3.B[0]
+H0111[1] => MUX8bit2way:inst3.B[1]
+H0111[2] => MUX8bit2way:inst3.B[2]
+H0111[3] => MUX8bit2way:inst3.B[3]
+H0111[4] => MUX8bit2way:inst3.B[4]
+H0111[5] => MUX8bit2way:inst3.B[5]
+H0111[6] => MUX8bit2way:inst3.B[6]
+H0111[7] => MUX8bit2way:inst3.B[7]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst5
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst9
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst1
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst4
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst2
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst3
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1
+Q[0] <= MUX8bit2way:inst5.Q[0]
+Q[1] <= MUX8bit2way:inst5.Q[1]
+Q[2] <= MUX8bit2way:inst5.Q[2]
+Q[3] <= MUX8bit2way:inst5.Q[3]
+Q[4] <= MUX8bit2way:inst5.Q[4]
+Q[5] <= MUX8bit2way:inst5.Q[5]
+Q[6] <= MUX8bit2way:inst5.Q[6]
+Q[7] <= MUX8bit2way:inst5.Q[7]
+sel3 => MUX8bit2way:inst5.SEL
+sel2 => MUX8bit2way:inst9.SEL
+sel2 => MUX8bit2way:inst4.SEL
+sel1 => MUX8bit2way:inst.SEL
+sel1 => MUX8bit2way:inst1.SEL
+sel1 => MUX8bit2way:inst2.SEL
+sel1 => MUX8bit2way:inst3.SEL
+A0000[0] => MUX8bit2way:inst.A[0]
+A0000[1] => MUX8bit2way:inst.A[1]
+A0000[2] => MUX8bit2way:inst.A[2]
+A0000[3] => MUX8bit2way:inst.A[3]
+A0000[4] => MUX8bit2way:inst.A[4]
+A0000[5] => MUX8bit2way:inst.A[5]
+A0000[6] => MUX8bit2way:inst.A[6]
+A0000[7] => MUX8bit2way:inst.A[7]
+E0100[0] => MUX8bit2way:inst.B[0]
+E0100[1] => MUX8bit2way:inst.B[1]
+E0100[2] => MUX8bit2way:inst.B[2]
+E0100[3] => MUX8bit2way:inst.B[3]
+E0100[4] => MUX8bit2way:inst.B[4]
+E0100[5] => MUX8bit2way:inst.B[5]
+E0100[6] => MUX8bit2way:inst.B[6]
+E0100[7] => MUX8bit2way:inst.B[7]
+C0010[0] => MUX8bit2way:inst1.A[0]
+C0010[1] => MUX8bit2way:inst1.A[1]
+C0010[2] => MUX8bit2way:inst1.A[2]
+C0010[3] => MUX8bit2way:inst1.A[3]
+C0010[4] => MUX8bit2way:inst1.A[4]
+C0010[5] => MUX8bit2way:inst1.A[5]
+C0010[6] => MUX8bit2way:inst1.A[6]
+C0010[7] => MUX8bit2way:inst1.A[7]
+G0110[0] => MUX8bit2way:inst1.B[0]
+G0110[1] => MUX8bit2way:inst1.B[1]
+G0110[2] => MUX8bit2way:inst1.B[2]
+G0110[3] => MUX8bit2way:inst1.B[3]
+G0110[4] => MUX8bit2way:inst1.B[4]
+G0110[5] => MUX8bit2way:inst1.B[5]
+G0110[6] => MUX8bit2way:inst1.B[6]
+G0110[7] => MUX8bit2way:inst1.B[7]
+B0001[0] => MUX8bit2way:inst2.A[0]
+B0001[1] => MUX8bit2way:inst2.A[1]
+B0001[2] => MUX8bit2way:inst2.A[2]
+B0001[3] => MUX8bit2way:inst2.A[3]
+B0001[4] => MUX8bit2way:inst2.A[4]
+B0001[5] => MUX8bit2way:inst2.A[5]
+B0001[6] => MUX8bit2way:inst2.A[6]
+B0001[7] => MUX8bit2way:inst2.A[7]
+F0101[0] => MUX8bit2way:inst2.B[0]
+F0101[1] => MUX8bit2way:inst2.B[1]
+F0101[2] => MUX8bit2way:inst2.B[2]
+F0101[3] => MUX8bit2way:inst2.B[3]
+F0101[4] => MUX8bit2way:inst2.B[4]
+F0101[5] => MUX8bit2way:inst2.B[5]
+F0101[6] => MUX8bit2way:inst2.B[6]
+F0101[7] => MUX8bit2way:inst2.B[7]
+D0011[0] => MUX8bit2way:inst3.A[0]
+D0011[1] => MUX8bit2way:inst3.A[1]
+D0011[2] => MUX8bit2way:inst3.A[2]
+D0011[3] => MUX8bit2way:inst3.A[3]
+D0011[4] => MUX8bit2way:inst3.A[4]
+D0011[5] => MUX8bit2way:inst3.A[5]
+D0011[6] => MUX8bit2way:inst3.A[6]
+D0011[7] => MUX8bit2way:inst3.A[7]
+H0111[0] => MUX8bit2way:inst3.B[0]
+H0111[1] => MUX8bit2way:inst3.B[1]
+H0111[2] => MUX8bit2way:inst3.B[2]
+H0111[3] => MUX8bit2way:inst3.B[3]
+H0111[4] => MUX8bit2way:inst3.B[4]
+H0111[5] => MUX8bit2way:inst3.B[5]
+H0111[6] => MUX8bit2way:inst3.B[6]
+H0111[7] => MUX8bit2way:inst3.B[7]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst5
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst9
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst1
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst4
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst2
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst3
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst17|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|reg8bit:inst
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|dcdr4bit:inst16
+EN0000 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+REGWRITE => dcdrCLKfree:inst.REGWRITE
+REGWRITE => dcdrCLKfree:inst1.REGWRITE
+ADDR[0] => dcdrCLKfree:inst1.WA[0]
+ADDR[1] => dcdrCLKfree:inst1.WA[1]
+ADDR[2] => dcdrCLKfree:inst.WA[0]
+ADDR[3] => dcdrCLKfree:inst.WA[1]
+EN0001 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+EN0010 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+EN0011 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+EN0100 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+EN0101 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+EN0110 <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+EN0111 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+EN1000 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+EN1001 <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+EN1010 <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+EN1011 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+EN1100 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+EN1101 <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+EN1110 <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+EN1111 <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|dcdr4bit:inst16|dcdrCLKfree:inst
+EN00 <= INST9.DB_MAX_OUTPUT_PORT_TYPE
+REGWRITE => INST9.IN0
+REGWRITE => inst8.ACLR
+REGWRITE => inst8.LATCH_ENABLE
+REGWRITE => inst8.PRESET
+REGWRITE => inst11.ACLR
+REGWRITE => inst11.LATCH_ENABLE
+REGWRITE => inst11.PRESET
+REGWRITE => INST10.IN0
+WA[0] => inst11.DATAIN
+WA[1] => inst8.DATAIN
+EN01 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+EN10 <= INST10.DB_MAX_OUTPUT_PORT_TYPE
+EN11 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|dcdr4bit:inst16|dcdrCLKfree:inst1
+EN00 <= INST9.DB_MAX_OUTPUT_PORT_TYPE
+REGWRITE => INST9.IN0
+REGWRITE => inst8.ACLR
+REGWRITE => inst8.LATCH_ENABLE
+REGWRITE => inst8.PRESET
+REGWRITE => inst11.ACLR
+REGWRITE => inst11.LATCH_ENABLE
+REGWRITE => inst11.PRESET
+REGWRITE => INST10.IN0
+WA[0] => inst11.DATAIN
+WA[1] => inst8.DATAIN
+EN01 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+EN10 <= INST10.DB_MAX_OUTPUT_PORT_TYPE
+EN11 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19
+A[0] <= DEMUX8BIT2WAY:inst5.A[0]
+A[1] <= DEMUX8BIT2WAY:inst5.A[1]
+A[2] <= DEMUX8BIT2WAY:inst5.A[2]
+A[3] <= DEMUX8BIT2WAY:inst5.A[3]
+A[4] <= DEMUX8BIT2WAY:inst5.A[4]
+A[5] <= DEMUX8BIT2WAY:inst5.A[5]
+A[6] <= DEMUX8BIT2WAY:inst5.A[6]
+A[7] <= DEMUX8BIT2WAY:inst5.A[7]
+ENWRT => DEMUX8BIT2WAY:inst5.pin_name1
+ENWRT => DEMUX8BIT2WAY:inst2.pin_name1
+ENWRT => DEMUX8BIT2WAY:inst.pin_name1
+ENWRT => DEMUX8BIT2WAY:inst1.pin_name1
+ENWRT => DEMUX8BIT2WAY:inst3.pin_name1
+ENWRT => DEMUX8BIT2WAY:inst4.pin_name1
+ENWRT => DEMUX8BIT2WAY:inst6.pin_name1
+ENWRT => DEMUX8BIT2WAY:inst7.pin_name1
+WD[0] => DEMUX8BIT2WAY:inst5.WD[0]
+WD[0] => DEMUX8BIT2WAY:inst2.WD[0]
+WD[0] => DEMUX8BIT2WAY:inst.WD[0]
+WD[0] => DEMUX8BIT2WAY:inst1.WD[0]
+WD[0] => DEMUX8BIT2WAY:inst3.WD[0]
+WD[0] => DEMUX8BIT2WAY:inst4.WD[0]
+WD[0] => DEMUX8BIT2WAY:inst6.WD[0]
+WD[0] => DEMUX8BIT2WAY:inst7.WD[0]
+WD[1] => DEMUX8BIT2WAY:inst5.WD[1]
+WD[1] => DEMUX8BIT2WAY:inst2.WD[1]
+WD[1] => DEMUX8BIT2WAY:inst.WD[1]
+WD[1] => DEMUX8BIT2WAY:inst1.WD[1]
+WD[1] => DEMUX8BIT2WAY:inst3.WD[1]
+WD[1] => DEMUX8BIT2WAY:inst4.WD[1]
+WD[1] => DEMUX8BIT2WAY:inst6.WD[1]
+WD[1] => DEMUX8BIT2WAY:inst7.WD[1]
+WD[2] => DEMUX8BIT2WAY:inst5.WD[2]
+WD[2] => DEMUX8BIT2WAY:inst2.WD[2]
+WD[2] => DEMUX8BIT2WAY:inst.WD[2]
+WD[2] => DEMUX8BIT2WAY:inst1.WD[2]
+WD[2] => DEMUX8BIT2WAY:inst3.WD[2]
+WD[2] => DEMUX8BIT2WAY:inst4.WD[2]
+WD[2] => DEMUX8BIT2WAY:inst6.WD[2]
+WD[2] => DEMUX8BIT2WAY:inst7.WD[2]
+WD[3] => DEMUX8BIT2WAY:inst5.WD[3]
+WD[3] => DEMUX8BIT2WAY:inst2.WD[3]
+WD[3] => DEMUX8BIT2WAY:inst.WD[3]
+WD[3] => DEMUX8BIT2WAY:inst1.WD[3]
+WD[3] => DEMUX8BIT2WAY:inst3.WD[3]
+WD[3] => DEMUX8BIT2WAY:inst4.WD[3]
+WD[3] => DEMUX8BIT2WAY:inst6.WD[3]
+WD[3] => DEMUX8BIT2WAY:inst7.WD[3]
+WD[4] => DEMUX8BIT2WAY:inst5.WD[4]
+WD[4] => DEMUX8BIT2WAY:inst2.WD[4]
+WD[4] => DEMUX8BIT2WAY:inst.WD[4]
+WD[4] => DEMUX8BIT2WAY:inst1.WD[4]
+WD[4] => DEMUX8BIT2WAY:inst3.WD[4]
+WD[4] => DEMUX8BIT2WAY:inst4.WD[4]
+WD[4] => DEMUX8BIT2WAY:inst6.WD[4]
+WD[4] => DEMUX8BIT2WAY:inst7.WD[4]
+WD[5] => DEMUX8BIT2WAY:inst5.WD[5]
+WD[5] => DEMUX8BIT2WAY:inst2.WD[5]
+WD[5] => DEMUX8BIT2WAY:inst.WD[5]
+WD[5] => DEMUX8BIT2WAY:inst1.WD[5]
+WD[5] => DEMUX8BIT2WAY:inst3.WD[5]
+WD[5] => DEMUX8BIT2WAY:inst4.WD[5]
+WD[5] => DEMUX8BIT2WAY:inst6.WD[5]
+WD[5] => DEMUX8BIT2WAY:inst7.WD[5]
+WD[6] => DEMUX8BIT2WAY:inst5.WD[6]
+WD[6] => DEMUX8BIT2WAY:inst2.WD[6]
+WD[6] => DEMUX8BIT2WAY:inst.WD[6]
+WD[6] => DEMUX8BIT2WAY:inst1.WD[6]
+WD[6] => DEMUX8BIT2WAY:inst3.WD[6]
+WD[6] => DEMUX8BIT2WAY:inst4.WD[6]
+WD[6] => DEMUX8BIT2WAY:inst6.WD[6]
+WD[6] => DEMUX8BIT2WAY:inst7.WD[6]
+WD[7] => DEMUX8BIT2WAY:inst5.WD[7]
+WD[7] => DEMUX8BIT2WAY:inst2.WD[7]
+WD[7] => DEMUX8BIT2WAY:inst.WD[7]
+WD[7] => DEMUX8BIT2WAY:inst1.WD[7]
+WD[7] => DEMUX8BIT2WAY:inst3.WD[7]
+WD[7] => DEMUX8BIT2WAY:inst4.WD[7]
+WD[7] => DEMUX8BIT2WAY:inst6.WD[7]
+WD[7] => DEMUX8BIT2WAY:inst7.WD[7]
+B[0] <= DEMUX8BIT2WAY:inst5.B[0]
+B[1] <= DEMUX8BIT2WAY:inst5.B[1]
+B[2] <= DEMUX8BIT2WAY:inst5.B[2]
+B[3] <= DEMUX8BIT2WAY:inst5.B[3]
+B[4] <= DEMUX8BIT2WAY:inst5.B[4]
+B[5] <= DEMUX8BIT2WAY:inst5.B[5]
+B[6] <= DEMUX8BIT2WAY:inst5.B[6]
+B[7] <= DEMUX8BIT2WAY:inst5.B[7]
+C[0] <= DEMUX8BIT2WAY:inst2.A[0]
+C[1] <= DEMUX8BIT2WAY:inst2.A[1]
+C[2] <= DEMUX8BIT2WAY:inst2.A[2]
+C[3] <= DEMUX8BIT2WAY:inst2.A[3]
+C[4] <= DEMUX8BIT2WAY:inst2.A[4]
+C[5] <= DEMUX8BIT2WAY:inst2.A[5]
+C[6] <= DEMUX8BIT2WAY:inst2.A[6]
+C[7] <= DEMUX8BIT2WAY:inst2.A[7]
+D[0] <= DEMUX8BIT2WAY:inst2.B[0]
+D[1] <= DEMUX8BIT2WAY:inst2.B[1]
+D[2] <= DEMUX8BIT2WAY:inst2.B[2]
+D[3] <= DEMUX8BIT2WAY:inst2.B[3]
+D[4] <= DEMUX8BIT2WAY:inst2.B[4]
+D[5] <= DEMUX8BIT2WAY:inst2.B[5]
+D[6] <= DEMUX8BIT2WAY:inst2.B[6]
+D[7] <= DEMUX8BIT2WAY:inst2.B[7]
+E[0] <= DEMUX8BIT2WAY:inst.A[0]
+E[1] <= DEMUX8BIT2WAY:inst.A[1]
+E[2] <= DEMUX8BIT2WAY:inst.A[2]
+E[3] <= DEMUX8BIT2WAY:inst.A[3]
+E[4] <= DEMUX8BIT2WAY:inst.A[4]
+E[5] <= DEMUX8BIT2WAY:inst.A[5]
+E[6] <= DEMUX8BIT2WAY:inst.A[6]
+E[7] <= DEMUX8BIT2WAY:inst.A[7]
+F[0] <= DEMUX8BIT2WAY:inst.B[0]
+F[1] <= DEMUX8BIT2WAY:inst.B[1]
+F[2] <= DEMUX8BIT2WAY:inst.B[2]
+F[3] <= DEMUX8BIT2WAY:inst.B[3]
+F[4] <= DEMUX8BIT2WAY:inst.B[4]
+F[5] <= DEMUX8BIT2WAY:inst.B[5]
+F[6] <= DEMUX8BIT2WAY:inst.B[6]
+F[7] <= DEMUX8BIT2WAY:inst.B[7]
+G[0] <= DEMUX8BIT2WAY:inst1.A[0]
+G[1] <= DEMUX8BIT2WAY:inst1.A[1]
+G[2] <= DEMUX8BIT2WAY:inst1.A[2]
+G[3] <= DEMUX8BIT2WAY:inst1.A[3]
+G[4] <= DEMUX8BIT2WAY:inst1.A[4]
+G[5] <= DEMUX8BIT2WAY:inst1.A[5]
+G[6] <= DEMUX8BIT2WAY:inst1.A[6]
+G[7] <= DEMUX8BIT2WAY:inst1.A[7]
+H[0] <= DEMUX8BIT2WAY:inst1.B[0]
+H[1] <= DEMUX8BIT2WAY:inst1.B[1]
+H[2] <= DEMUX8BIT2WAY:inst1.B[2]
+H[3] <= DEMUX8BIT2WAY:inst1.B[3]
+H[4] <= DEMUX8BIT2WAY:inst1.B[4]
+H[5] <= DEMUX8BIT2WAY:inst1.B[5]
+H[6] <= DEMUX8BIT2WAY:inst1.B[6]
+H[7] <= DEMUX8BIT2WAY:inst1.B[7]
+I[0] <= DEMUX8BIT2WAY:inst3.A[0]
+I[1] <= DEMUX8BIT2WAY:inst3.A[1]
+I[2] <= DEMUX8BIT2WAY:inst3.A[2]
+I[3] <= DEMUX8BIT2WAY:inst3.A[3]
+I[4] <= DEMUX8BIT2WAY:inst3.A[4]
+I[5] <= DEMUX8BIT2WAY:inst3.A[5]
+I[6] <= DEMUX8BIT2WAY:inst3.A[6]
+I[7] <= DEMUX8BIT2WAY:inst3.A[7]
+J[0] <= DEMUX8BIT2WAY:inst3.B[0]
+J[1] <= DEMUX8BIT2WAY:inst3.B[1]
+J[2] <= DEMUX8BIT2WAY:inst3.B[2]
+J[3] <= DEMUX8BIT2WAY:inst3.B[3]
+J[4] <= DEMUX8BIT2WAY:inst3.B[4]
+J[5] <= DEMUX8BIT2WAY:inst3.B[5]
+J[6] <= DEMUX8BIT2WAY:inst3.B[6]
+J[7] <= DEMUX8BIT2WAY:inst3.B[7]
+K[0] <= DEMUX8BIT2WAY:inst4.A[0]
+K[1] <= DEMUX8BIT2WAY:inst4.A[1]
+K[2] <= DEMUX8BIT2WAY:inst4.A[2]
+K[3] <= DEMUX8BIT2WAY:inst4.A[3]
+K[4] <= DEMUX8BIT2WAY:inst4.A[4]
+K[5] <= DEMUX8BIT2WAY:inst4.A[5]
+K[6] <= DEMUX8BIT2WAY:inst4.A[6]
+K[7] <= DEMUX8BIT2WAY:inst4.A[7]
+L[0] <= DEMUX8BIT2WAY:inst4.B[0]
+L[1] <= DEMUX8BIT2WAY:inst4.B[1]
+L[2] <= DEMUX8BIT2WAY:inst4.B[2]
+L[3] <= DEMUX8BIT2WAY:inst4.B[3]
+L[4] <= DEMUX8BIT2WAY:inst4.B[4]
+L[5] <= DEMUX8BIT2WAY:inst4.B[5]
+L[6] <= DEMUX8BIT2WAY:inst4.B[6]
+L[7] <= DEMUX8BIT2WAY:inst4.B[7]
+M[0] <= DEMUX8BIT2WAY:inst6.A[0]
+M[1] <= DEMUX8BIT2WAY:inst6.A[1]
+M[2] <= DEMUX8BIT2WAY:inst6.A[2]
+M[3] <= DEMUX8BIT2WAY:inst6.A[3]
+M[4] <= DEMUX8BIT2WAY:inst6.A[4]
+M[5] <= DEMUX8BIT2WAY:inst6.A[5]
+M[6] <= DEMUX8BIT2WAY:inst6.A[6]
+M[7] <= DEMUX8BIT2WAY:inst6.A[7]
+N[0] <= DEMUX8BIT2WAY:inst6.B[0]
+N[1] <= DEMUX8BIT2WAY:inst6.B[1]
+N[2] <= DEMUX8BIT2WAY:inst6.B[2]
+N[3] <= DEMUX8BIT2WAY:inst6.B[3]
+N[4] <= DEMUX8BIT2WAY:inst6.B[4]
+N[5] <= DEMUX8BIT2WAY:inst6.B[5]
+N[6] <= DEMUX8BIT2WAY:inst6.B[6]
+N[7] <= DEMUX8BIT2WAY:inst6.B[7]
+O[0] <= DEMUX8BIT2WAY:inst7.A[0]
+O[1] <= DEMUX8BIT2WAY:inst7.A[1]
+O[2] <= DEMUX8BIT2WAY:inst7.A[2]
+O[3] <= DEMUX8BIT2WAY:inst7.A[3]
+O[4] <= DEMUX8BIT2WAY:inst7.A[4]
+O[5] <= DEMUX8BIT2WAY:inst7.A[5]
+O[6] <= DEMUX8BIT2WAY:inst7.A[6]
+O[7] <= DEMUX8BIT2WAY:inst7.A[7]
+P[0] <= DEMUX8BIT2WAY:inst7.B[0]
+P[1] <= DEMUX8BIT2WAY:inst7.B[1]
+P[2] <= DEMUX8BIT2WAY:inst7.B[2]
+P[3] <= DEMUX8BIT2WAY:inst7.B[3]
+P[4] <= DEMUX8BIT2WAY:inst7.B[4]
+P[5] <= DEMUX8BIT2WAY:inst7.B[5]
+P[6] <= DEMUX8BIT2WAY:inst7.B[6]
+P[7] <= DEMUX8BIT2WAY:inst7.B[7]
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst5
+A[0] <= DEMUX4BIT2WAY:inst1.A[0]
+A[1] <= DEMUX4BIT2WAY:inst1.A[1]
+A[2] <= DEMUX4BIT2WAY:inst1.A[2]
+A[3] <= DEMUX4BIT2WAY:inst1.A[3]
+A[4] <= DEMUX4BIT2WAY:inst.A[0]
+A[5] <= DEMUX4BIT2WAY:inst.A[1]
+A[6] <= DEMUX4BIT2WAY:inst.A[2]
+A[7] <= DEMUX4BIT2WAY:inst.A[3]
+pin_name1 => DEMUX4BIT2WAY:inst.SEL
+pin_name1 => DEMUX4BIT2WAY:inst1.SEL
+WD[0] => DEMUX4BIT2WAY:inst1.c[0]
+WD[1] => DEMUX4BIT2WAY:inst1.c[1]
+WD[2] => DEMUX4BIT2WAY:inst1.c[2]
+WD[3] => DEMUX4BIT2WAY:inst1.c[3]
+WD[4] => DEMUX4BIT2WAY:inst.c[0]
+WD[5] => DEMUX4BIT2WAY:inst.c[1]
+WD[6] => DEMUX4BIT2WAY:inst.c[2]
+WD[7] => DEMUX4BIT2WAY:inst.c[3]
+B[0] <= DEMUX4BIT2WAY:inst1.B[0]
+B[1] <= DEMUX4BIT2WAY:inst1.B[1]
+B[2] <= DEMUX4BIT2WAY:inst1.B[2]
+B[3] <= DEMUX4BIT2WAY:inst1.B[3]
+B[4] <= DEMUX4BIT2WAY:inst.B[0]
+B[5] <= DEMUX4BIT2WAY:inst.B[1]
+B[6] <= DEMUX4BIT2WAY:inst.B[2]
+B[7] <= DEMUX4BIT2WAY:inst.B[3]
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst5|DEMUX4BIT2WAY:inst
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst5|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst5|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst5|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst5|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst5|DEMUX4BIT2WAY:inst1
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst5|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst5|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst5|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst5|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst2
+A[0] <= DEMUX4BIT2WAY:inst1.A[0]
+A[1] <= DEMUX4BIT2WAY:inst1.A[1]
+A[2] <= DEMUX4BIT2WAY:inst1.A[2]
+A[3] <= DEMUX4BIT2WAY:inst1.A[3]
+A[4] <= DEMUX4BIT2WAY:inst.A[0]
+A[5] <= DEMUX4BIT2WAY:inst.A[1]
+A[6] <= DEMUX4BIT2WAY:inst.A[2]
+A[7] <= DEMUX4BIT2WAY:inst.A[3]
+pin_name1 => DEMUX4BIT2WAY:inst.SEL
+pin_name1 => DEMUX4BIT2WAY:inst1.SEL
+WD[0] => DEMUX4BIT2WAY:inst1.c[0]
+WD[1] => DEMUX4BIT2WAY:inst1.c[1]
+WD[2] => DEMUX4BIT2WAY:inst1.c[2]
+WD[3] => DEMUX4BIT2WAY:inst1.c[3]
+WD[4] => DEMUX4BIT2WAY:inst.c[0]
+WD[5] => DEMUX4BIT2WAY:inst.c[1]
+WD[6] => DEMUX4BIT2WAY:inst.c[2]
+WD[7] => DEMUX4BIT2WAY:inst.c[3]
+B[0] <= DEMUX4BIT2WAY:inst1.B[0]
+B[1] <= DEMUX4BIT2WAY:inst1.B[1]
+B[2] <= DEMUX4BIT2WAY:inst1.B[2]
+B[3] <= DEMUX4BIT2WAY:inst1.B[3]
+B[4] <= DEMUX4BIT2WAY:inst.B[0]
+B[5] <= DEMUX4BIT2WAY:inst.B[1]
+B[6] <= DEMUX4BIT2WAY:inst.B[2]
+B[7] <= DEMUX4BIT2WAY:inst.B[3]
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst2|DEMUX4BIT2WAY:inst
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst2|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst2|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst2|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst2|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst2|DEMUX4BIT2WAY:inst1
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst2|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst2|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst2|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst2|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst
+A[0] <= DEMUX4BIT2WAY:inst1.A[0]
+A[1] <= DEMUX4BIT2WAY:inst1.A[1]
+A[2] <= DEMUX4BIT2WAY:inst1.A[2]
+A[3] <= DEMUX4BIT2WAY:inst1.A[3]
+A[4] <= DEMUX4BIT2WAY:inst.A[0]
+A[5] <= DEMUX4BIT2WAY:inst.A[1]
+A[6] <= DEMUX4BIT2WAY:inst.A[2]
+A[7] <= DEMUX4BIT2WAY:inst.A[3]
+pin_name1 => DEMUX4BIT2WAY:inst.SEL
+pin_name1 => DEMUX4BIT2WAY:inst1.SEL
+WD[0] => DEMUX4BIT2WAY:inst1.c[0]
+WD[1] => DEMUX4BIT2WAY:inst1.c[1]
+WD[2] => DEMUX4BIT2WAY:inst1.c[2]
+WD[3] => DEMUX4BIT2WAY:inst1.c[3]
+WD[4] => DEMUX4BIT2WAY:inst.c[0]
+WD[5] => DEMUX4BIT2WAY:inst.c[1]
+WD[6] => DEMUX4BIT2WAY:inst.c[2]
+WD[7] => DEMUX4BIT2WAY:inst.c[3]
+B[0] <= DEMUX4BIT2WAY:inst1.B[0]
+B[1] <= DEMUX4BIT2WAY:inst1.B[1]
+B[2] <= DEMUX4BIT2WAY:inst1.B[2]
+B[3] <= DEMUX4BIT2WAY:inst1.B[3]
+B[4] <= DEMUX4BIT2WAY:inst.B[0]
+B[5] <= DEMUX4BIT2WAY:inst.B[1]
+B[6] <= DEMUX4BIT2WAY:inst.B[2]
+B[7] <= DEMUX4BIT2WAY:inst.B[3]
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst|DEMUX4BIT2WAY:inst
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst|DEMUX4BIT2WAY:inst1
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst1
+A[0] <= DEMUX4BIT2WAY:inst1.A[0]
+A[1] <= DEMUX4BIT2WAY:inst1.A[1]
+A[2] <= DEMUX4BIT2WAY:inst1.A[2]
+A[3] <= DEMUX4BIT2WAY:inst1.A[3]
+A[4] <= DEMUX4BIT2WAY:inst.A[0]
+A[5] <= DEMUX4BIT2WAY:inst.A[1]
+A[6] <= DEMUX4BIT2WAY:inst.A[2]
+A[7] <= DEMUX4BIT2WAY:inst.A[3]
+pin_name1 => DEMUX4BIT2WAY:inst.SEL
+pin_name1 => DEMUX4BIT2WAY:inst1.SEL
+WD[0] => DEMUX4BIT2WAY:inst1.c[0]
+WD[1] => DEMUX4BIT2WAY:inst1.c[1]
+WD[2] => DEMUX4BIT2WAY:inst1.c[2]
+WD[3] => DEMUX4BIT2WAY:inst1.c[3]
+WD[4] => DEMUX4BIT2WAY:inst.c[0]
+WD[5] => DEMUX4BIT2WAY:inst.c[1]
+WD[6] => DEMUX4BIT2WAY:inst.c[2]
+WD[7] => DEMUX4BIT2WAY:inst.c[3]
+B[0] <= DEMUX4BIT2WAY:inst1.B[0]
+B[1] <= DEMUX4BIT2WAY:inst1.B[1]
+B[2] <= DEMUX4BIT2WAY:inst1.B[2]
+B[3] <= DEMUX4BIT2WAY:inst1.B[3]
+B[4] <= DEMUX4BIT2WAY:inst.B[0]
+B[5] <= DEMUX4BIT2WAY:inst.B[1]
+B[6] <= DEMUX4BIT2WAY:inst.B[2]
+B[7] <= DEMUX4BIT2WAY:inst.B[3]
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst1|DEMUX4BIT2WAY:inst
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst1|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst1|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst1|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst1|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst1|DEMUX4BIT2WAY:inst1
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst1|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst1|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst1|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst1|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst3
+A[0] <= DEMUX4BIT2WAY:inst1.A[0]
+A[1] <= DEMUX4BIT2WAY:inst1.A[1]
+A[2] <= DEMUX4BIT2WAY:inst1.A[2]
+A[3] <= DEMUX4BIT2WAY:inst1.A[3]
+A[4] <= DEMUX4BIT2WAY:inst.A[0]
+A[5] <= DEMUX4BIT2WAY:inst.A[1]
+A[6] <= DEMUX4BIT2WAY:inst.A[2]
+A[7] <= DEMUX4BIT2WAY:inst.A[3]
+pin_name1 => DEMUX4BIT2WAY:inst.SEL
+pin_name1 => DEMUX4BIT2WAY:inst1.SEL
+WD[0] => DEMUX4BIT2WAY:inst1.c[0]
+WD[1] => DEMUX4BIT2WAY:inst1.c[1]
+WD[2] => DEMUX4BIT2WAY:inst1.c[2]
+WD[3] => DEMUX4BIT2WAY:inst1.c[3]
+WD[4] => DEMUX4BIT2WAY:inst.c[0]
+WD[5] => DEMUX4BIT2WAY:inst.c[1]
+WD[6] => DEMUX4BIT2WAY:inst.c[2]
+WD[7] => DEMUX4BIT2WAY:inst.c[3]
+B[0] <= DEMUX4BIT2WAY:inst1.B[0]
+B[1] <= DEMUX4BIT2WAY:inst1.B[1]
+B[2] <= DEMUX4BIT2WAY:inst1.B[2]
+B[3] <= DEMUX4BIT2WAY:inst1.B[3]
+B[4] <= DEMUX4BIT2WAY:inst.B[0]
+B[5] <= DEMUX4BIT2WAY:inst.B[1]
+B[6] <= DEMUX4BIT2WAY:inst.B[2]
+B[7] <= DEMUX4BIT2WAY:inst.B[3]
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst3|DEMUX4BIT2WAY:inst
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst3|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst3|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst3|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst3|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst3|DEMUX4BIT2WAY:inst1
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst3|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst3|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst3|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst3|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst4
+A[0] <= DEMUX4BIT2WAY:inst1.A[0]
+A[1] <= DEMUX4BIT2WAY:inst1.A[1]
+A[2] <= DEMUX4BIT2WAY:inst1.A[2]
+A[3] <= DEMUX4BIT2WAY:inst1.A[3]
+A[4] <= DEMUX4BIT2WAY:inst.A[0]
+A[5] <= DEMUX4BIT2WAY:inst.A[1]
+A[6] <= DEMUX4BIT2WAY:inst.A[2]
+A[7] <= DEMUX4BIT2WAY:inst.A[3]
+pin_name1 => DEMUX4BIT2WAY:inst.SEL
+pin_name1 => DEMUX4BIT2WAY:inst1.SEL
+WD[0] => DEMUX4BIT2WAY:inst1.c[0]
+WD[1] => DEMUX4BIT2WAY:inst1.c[1]
+WD[2] => DEMUX4BIT2WAY:inst1.c[2]
+WD[3] => DEMUX4BIT2WAY:inst1.c[3]
+WD[4] => DEMUX4BIT2WAY:inst.c[0]
+WD[5] => DEMUX4BIT2WAY:inst.c[1]
+WD[6] => DEMUX4BIT2WAY:inst.c[2]
+WD[7] => DEMUX4BIT2WAY:inst.c[3]
+B[0] <= DEMUX4BIT2WAY:inst1.B[0]
+B[1] <= DEMUX4BIT2WAY:inst1.B[1]
+B[2] <= DEMUX4BIT2WAY:inst1.B[2]
+B[3] <= DEMUX4BIT2WAY:inst1.B[3]
+B[4] <= DEMUX4BIT2WAY:inst.B[0]
+B[5] <= DEMUX4BIT2WAY:inst.B[1]
+B[6] <= DEMUX4BIT2WAY:inst.B[2]
+B[7] <= DEMUX4BIT2WAY:inst.B[3]
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst4|DEMUX4BIT2WAY:inst
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst4|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst4|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst4|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst4|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst4|DEMUX4BIT2WAY:inst1
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst4|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst4|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst4|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst4|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst6
+A[0] <= DEMUX4BIT2WAY:inst1.A[0]
+A[1] <= DEMUX4BIT2WAY:inst1.A[1]
+A[2] <= DEMUX4BIT2WAY:inst1.A[2]
+A[3] <= DEMUX4BIT2WAY:inst1.A[3]
+A[4] <= DEMUX4BIT2WAY:inst.A[0]
+A[5] <= DEMUX4BIT2WAY:inst.A[1]
+A[6] <= DEMUX4BIT2WAY:inst.A[2]
+A[7] <= DEMUX4BIT2WAY:inst.A[3]
+pin_name1 => DEMUX4BIT2WAY:inst.SEL
+pin_name1 => DEMUX4BIT2WAY:inst1.SEL
+WD[0] => DEMUX4BIT2WAY:inst1.c[0]
+WD[1] => DEMUX4BIT2WAY:inst1.c[1]
+WD[2] => DEMUX4BIT2WAY:inst1.c[2]
+WD[3] => DEMUX4BIT2WAY:inst1.c[3]
+WD[4] => DEMUX4BIT2WAY:inst.c[0]
+WD[5] => DEMUX4BIT2WAY:inst.c[1]
+WD[6] => DEMUX4BIT2WAY:inst.c[2]
+WD[7] => DEMUX4BIT2WAY:inst.c[3]
+B[0] <= DEMUX4BIT2WAY:inst1.B[0]
+B[1] <= DEMUX4BIT2WAY:inst1.B[1]
+B[2] <= DEMUX4BIT2WAY:inst1.B[2]
+B[3] <= DEMUX4BIT2WAY:inst1.B[3]
+B[4] <= DEMUX4BIT2WAY:inst.B[0]
+B[5] <= DEMUX4BIT2WAY:inst.B[1]
+B[6] <= DEMUX4BIT2WAY:inst.B[2]
+B[7] <= DEMUX4BIT2WAY:inst.B[3]
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst6|DEMUX4BIT2WAY:inst
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst6|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst6|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst6|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst6|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst6|DEMUX4BIT2WAY:inst1
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst6|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst6|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst6|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst6|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst7
+A[0] <= DEMUX4BIT2WAY:inst1.A[0]
+A[1] <= DEMUX4BIT2WAY:inst1.A[1]
+A[2] <= DEMUX4BIT2WAY:inst1.A[2]
+A[3] <= DEMUX4BIT2WAY:inst1.A[3]
+A[4] <= DEMUX4BIT2WAY:inst.A[0]
+A[5] <= DEMUX4BIT2WAY:inst.A[1]
+A[6] <= DEMUX4BIT2WAY:inst.A[2]
+A[7] <= DEMUX4BIT2WAY:inst.A[3]
+pin_name1 => DEMUX4BIT2WAY:inst.SEL
+pin_name1 => DEMUX4BIT2WAY:inst1.SEL
+WD[0] => DEMUX4BIT2WAY:inst1.c[0]
+WD[1] => DEMUX4BIT2WAY:inst1.c[1]
+WD[2] => DEMUX4BIT2WAY:inst1.c[2]
+WD[3] => DEMUX4BIT2WAY:inst1.c[3]
+WD[4] => DEMUX4BIT2WAY:inst.c[0]
+WD[5] => DEMUX4BIT2WAY:inst.c[1]
+WD[6] => DEMUX4BIT2WAY:inst.c[2]
+WD[7] => DEMUX4BIT2WAY:inst.c[3]
+B[0] <= DEMUX4BIT2WAY:inst1.B[0]
+B[1] <= DEMUX4BIT2WAY:inst1.B[1]
+B[2] <= DEMUX4BIT2WAY:inst1.B[2]
+B[3] <= DEMUX4BIT2WAY:inst1.B[3]
+B[4] <= DEMUX4BIT2WAY:inst.B[0]
+B[5] <= DEMUX4BIT2WAY:inst.B[1]
+B[6] <= DEMUX4BIT2WAY:inst.B[2]
+B[7] <= DEMUX4BIT2WAY:inst.B[3]
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst7|DEMUX4BIT2WAY:inst
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst7|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst7|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst7|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst7|DEMUX4BIT2WAY:inst|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst7|DEMUX4BIT2WAY:inst1
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst7|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst7|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst7|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|DEMUX8bit16way:inst19|DEMUX8BIT2WAY:inst7|DEMUX4BIT2WAY:inst1|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst2.IN0
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile16by8bit|reg8bit:inst4
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst4|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst4|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst8
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst8|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst8|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst12
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst12|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst12|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst1
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst1|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst1|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst5
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst5|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst5|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst9
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst9|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst9|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst13
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst13|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst13|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst2
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst2|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst2|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst3
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst3|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst3|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst10
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst10|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst10|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst14
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst14|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst14|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst6
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst6|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst6|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst7
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst7|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst7|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst11
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst11|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst11|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst15
+Q[0] <= reg4bit:inst.Q[0]
+Q[1] <= reg4bit:inst.Q[1]
+Q[2] <= reg4bit:inst.Q[2]
+Q[3] <= reg4bit:inst.Q[3]
+Q[4] <= reg4bit:inst1.Q[0]
+Q[5] <= reg4bit:inst1.Q[1]
+Q[6] <= reg4bit:inst1.Q[2]
+Q[7] <= reg4bit:inst1.Q[3]
+clk => reg4bit:inst.CLK
+clk => reg4bit:inst1.CLK
+EN => reg4bit:inst.EN
+EN => reg4bit:inst1.EN
+D[0] => reg4bit:inst.D[0]
+D[1] => reg4bit:inst.D[1]
+D[2] => reg4bit:inst.D[2]
+D[3] => reg4bit:inst.D[3]
+D[4] => reg4bit:inst1.D[0]
+D[5] => reg4bit:inst1.D[1]
+D[6] => reg4bit:inst1.D[2]
+D[7] => reg4bit:inst1.D[3]
+
+
+|regFile16by8bit|reg8bit:inst15|reg4bit:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|reg8bit:inst15|reg4bit:inst1
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN => inst.PRESET
+EN => inst.ACLR
+EN => inst.ENA
+EN => inst1.PRESET
+EN => inst1.ACLR
+EN => inst1.ENA
+EN => inst2.PRESET
+EN => inst2.ACLR
+EN => inst2.ENA
+EN => inst3.PRESET
+EN => inst3.ACLR
+EN => inst3.ENA
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+
+
+|regFile16by8bit|MUX16:inst18
+RD[0] <= MUX8bit2way:inst11.Q[0]
+RD[1] <= MUX8bit2way:inst11.Q[1]
+RD[2] <= MUX8bit2way:inst11.Q[2]
+RD[3] <= MUX8bit2way:inst11.Q[3]
+RD[4] <= MUX8bit2way:inst11.Q[4]
+RD[5] <= MUX8bit2way:inst11.Q[5]
+RD[6] <= MUX8bit2way:inst11.Q[6]
+RD[7] <= MUX8bit2way:inst11.Q[7]
+SEL[0] => MUX8bit4way:inst.sel3
+SEL[0] => MUX8bit4way:inst1.sel3
+SEL[1] => MUX8bit4way:inst.sel2
+SEL[1] => MUX8bit4way:inst1.sel2
+SEL[2] => MUX8bit4way:inst.sel1
+SEL[2] => MUX8bit4way:inst1.sel1
+SEL[3] => MUX8bit2way:inst11.SEL
+A0000[0] => MUX8bit4way:inst.A0000[0]
+A0000[1] => MUX8bit4way:inst.A0000[1]
+A0000[2] => MUX8bit4way:inst.A0000[2]
+A0000[3] => MUX8bit4way:inst.A0000[3]
+A0000[4] => MUX8bit4way:inst.A0000[4]
+A0000[5] => MUX8bit4way:inst.A0000[5]
+A0000[6] => MUX8bit4way:inst.A0000[6]
+A0000[7] => MUX8bit4way:inst.A0000[7]
+B0001[0] => MUX8bit4way:inst.B0001[0]
+B0001[1] => MUX8bit4way:inst.B0001[1]
+B0001[2] => MUX8bit4way:inst.B0001[2]
+B0001[3] => MUX8bit4way:inst.B0001[3]
+B0001[4] => MUX8bit4way:inst.B0001[4]
+B0001[5] => MUX8bit4way:inst.B0001[5]
+B0001[6] => MUX8bit4way:inst.B0001[6]
+B0001[7] => MUX8bit4way:inst.B0001[7]
+C0010[0] => MUX8bit4way:inst.C0010[0]
+C0010[1] => MUX8bit4way:inst.C0010[1]
+C0010[2] => MUX8bit4way:inst.C0010[2]
+C0010[3] => MUX8bit4way:inst.C0010[3]
+C0010[4] => MUX8bit4way:inst.C0010[4]
+C0010[5] => MUX8bit4way:inst.C0010[5]
+C0010[6] => MUX8bit4way:inst.C0010[6]
+C0010[7] => MUX8bit4way:inst.C0010[7]
+D0011[0] => MUX8bit4way:inst.D0011[0]
+D0011[1] => MUX8bit4way:inst.D0011[1]
+D0011[2] => MUX8bit4way:inst.D0011[2]
+D0011[3] => MUX8bit4way:inst.D0011[3]
+D0011[4] => MUX8bit4way:inst.D0011[4]
+D0011[5] => MUX8bit4way:inst.D0011[5]
+D0011[6] => MUX8bit4way:inst.D0011[6]
+D0011[7] => MUX8bit4way:inst.D0011[7]
+E0100[0] => MUX8bit4way:inst.E0100[0]
+E0100[1] => MUX8bit4way:inst.E0100[1]
+E0100[2] => MUX8bit4way:inst.E0100[2]
+E0100[3] => MUX8bit4way:inst.E0100[3]
+E0100[4] => MUX8bit4way:inst.E0100[4]
+E0100[5] => MUX8bit4way:inst.E0100[5]
+E0100[6] => MUX8bit4way:inst.E0100[6]
+E0100[7] => MUX8bit4way:inst.E0100[7]
+F0101[0] => MUX8bit4way:inst.F0101[0]
+F0101[1] => MUX8bit4way:inst.F0101[1]
+F0101[2] => MUX8bit4way:inst.F0101[2]
+F0101[3] => MUX8bit4way:inst.F0101[3]
+F0101[4] => MUX8bit4way:inst.F0101[4]
+F0101[5] => MUX8bit4way:inst.F0101[5]
+F0101[6] => MUX8bit4way:inst.F0101[6]
+F0101[7] => MUX8bit4way:inst.F0101[7]
+G0110[0] => MUX8bit4way:inst.G0110[0]
+G0110[1] => MUX8bit4way:inst.G0110[1]
+G0110[2] => MUX8bit4way:inst.G0110[2]
+G0110[3] => MUX8bit4way:inst.G0110[3]
+G0110[4] => MUX8bit4way:inst.G0110[4]
+G0110[5] => MUX8bit4way:inst.G0110[5]
+G0110[6] => MUX8bit4way:inst.G0110[6]
+G0110[7] => MUX8bit4way:inst.G0110[7]
+H0111[0] => MUX8bit4way:inst.H0111[0]
+H0111[1] => MUX8bit4way:inst.H0111[1]
+H0111[2] => MUX8bit4way:inst.H0111[2]
+H0111[3] => MUX8bit4way:inst.H0111[3]
+H0111[4] => MUX8bit4way:inst.H0111[4]
+H0111[5] => MUX8bit4way:inst.H0111[5]
+H0111[6] => MUX8bit4way:inst.H0111[6]
+H0111[7] => MUX8bit4way:inst.H0111[7]
+I1000[0] => MUX8bit4way:inst1.A0000[0]
+I1000[1] => MUX8bit4way:inst1.A0000[1]
+I1000[2] => MUX8bit4way:inst1.A0000[2]
+I1000[3] => MUX8bit4way:inst1.A0000[3]
+I1000[4] => MUX8bit4way:inst1.A0000[4]
+I1000[5] => MUX8bit4way:inst1.A0000[5]
+I1000[6] => MUX8bit4way:inst1.A0000[6]
+I1000[7] => MUX8bit4way:inst1.A0000[7]
+M1001[0] => MUX8bit4way:inst1.B0001[0]
+M1001[1] => MUX8bit4way:inst1.B0001[1]
+M1001[2] => MUX8bit4way:inst1.B0001[2]
+M1001[3] => MUX8bit4way:inst1.B0001[3]
+M1001[4] => MUX8bit4way:inst1.B0001[4]
+M1001[5] => MUX8bit4way:inst1.B0001[5]
+M1001[6] => MUX8bit4way:inst1.B0001[6]
+M1001[7] => MUX8bit4way:inst1.B0001[7]
+K1010[0] => MUX8bit4way:inst1.C0010[0]
+K1010[1] => MUX8bit4way:inst1.C0010[1]
+K1010[2] => MUX8bit4way:inst1.C0010[2]
+K1010[3] => MUX8bit4way:inst1.C0010[3]
+K1010[4] => MUX8bit4way:inst1.C0010[4]
+K1010[5] => MUX8bit4way:inst1.C0010[5]
+K1010[6] => MUX8bit4way:inst1.C0010[6]
+K1010[7] => MUX8bit4way:inst1.C0010[7]
+L1011[0] => MUX8bit4way:inst1.D0011[0]
+L1011[1] => MUX8bit4way:inst1.D0011[1]
+L1011[2] => MUX8bit4way:inst1.D0011[2]
+L1011[3] => MUX8bit4way:inst1.D0011[3]
+L1011[4] => MUX8bit4way:inst1.D0011[4]
+L1011[5] => MUX8bit4way:inst1.D0011[5]
+L1011[6] => MUX8bit4way:inst1.D0011[6]
+L1011[7] => MUX8bit4way:inst1.D0011[7]
+J1100[0] => MUX8bit4way:inst1.E0100[0]
+J1100[1] => MUX8bit4way:inst1.E0100[1]
+J1100[2] => MUX8bit4way:inst1.E0100[2]
+J1100[3] => MUX8bit4way:inst1.E0100[3]
+J1100[4] => MUX8bit4way:inst1.E0100[4]
+J1100[5] => MUX8bit4way:inst1.E0100[5]
+J1100[6] => MUX8bit4way:inst1.E0100[6]
+J1100[7] => MUX8bit4way:inst1.E0100[7]
+N1101[0] => MUX8bit4way:inst1.F0101[0]
+N1101[1] => MUX8bit4way:inst1.F0101[1]
+N1101[2] => MUX8bit4way:inst1.F0101[2]
+N1101[3] => MUX8bit4way:inst1.F0101[3]
+N1101[4] => MUX8bit4way:inst1.F0101[4]
+N1101[5] => MUX8bit4way:inst1.F0101[5]
+N1101[6] => MUX8bit4way:inst1.F0101[6]
+N1101[7] => MUX8bit4way:inst1.F0101[7]
+O1110[0] => MUX8bit4way:inst1.G0110[0]
+O1110[1] => MUX8bit4way:inst1.G0110[1]
+O1110[2] => MUX8bit4way:inst1.G0110[2]
+O1110[3] => MUX8bit4way:inst1.G0110[3]
+O1110[4] => MUX8bit4way:inst1.G0110[4]
+O1110[5] => MUX8bit4way:inst1.G0110[5]
+O1110[6] => MUX8bit4way:inst1.G0110[6]
+O1110[7] => MUX8bit4way:inst1.G0110[7]
+P1111[0] => MUX8bit4way:inst1.H0111[0]
+P1111[1] => MUX8bit4way:inst1.H0111[1]
+P1111[2] => MUX8bit4way:inst1.H0111[2]
+P1111[3] => MUX8bit4way:inst1.H0111[3]
+P1111[4] => MUX8bit4way:inst1.H0111[4]
+P1111[5] => MUX8bit4way:inst1.H0111[5]
+P1111[6] => MUX8bit4way:inst1.H0111[6]
+P1111[7] => MUX8bit4way:inst1.H0111[7]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit2way:inst11
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit2way:inst11|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit2way:inst11|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit2way:inst11|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit2way:inst11|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit2way:inst11|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit2way:inst11|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit2way:inst11|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit2way:inst11|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit2way:inst11|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit2way:inst11|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst
+Q[0] <= MUX8bit2way:inst5.Q[0]
+Q[1] <= MUX8bit2way:inst5.Q[1]
+Q[2] <= MUX8bit2way:inst5.Q[2]
+Q[3] <= MUX8bit2way:inst5.Q[3]
+Q[4] <= MUX8bit2way:inst5.Q[4]
+Q[5] <= MUX8bit2way:inst5.Q[5]
+Q[6] <= MUX8bit2way:inst5.Q[6]
+Q[7] <= MUX8bit2way:inst5.Q[7]
+sel3 => MUX8bit2way:inst5.SEL
+sel2 => MUX8bit2way:inst9.SEL
+sel2 => MUX8bit2way:inst4.SEL
+sel1 => MUX8bit2way:inst.SEL
+sel1 => MUX8bit2way:inst1.SEL
+sel1 => MUX8bit2way:inst2.SEL
+sel1 => MUX8bit2way:inst3.SEL
+A0000[0] => MUX8bit2way:inst.A[0]
+A0000[1] => MUX8bit2way:inst.A[1]
+A0000[2] => MUX8bit2way:inst.A[2]
+A0000[3] => MUX8bit2way:inst.A[3]
+A0000[4] => MUX8bit2way:inst.A[4]
+A0000[5] => MUX8bit2way:inst.A[5]
+A0000[6] => MUX8bit2way:inst.A[6]
+A0000[7] => MUX8bit2way:inst.A[7]
+E0100[0] => MUX8bit2way:inst.B[0]
+E0100[1] => MUX8bit2way:inst.B[1]
+E0100[2] => MUX8bit2way:inst.B[2]
+E0100[3] => MUX8bit2way:inst.B[3]
+E0100[4] => MUX8bit2way:inst.B[4]
+E0100[5] => MUX8bit2way:inst.B[5]
+E0100[6] => MUX8bit2way:inst.B[6]
+E0100[7] => MUX8bit2way:inst.B[7]
+C0010[0] => MUX8bit2way:inst1.A[0]
+C0010[1] => MUX8bit2way:inst1.A[1]
+C0010[2] => MUX8bit2way:inst1.A[2]
+C0010[3] => MUX8bit2way:inst1.A[3]
+C0010[4] => MUX8bit2way:inst1.A[4]
+C0010[5] => MUX8bit2way:inst1.A[5]
+C0010[6] => MUX8bit2way:inst1.A[6]
+C0010[7] => MUX8bit2way:inst1.A[7]
+G0110[0] => MUX8bit2way:inst1.B[0]
+G0110[1] => MUX8bit2way:inst1.B[1]
+G0110[2] => MUX8bit2way:inst1.B[2]
+G0110[3] => MUX8bit2way:inst1.B[3]
+G0110[4] => MUX8bit2way:inst1.B[4]
+G0110[5] => MUX8bit2way:inst1.B[5]
+G0110[6] => MUX8bit2way:inst1.B[6]
+G0110[7] => MUX8bit2way:inst1.B[7]
+B0001[0] => MUX8bit2way:inst2.A[0]
+B0001[1] => MUX8bit2way:inst2.A[1]
+B0001[2] => MUX8bit2way:inst2.A[2]
+B0001[3] => MUX8bit2way:inst2.A[3]
+B0001[4] => MUX8bit2way:inst2.A[4]
+B0001[5] => MUX8bit2way:inst2.A[5]
+B0001[6] => MUX8bit2way:inst2.A[6]
+B0001[7] => MUX8bit2way:inst2.A[7]
+F0101[0] => MUX8bit2way:inst2.B[0]
+F0101[1] => MUX8bit2way:inst2.B[1]
+F0101[2] => MUX8bit2way:inst2.B[2]
+F0101[3] => MUX8bit2way:inst2.B[3]
+F0101[4] => MUX8bit2way:inst2.B[4]
+F0101[5] => MUX8bit2way:inst2.B[5]
+F0101[6] => MUX8bit2way:inst2.B[6]
+F0101[7] => MUX8bit2way:inst2.B[7]
+D0011[0] => MUX8bit2way:inst3.A[0]
+D0011[1] => MUX8bit2way:inst3.A[1]
+D0011[2] => MUX8bit2way:inst3.A[2]
+D0011[3] => MUX8bit2way:inst3.A[3]
+D0011[4] => MUX8bit2way:inst3.A[4]
+D0011[5] => MUX8bit2way:inst3.A[5]
+D0011[6] => MUX8bit2way:inst3.A[6]
+D0011[7] => MUX8bit2way:inst3.A[7]
+H0111[0] => MUX8bit2way:inst3.B[0]
+H0111[1] => MUX8bit2way:inst3.B[1]
+H0111[2] => MUX8bit2way:inst3.B[2]
+H0111[3] => MUX8bit2way:inst3.B[3]
+H0111[4] => MUX8bit2way:inst3.B[4]
+H0111[5] => MUX8bit2way:inst3.B[5]
+H0111[6] => MUX8bit2way:inst3.B[6]
+H0111[7] => MUX8bit2way:inst3.B[7]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst5
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst9
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst1
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst4
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst2
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst3
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1
+Q[0] <= MUX8bit2way:inst5.Q[0]
+Q[1] <= MUX8bit2way:inst5.Q[1]
+Q[2] <= MUX8bit2way:inst5.Q[2]
+Q[3] <= MUX8bit2way:inst5.Q[3]
+Q[4] <= MUX8bit2way:inst5.Q[4]
+Q[5] <= MUX8bit2way:inst5.Q[5]
+Q[6] <= MUX8bit2way:inst5.Q[6]
+Q[7] <= MUX8bit2way:inst5.Q[7]
+sel3 => MUX8bit2way:inst5.SEL
+sel2 => MUX8bit2way:inst9.SEL
+sel2 => MUX8bit2way:inst4.SEL
+sel1 => MUX8bit2way:inst.SEL
+sel1 => MUX8bit2way:inst1.SEL
+sel1 => MUX8bit2way:inst2.SEL
+sel1 => MUX8bit2way:inst3.SEL
+A0000[0] => MUX8bit2way:inst.A[0]
+A0000[1] => MUX8bit2way:inst.A[1]
+A0000[2] => MUX8bit2way:inst.A[2]
+A0000[3] => MUX8bit2way:inst.A[3]
+A0000[4] => MUX8bit2way:inst.A[4]
+A0000[5] => MUX8bit2way:inst.A[5]
+A0000[6] => MUX8bit2way:inst.A[6]
+A0000[7] => MUX8bit2way:inst.A[7]
+E0100[0] => MUX8bit2way:inst.B[0]
+E0100[1] => MUX8bit2way:inst.B[1]
+E0100[2] => MUX8bit2way:inst.B[2]
+E0100[3] => MUX8bit2way:inst.B[3]
+E0100[4] => MUX8bit2way:inst.B[4]
+E0100[5] => MUX8bit2way:inst.B[5]
+E0100[6] => MUX8bit2way:inst.B[6]
+E0100[7] => MUX8bit2way:inst.B[7]
+C0010[0] => MUX8bit2way:inst1.A[0]
+C0010[1] => MUX8bit2way:inst1.A[1]
+C0010[2] => MUX8bit2way:inst1.A[2]
+C0010[3] => MUX8bit2way:inst1.A[3]
+C0010[4] => MUX8bit2way:inst1.A[4]
+C0010[5] => MUX8bit2way:inst1.A[5]
+C0010[6] => MUX8bit2way:inst1.A[6]
+C0010[7] => MUX8bit2way:inst1.A[7]
+G0110[0] => MUX8bit2way:inst1.B[0]
+G0110[1] => MUX8bit2way:inst1.B[1]
+G0110[2] => MUX8bit2way:inst1.B[2]
+G0110[3] => MUX8bit2way:inst1.B[3]
+G0110[4] => MUX8bit2way:inst1.B[4]
+G0110[5] => MUX8bit2way:inst1.B[5]
+G0110[6] => MUX8bit2way:inst1.B[6]
+G0110[7] => MUX8bit2way:inst1.B[7]
+B0001[0] => MUX8bit2way:inst2.A[0]
+B0001[1] => MUX8bit2way:inst2.A[1]
+B0001[2] => MUX8bit2way:inst2.A[2]
+B0001[3] => MUX8bit2way:inst2.A[3]
+B0001[4] => MUX8bit2way:inst2.A[4]
+B0001[5] => MUX8bit2way:inst2.A[5]
+B0001[6] => MUX8bit2way:inst2.A[6]
+B0001[7] => MUX8bit2way:inst2.A[7]
+F0101[0] => MUX8bit2way:inst2.B[0]
+F0101[1] => MUX8bit2way:inst2.B[1]
+F0101[2] => MUX8bit2way:inst2.B[2]
+F0101[3] => MUX8bit2way:inst2.B[3]
+F0101[4] => MUX8bit2way:inst2.B[4]
+F0101[5] => MUX8bit2way:inst2.B[5]
+F0101[6] => MUX8bit2way:inst2.B[6]
+F0101[7] => MUX8bit2way:inst2.B[7]
+D0011[0] => MUX8bit2way:inst3.A[0]
+D0011[1] => MUX8bit2way:inst3.A[1]
+D0011[2] => MUX8bit2way:inst3.A[2]
+D0011[3] => MUX8bit2way:inst3.A[3]
+D0011[4] => MUX8bit2way:inst3.A[4]
+D0011[5] => MUX8bit2way:inst3.A[5]
+D0011[6] => MUX8bit2way:inst3.A[6]
+D0011[7] => MUX8bit2way:inst3.A[7]
+H0111[0] => MUX8bit2way:inst3.B[0]
+H0111[1] => MUX8bit2way:inst3.B[1]
+H0111[2] => MUX8bit2way:inst3.B[2]
+H0111[3] => MUX8bit2way:inst3.B[3]
+H0111[4] => MUX8bit2way:inst3.B[4]
+H0111[5] => MUX8bit2way:inst3.B[5]
+H0111[6] => MUX8bit2way:inst3.B[6]
+H0111[7] => MUX8bit2way:inst3.B[7]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst5
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst5|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst9
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst9|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst1
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst1|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst4
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst4|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst2
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst2|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst3
+Q[0] <= MUX_bus:inst1.C[0]
+Q[1] <= MUX_bus:inst1.C[1]
+Q[2] <= MUX_bus:inst1.C[2]
+Q[3] <= MUX_bus:inst1.C[3]
+Q[4] <= MUX_bus:inst.C[0]
+Q[5] <= MUX_bus:inst.C[1]
+Q[6] <= MUX_bus:inst.C[2]
+Q[7] <= MUX_bus:inst.C[3]
+SEL => MUX_bus:inst.SEL
+SEL => MUX_bus:inst1.SEL
+A[0] => MUX_bus:inst1.A[0]
+A[1] => MUX_bus:inst1.A[1]
+A[2] => MUX_bus:inst1.A[2]
+A[3] => MUX_bus:inst1.A[3]
+A[4] => MUX_bus:inst.A[0]
+A[5] => MUX_bus:inst.A[1]
+A[6] => MUX_bus:inst.A[2]
+A[7] => MUX_bus:inst.A[3]
+B[0] => MUX_bus:inst1.B[0]
+B[1] => MUX_bus:inst1.B[1]
+B[2] => MUX_bus:inst1.B[2]
+B[3] => MUX_bus:inst1.B[3]
+B[4] => MUX_bus:inst.B[0]
+B[5] => MUX_bus:inst.B[1]
+B[6] => MUX_bus:inst.B[2]
+B[7] => MUX_bus:inst.B[3]
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst1
+C[0] <= MUX1BITS2WAY:inst.C
+C[1] <= MUX1BITS2WAY:inst1.C
+C[2] <= MUX1BITS2WAY:inst2.C
+C[3] <= MUX1BITS2WAY:inst3.C
+A[0] => MUX1BITS2WAY:inst.A
+A[1] => MUX1BITS2WAY:inst1.A
+A[2] => MUX1BITS2WAY:inst2.A
+A[3] => MUX1BITS2WAY:inst3.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+SEL => MUX1BITS2WAY:inst2.SEL
+SEL => MUX1BITS2WAY:inst3.SEL
+B[0] => MUX1BITS2WAY:inst.B
+B[1] => MUX1BITS2WAY:inst1.B
+B[2] => MUX1BITS2WAY:inst2.B
+B[3] => MUX1BITS2WAY:inst3.B
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst2
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|regFile16by8bit|MUX16:inst18|MUX8bit4way:inst1|MUX8bit2way:inst3|MUX_bus:inst1|MUX1BITS2WAY:inst3
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+

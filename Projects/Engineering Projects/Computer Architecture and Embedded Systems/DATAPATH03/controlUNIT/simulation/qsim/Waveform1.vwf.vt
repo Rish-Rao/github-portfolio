@@ -1,0 +1,91 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/13/2022 14:29:03"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          controlUNIT
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module controlUNIT_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [3:0] OPCODE;
+// wires                                               
+wire branch;
+wire BSel;
+wire DataMemEn;
+wire InstrMemEN;
+wire jump;
+wire PCWriteEN;
+wire RegWriteEN;
+
+// assign statements (if any)                          
+controlUNIT i1 (
+// port map - connection between master ports and signals/registers   
+	.branch(branch),
+	.BSel(BSel),
+	.DataMemEn(DataMemEn),
+	.InstrMemEN(InstrMemEN),
+	.jump(jump),
+	.OPCODE(OPCODE),
+	.PCWriteEN(PCWriteEN),
+	.RegWriteEN(RegWriteEN)
+);
+initial 
+begin 
+#8000000 $finish;
+end 
+// OPCODE[ 3 ]
+initial
+begin
+	OPCODE[3] = 1'b0;
+	OPCODE[3] = #3000000 1'b1;
+	OPCODE[3] = #2000000 1'b0;
+	OPCODE[3] = #2000000 1'b1;
+end 
+// OPCODE[ 2 ]
+initial
+begin
+	OPCODE[2] = 1'b0;
+	OPCODE[2] = #2000000 1'b1;
+	OPCODE[2] = #1000000 1'b0;
+	OPCODE[2] = #1000000 1'b1;
+	OPCODE[2] = #2000000 1'b0;
+end 
+// OPCODE[ 1 ]
+initial
+begin
+	OPCODE[1] = 1'b0;
+	OPCODE[1] = #6000000 1'b1;
+end 
+// OPCODE[ 0 ]
+initial
+begin
+	OPCODE[0] = 1'b0;
+	OPCODE[0] = #1000000 1'b1;
+	OPCODE[0] = #1000000 1'b0;
+	OPCODE[0] = #3000000 1'b1;
+end 
+endmodule
+

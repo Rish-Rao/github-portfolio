@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "INSTR[19]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[18]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[17]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[16]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "Addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Addr[4]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

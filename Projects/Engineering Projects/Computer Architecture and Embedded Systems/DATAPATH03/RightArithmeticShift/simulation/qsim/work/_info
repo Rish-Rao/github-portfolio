@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/RightArithmeticShift/simulation/qsim
+vRightShift
+Z1 !s110 1664858715
+!i10b 1
+!s100 4Un34JL:Fo@@e7zV9d2;^3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IT83LKV1N5ffndb>0gXlXj2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1664858714
+8RightShift.vo
+FRightShift.vo
+!i122 12
+L0 32 252
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1664858715.000000
+!s107 RightShift.vo|
+!s90 -work|work|RightShift.vo|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+n@right@shift
+vRightShift_vlg_vec_tst
+R1
+!i10b 1
+!s100 _A^?_TQ<K3SP7C_G^[0gl2
+R2
+If<VP4MUjo<mj>Lb=PdX?S3
+R3
+R0
+R4
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 13
+L0 30 58
+R5
+r1
+!s85 0
+31
+R6
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R7
+R8
+n@right@shift_vlg_vec_tst

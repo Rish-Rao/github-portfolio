@@ -1,0 +1,249 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
+
+// DATE "09/23/2022 22:53:31"
+
+// 
+// Device: Altera 5CSEBA6U23I7 Package UFBGA672
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module Decoder (
+	EN0,
+	WA1,
+	WA2,
+	EN1,
+	EN2,
+	EN3);
+output 	EN0;
+input 	WA1;
+input 	WA2;
+output 	EN1;
+output 	EN2;
+output 	EN3;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \EN0~output_o ;
+wire \EN1~output_o ;
+wire \EN2~output_o ;
+wire \EN3~output_o ;
+wire \WA1~input_o ;
+wire \WA2~input_o ;
+wire \inst2~combout ;
+wire \inst3~0_combout ;
+wire \inst3~1_combout ;
+wire \inst3~2_combout ;
+
+
+cyclonev_io_obuf \EN0~output (
+	.i(!\inst2~combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\EN0~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \EN0~output .bus_hold = "false";
+defparam \EN0~output .open_drain_output = "false";
+defparam \EN0~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \EN1~output (
+	.i(\inst3~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\EN1~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \EN1~output .bus_hold = "false";
+defparam \EN1~output .open_drain_output = "false";
+defparam \EN1~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \EN2~output (
+	.i(\inst3~1_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\EN2~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \EN2~output .bus_hold = "false";
+defparam \EN2~output .open_drain_output = "false";
+defparam \EN2~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \EN3~output (
+	.i(\inst3~2_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\EN3~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \EN3~output .bus_hold = "false";
+defparam \EN3~output .open_drain_output = "false";
+defparam \EN3~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \WA1~input (
+	.i(WA1),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\WA1~input_o ));
+// synopsys translate_off
+defparam \WA1~input .bus_hold = "false";
+defparam \WA1~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \WA2~input (
+	.i(WA2),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\WA2~input_o ));
+// synopsys translate_off
+defparam \WA2~input .bus_hold = "false";
+defparam \WA2~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb inst2(
+// Equation(s):
+// \inst2~combout  = (\WA2~input_o ) # (\WA1~input_o )
+
+	.dataa(!\WA1~input_o ),
+	.datab(!\WA2~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst2~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam inst2.extended_lut = "off";
+defparam inst2.lut_mask = 64'h7777777777777777;
+defparam inst2.shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst3~0 (
+// Equation(s):
+// \inst3~0_combout  = (!\WA1~input_o  & \WA2~input_o )
+
+	.dataa(!\WA1~input_o ),
+	.datab(!\WA2~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst3~0 .extended_lut = "off";
+defparam \inst3~0 .lut_mask = 64'h2222222222222222;
+defparam \inst3~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst3~1 (
+// Equation(s):
+// \inst3~1_combout  = (\WA1~input_o  & !\WA2~input_o )
+
+	.dataa(!\WA1~input_o ),
+	.datab(!\WA2~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst3~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst3~1 .extended_lut = "off";
+defparam \inst3~1 .lut_mask = 64'h4444444444444444;
+defparam \inst3~1 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst3~2 (
+// Equation(s):
+// \inst3~2_combout  = (\WA1~input_o  & \WA2~input_o )
+
+	.dataa(!\WA1~input_o ),
+	.datab(!\WA2~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst3~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst3~2 .extended_lut = "off";
+defparam \inst3~2 .lut_mask = 64'h1111111111111111;
+defparam \inst3~2 .shared_arith = "off";
+// synopsys translate_on
+
+assign EN0 = \EN0~output_o ;
+
+assign EN1 = \EN1~output_o ;
+
+assign EN2 = \EN2~output_o ;
+
+assign EN3 = \EN3~output_o ;
+
+endmodule

@@ -1,0 +1,55 @@
+﻿@model IPagedList<Transaction>
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using static MCBA.Utils.ConstValues;
+@using static MCBA.Utils.HelperMethods;
+
+@{
+    ViewData["Title"] = "MyStatement";
+    var account = (Account)ViewBag.Account;
+}
+
+<a class="btn btn-outline-secondary"
+   asp-controller="Account" asp-action="Accounts" asp-route-id="@account.AccountNumber"><</a>
+
+<div style="padding-left:50px">
+    <h3>
+        @account.AccountType.AccountTypeToString() Account - @account.AccountNumber
+        <div class="float-end"> Balance: @account.Balance.ToString("$0.00")</div>
+    </h3>
+
+
+    <table class="table">
+
+        <tr>
+            <th class="text-left">@Html.DisplayNameFor(x => x[0].TransactionID)</th>
+            <th class="text-center">@Html.DisplayNameFor(x => x[0].TransactionType)</th>
+            <th class="text-center">@Html.DisplayNameFor(x => x[0].AccountNumber)</th>
+            <th class="text-center">@Html.DisplayNameFor(x => x[0].DestinationAccountNumber)</th>
+            <th class="text-center">@Html.DisplayNameFor(x => x[0].Amount)</th>
+            <th class="text-center">@Html.DisplayNameFor(x => x[0].Comment)</th>
+            <th class="text-center">@Html.DisplayNameFor(x => x[0].TransactionTimeUtc)</th>
+        </tr>
+
+        @foreach (var transaction in Model)
+        {
+            <tr>
+                <td class="text-left">@transaction.TransactionID</td>
+                <td class="text-center">@transaction.TransactionType.TransactionTypeToString()</td>
+                <td class="text-center">@transaction.AccountNumber</td>
+                <td class="text-center">@DestAccountValue(transaction.DestinationAccountNumber)</td>
+                <td class="text-center">@transaction.Amount.ToString("$0.00")</td>
+                <td class="text-center">@CommentValue(transaction.Comment)</td>
+                <td class="text-center">@transaction.TransactionTimeUtc.ToLocalTime()</td>
+            </tr>
+        }
+    </table>
+
+    @Html.PagedListPager(Model, page => Url.Action("MyStatement", new { page }),
+        new PagedListRenderOptions
+        {
+            LiElementClasses = new[] { "page-item" },
+            PageClasses = new[] { "page-link" }
+        })
+</div>

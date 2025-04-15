@@ -1,0 +1,55 @@
+|DEMUX4BIT2WAY
+A[0] <= DEMUX1I_2O:inst.A
+A[1] <= DEMUX1I_2O:inst1.A
+A[2] <= DEMUX1I_2O:inst2.A
+A[3] <= DEMUX1I_2O:inst3.A
+c[0] => DEMUX1I_2O:inst.C
+c[1] => DEMUX1I_2O:inst1.C
+c[2] => DEMUX1I_2O:inst2.C
+c[3] => DEMUX1I_2O:inst3.C
+SEL => DEMUX1I_2O:inst.SEL
+SEL => DEMUX1I_2O:inst1.SEL
+SEL => DEMUX1I_2O:inst2.SEL
+SEL => DEMUX1I_2O:inst3.SEL
+B[0] <= DEMUX1I_2O:inst.B
+B[1] <= DEMUX1I_2O:inst1.B
+B[2] <= DEMUX1I_2O:inst2.B
+B[3] <= DEMUX1I_2O:inst3.B
+
+
+|DEMUX4BIT2WAY|DEMUX1I_2O:inst
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst1.IN1
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DEMUX4BIT2WAY|DEMUX1I_2O:inst1
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst1.IN1
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DEMUX4BIT2WAY|DEMUX1I_2O:inst2
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst1.IN1
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DEMUX4BIT2WAY|DEMUX1I_2O:inst3
+A <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+C => inst.IN1
+SEL => inst1.IN1
+SEL => inst.IN0
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+

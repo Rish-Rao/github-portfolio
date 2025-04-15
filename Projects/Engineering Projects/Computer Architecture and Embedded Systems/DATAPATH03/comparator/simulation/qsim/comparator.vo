@@ -1,0 +1,205 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
+
+// DATE "10/04/2022 07:39:03"
+
+// 
+// Device: Altera 5CSEBA6U23I7 Package UFBGA672
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module comparator (
+	lesserA,
+	A,
+	B,
+	equal,
+	lesserB);
+output 	lesserA;
+input 	A;
+input 	B;
+output 	equal;
+output 	lesserB;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \lesserA~output_o ;
+wire \equal~output_o ;
+wire \lesserB~output_o ;
+wire \A~input_o ;
+wire \B~input_o ;
+wire \inst30~combout ;
+wire \inst32~0_combout ;
+wire \inst31~combout ;
+
+
+cyclonev_io_obuf \lesserA~output (
+	.i(\inst30~combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\lesserA~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \lesserA~output .bus_hold = "false";
+defparam \lesserA~output .open_drain_output = "false";
+defparam \lesserA~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \equal~output (
+	.i(!\inst32~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\equal~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \equal~output .bus_hold = "false";
+defparam \equal~output .open_drain_output = "false";
+defparam \equal~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \lesserB~output (
+	.i(\inst31~combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\lesserB~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \lesserB~output .bus_hold = "false";
+defparam \lesserB~output .open_drain_output = "false";
+defparam \lesserB~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \A~input (
+	.i(A),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\A~input_o ));
+// synopsys translate_off
+defparam \A~input .bus_hold = "false";
+defparam \A~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \B~input (
+	.i(B),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\B~input_o ));
+// synopsys translate_off
+defparam \B~input .bus_hold = "false";
+defparam \B~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb inst30(
+// Equation(s):
+// \inst30~combout  = (!\A~input_o  & \B~input_o )
+
+	.dataa(!\A~input_o ),
+	.datab(!\B~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst30~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam inst30.extended_lut = "off";
+defparam inst30.lut_mask = 64'h2222222222222222;
+defparam inst30.shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst32~0 (
+// Equation(s):
+// \inst32~0_combout  = !\A~input_o  $ (!\B~input_o )
+
+	.dataa(!\A~input_o ),
+	.datab(!\B~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst32~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst32~0 .extended_lut = "off";
+defparam \inst32~0 .lut_mask = 64'h6666666666666666;
+defparam \inst32~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb inst31(
+// Equation(s):
+// \inst31~combout  = (\A~input_o  & !\B~input_o )
+
+	.dataa(!\A~input_o ),
+	.datab(!\B~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst31~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam inst31.extended_lut = "off";
+defparam inst31.lut_mask = 64'h4444444444444444;
+defparam inst31.shared_arith = "off";
+// synopsys translate_on
+
+assign lesserA = \lesserA~output_o ;
+
+assign equal = \equal~output_o ;
+
+assign lesserB = \lesserB~output_o ;
+
+endmodule

@@ -1,0 +1,146 @@
+Determining the location of the ModelSim executable...
+
+Using: c:/intelfpga_lite/20.1/modelsim_ase/win32aloem/
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ALU -c ALU --vector_source="C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/ALU/Waveform.vwf" --testbench_file="C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/ALU/simulation/qsim/Waveform.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Sat Oct 08 07:46:56 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ALU -c ALU --vector_source="C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/ALU/Waveform.vwf" --testbench_file="C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/ALU/simulation/qsim/Waveform.vwf.vt"
+Info (119006): Selected device 5CSEBA6U23I7 for design "ALU"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+9 megabytes
+    Info: Processing ended: Sat Oct 08 07:46:57 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/ALU/simulation/qsim/" ALU -c ALU
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Sat Oct 08 07:46:57 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/ALU/simulation/qsim/" ALU -c ALU
+Info (119006): Selected device 5CSEBA6U23I7 for design "ALU"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file ALU.vo in folder "C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/ALU/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4723 megabytes
+    Info: Processing ended: Sat Oct 08 07:46:58 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/ALU/simulation/qsim/ALU.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+c:/intelfpga_lite/20.1/modelsim_ase/win32aloem//vsim -c -do ALU.do
+
+Reading pref.tcl
+
+# 2020.1
+
+# do ALU.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 07:46:59 on Oct 08,2022
+# vlog -work work ALU.vo 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 07:46:59 on Oct 08,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 07:46:59 on Oct 08,2022
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module ALU_vlg_vec_tst
+
+# 
+# Top level modules:
+# 	ALU_vlg_vec_tst
+# End time: 07:46:59 on Oct 08,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.ALU_vlg_vec_tst 
+# Start time: 07:46:59 on Oct 08,2022
+# Loading work.ALU_vlg_vec_tst
+# Loading work.ALU
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# after#25
+
+# ** Note: $finish    : Waveform.vwf.vt(51)
+#    Time: 1 us  Iteration: 0  Instance: /ALU_vlg_vec_tst
+# End time: 07:47:00 on Oct 08,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/ALU/Waveform.vwf...
+
+Reading C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/ALU/simulation/qsim/ALU.msim.vcd...
+
+Processing channel transitions... 
+
+Writing the resulting VWF to C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/ALU/simulation/qsim/ALU_20221008074700.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

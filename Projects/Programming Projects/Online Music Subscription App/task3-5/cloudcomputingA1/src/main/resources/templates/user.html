@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>User Page</title>
+	<!--  <link rel="stylesheet" type="text/css" href="/userStyle.css"> -->
+</head>
+<body>
+	<div th:fragment="user">
+		<!-- User area -->
+		<section id="user" style="display: block;">
+			<h2>User Area</h2>
+			<p>Welcome, User!</p>
+			<p>You are currently logged in as <span th:text="${username}">User</span>!</p>
+		</section>
+	</div>
+</body>
+</html>

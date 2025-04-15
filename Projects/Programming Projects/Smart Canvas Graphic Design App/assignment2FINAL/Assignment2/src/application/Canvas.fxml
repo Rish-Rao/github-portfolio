@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CanvasController">
+   <children>
+      <HBox prefHeight="43.0" prefWidth="670.0" style="-fx-background-color: fc6c85;" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar fx:id="menubar" prefHeight="11.0" prefWidth="175.0" style="-fx-background-color: transparent;">
+              <menus>
+                <Menu fx:id="file" mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newCanvas" text="New canvas" />
+                        <MenuItem fx:id="deletecanvas" mnemonicParsing="false" onAction="#clearCanvas" text="Delete canvas" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="saveas" mnemonicParsing="false" onAction="#saveAs" text="Save as" />
+                  </items>
+                </Menu>
+                <Menu fx:id="edit" mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem fx:id="deleteelement" mnemonicParsing="false" onAction="#deleteElement" text="Delete element" />
+                  </items>
+                </Menu>
+                <Menu fx:id="help" mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+               <HBox.margin>
+                  <Insets right="260.0" />
+               </HBox.margin>
+            </MenuBar>
+            <ImageView fx:id="profilepic" fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="UserName" alignment="CENTER" ellipsisString="" prefHeight="34.0" prefWidth="77.0">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Button fx:id="profile" mnemonicParsing="false" onAction="#editProfile" prefHeight="0.0" prefWidth="46.0" text="Profile">
+               <HBox.margin>
+                  <Insets right="2.0" top="6.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutbutton" mnemonicParsing="false" onAction="#logout" prefHeight="0.0" prefWidth="46.0" text="Log out">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="6.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+      <VBox layoutY="43.0" prefHeight="347.0" prefWidth="46.0" style="-fx-background-color: fbd2d7;" AnchorPane.leftAnchor="0.0">
+         <children>
+            <Button fx:id="text" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#addText" prefHeight="43.0" prefWidth="43.0" text="Text">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="8.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../../images/text.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="image" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#addImage" prefHeight="43.0" prefWidth="43.0" text="Image">
+               <font>
+                  <Font size="8.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../../images/image.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="rect" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#addRect" prefHeight="43.0" prefWidth="43.0" text="Rect">
+               <font>
+                  <Font size="8.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../../images/rect.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="circle" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#addCirc" prefHeight="43.0" prefWidth="43.0" text="Circle">
+               <font>
+                  <Font size="8.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../../images/circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="canvasbutton" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#showcanvasOP" prefHeight="43.0" prefWidth="43.0" text="Canvas">
+               <font>
+                  <Font size="8.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../../images/canvas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="1.0" />
+         </padding>
+      </VBox>
+      <AnchorPane fx:id="canvasplaceholder" layoutX="46.0" layoutY="43.0" prefHeight="346.0" prefWidth="414.0" style="-fx-background-color: D3D3D3;" />
+      <ScrollPane fx:id="optionslistplaceholder" layoutX="460.0" layoutY="43.0" prefHeight="346.0" prefWidth="210.0" style="-fx-background-color: fbd2d7;" />
+      <AnchorPane layoutY="389.0" prefHeight="43.0" prefWidth="670.0" style="-fx-background-color: fc6c85;">
+         <children>
+            <Slider fx:id="zoomslider" layoutX="432.0" layoutY="14.0" max="200.0" />
+            <Label fx:id="zoomlabel" layoutX="590.0" layoutY="13.0" text="Zoom:" />
+            <Label fx:id="elementvalues" layoutX="14.0" layoutY="13.0" text="x: y: w: h: angle: " />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

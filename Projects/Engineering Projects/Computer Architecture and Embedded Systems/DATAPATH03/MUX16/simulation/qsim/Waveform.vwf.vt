@@ -1,0 +1,929 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/07/2022 22:53:39"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          MUX16
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module MUX16_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [7:0] A0000;
+reg [7:0] B0001;
+reg [7:0] C0010;
+reg [7:0] D0011;
+reg [7:0] E0100;
+reg [7:0] F0101;
+reg [7:0] G0110;
+reg [7:0] H0111;
+reg [7:0] I1000;
+reg [7:0] J1100;
+reg [7:0] K1010;
+reg [7:0] L1011;
+reg [7:0] M1001;
+reg [7:0] N1101;
+reg [7:0] O1110;
+reg [7:0] P1111;
+reg [3:0] SEL;
+// wires                                               
+wire [7:0] RD;
+
+// assign statements (if any)                          
+MUX16 i1 (
+// port map - connection between master ports and signals/registers   
+	.A0000(A0000),
+	.B0001(B0001),
+	.C0010(C0010),
+	.D0011(D0011),
+	.E0100(E0100),
+	.F0101(F0101),
+	.G0110(G0110),
+	.H0111(H0111),
+	.I1000(I1000),
+	.J1100(J1100),
+	.K1010(K1010),
+	.L1011(L1011),
+	.M1001(M1001),
+	.N1101(N1101),
+	.O1110(O1110),
+	.P1111(P1111),
+	.RD(RD),
+	.SEL(SEL)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+// A0000[ 7 ]
+initial
+begin
+	A0000[7] = 1'b0;
+end 
+// A0000[ 6 ]
+initial
+begin
+	A0000[6] = 1'b0;
+end 
+// A0000[ 5 ]
+initial
+begin
+	A0000[5] = 1'b0;
+end 
+// A0000[ 4 ]
+initial
+begin
+	A0000[4] = 1'b0;
+end 
+// A0000[ 3 ]
+always
+begin
+	A0000[3] = 1'b0;
+	A0000[3] = #500000 1'b1;
+	#500000;
+end 
+// A0000[ 2 ]
+always
+begin
+	A0000[2] = 1'b0;
+	A0000[2] = #250000 1'b1;
+	#250000;
+end 
+// A0000[ 1 ]
+always
+begin
+	A0000[1] = 1'b0;
+	A0000[1] = #125000 1'b1;
+	#125000;
+end 
+// A0000[ 0 ]
+always
+begin
+	A0000[0] = 1'b0;
+	A0000[0] = #62500 1'b1;
+	#62500;
+end 
+// B0001[ 7 ]
+initial
+begin
+	B0001[7] = 1'b0;
+end 
+// B0001[ 6 ]
+initial
+begin
+	B0001[6] = 1'b0;
+end 
+// B0001[ 5 ]
+initial
+begin
+	B0001[5] = 1'b0;
+end 
+// B0001[ 4 ]
+initial
+begin
+	B0001[4] = 1'b0;
+	B0001[4] = #750000 1'b1;
+end 
+// B0001[ 3 ]
+initial
+begin
+	B0001[3] = 1'b0;
+	B0001[3] = #250000 1'b1;
+	B0001[3] = #500000 1'b0;
+end 
+// B0001[ 2 ]
+always
+begin
+	B0001[2] = 1'b1;
+	B0001[2] = #250000 1'b0;
+	#250000;
+end 
+// B0001[ 1 ]
+always
+begin
+	B0001[1] = 1'b0;
+	B0001[1] = #125000 1'b1;
+	#125000;
+end 
+// B0001[ 0 ]
+always
+begin
+	B0001[0] = 1'b0;
+	B0001[0] = #62500 1'b1;
+	#62500;
+end 
+// C0010[ 7 ]
+initial
+begin
+	C0010[7] = 1'b0;
+end 
+// C0010[ 6 ]
+initial
+begin
+	C0010[6] = 1'b0;
+end 
+// C0010[ 5 ]
+initial
+begin
+	C0010[5] = 1'b0;
+end 
+// C0010[ 4 ]
+initial
+begin
+	C0010[4] = 1'b0;
+	C0010[4] = #500000 1'b1;
+end 
+// C0010[ 3 ]
+initial
+begin
+	C0010[3] = 1'b1;
+	C0010[3] = #500000 1'b0;
+end 
+// C0010[ 2 ]
+always
+begin
+	C0010[2] = 1'b0;
+	C0010[2] = #250000 1'b1;
+	#250000;
+end 
+// C0010[ 1 ]
+always
+begin
+	C0010[1] = 1'b0;
+	C0010[1] = #125000 1'b1;
+	#125000;
+end 
+// C0010[ 0 ]
+always
+begin
+	C0010[0] = 1'b0;
+	C0010[0] = #62500 1'b1;
+	#62500;
+end 
+// D0011[ 7 ]
+initial
+begin
+	D0011[7] = 1'b0;
+end 
+// D0011[ 6 ]
+initial
+begin
+	D0011[6] = 1'b0;
+end 
+// D0011[ 5 ]
+initial
+begin
+	D0011[5] = 1'b0;
+end 
+// D0011[ 4 ]
+initial
+begin
+	D0011[4] = 1'b1;
+end 
+// D0011[ 3 ]
+initial
+begin
+	D0011[3] = 1'b0;
+	D0011[3] = #500000 1'b1;
+end 
+// D0011[ 2 ]
+always
+begin
+	D0011[2] = 1'b0;
+	D0011[2] = #250000 1'b1;
+	#250000;
+end 
+// D0011[ 1 ]
+always
+begin
+	D0011[1] = 1'b0;
+	D0011[1] = #125000 1'b1;
+	#125000;
+end 
+// D0011[ 0 ]
+always
+begin
+	D0011[0] = 1'b0;
+	D0011[0] = #62500 1'b1;
+	#62500;
+end 
+// E0100[ 7 ]
+initial
+begin
+	E0100[7] = 1'b0;
+end 
+// E0100[ 6 ]
+initial
+begin
+	E0100[6] = 1'b0;
+end 
+// E0100[ 5 ]
+initial
+begin
+	E0100[5] = 1'b1;
+end 
+// E0100[ 4 ]
+initial
+begin
+	E0100[4] = 1'b0;
+end 
+// E0100[ 3 ]
+initial
+begin
+	E0100[3] = 1'b0;
+	E0100[3] = #500000 1'b1;
+end 
+// E0100[ 2 ]
+always
+begin
+	E0100[2] = 1'b0;
+	E0100[2] = #250000 1'b1;
+	#250000;
+end 
+// E0100[ 1 ]
+always
+begin
+	E0100[1] = 1'b0;
+	E0100[1] = #125000 1'b1;
+	#125000;
+end 
+// E0100[ 0 ]
+always
+begin
+	E0100[0] = 1'b0;
+	E0100[0] = #62500 1'b1;
+	#62500;
+end 
+// F0101[ 7 ]
+initial
+begin
+	F0101[7] = 1'b0;
+end 
+// F0101[ 6 ]
+initial
+begin
+	F0101[6] = 1'b1;
+end 
+// F0101[ 5 ]
+initial
+begin
+	F0101[5] = 1'b0;
+end 
+// F0101[ 4 ]
+initial
+begin
+	F0101[4] = 1'b0;
+end 
+// F0101[ 3 ]
+initial
+begin
+	F0101[3] = 1'b0;
+	F0101[3] = #500000 1'b1;
+end 
+// F0101[ 2 ]
+always
+begin
+	F0101[2] = 1'b0;
+	F0101[2] = #250000 1'b1;
+	#250000;
+end 
+// F0101[ 1 ]
+always
+begin
+	F0101[1] = 1'b0;
+	F0101[1] = #125000 1'b1;
+	#125000;
+end 
+// F0101[ 0 ]
+always
+begin
+	F0101[0] = 1'b0;
+	F0101[0] = #62500 1'b1;
+	#62500;
+end 
+// G0110[ 7 ]
+initial
+begin
+	G0110[7] = 1'b1;
+end 
+// G0110[ 6 ]
+initial
+begin
+	G0110[6] = 1'b0;
+end 
+// G0110[ 5 ]
+initial
+begin
+	G0110[5] = 1'b0;
+end 
+// G0110[ 4 ]
+initial
+begin
+	G0110[4] = 1'b0;
+end 
+// G0110[ 3 ]
+initial
+begin
+	G0110[3] = 1'b0;
+	G0110[3] = #500000 1'b1;
+end 
+// G0110[ 2 ]
+always
+begin
+	G0110[2] = 1'b0;
+	G0110[2] = #250000 1'b1;
+	#250000;
+end 
+// G0110[ 1 ]
+always
+begin
+	G0110[1] = 1'b0;
+	G0110[1] = #125000 1'b1;
+	#125000;
+end 
+// G0110[ 0 ]
+always
+begin
+	G0110[0] = 1'b0;
+	G0110[0] = #62500 1'b1;
+	#62500;
+end 
+// H0111[ 7 ]
+initial
+begin
+	H0111[7] = 1'b1;
+end 
+// H0111[ 6 ]
+initial
+begin
+	H0111[6] = 1'b0;
+end 
+// H0111[ 5 ]
+initial
+begin
+	H0111[5] = 1'b0;
+end 
+// H0111[ 4 ]
+initial
+begin
+	H0111[4] = 1'b0;
+	H0111[4] = #937500 1'b1;
+end 
+// H0111[ 3 ]
+initial
+begin
+	H0111[3] = 1'b0;
+	H0111[3] = #437500 1'b1;
+	H0111[3] = #500000 1'b0;
+end 
+// H0111[ 2 ]
+initial
+begin
+	H0111[2] = 1'b0;
+	H0111[2] = #187500 1'b1;
+	H0111[2] = #250000 1'b0;
+	H0111[2] = #250000 1'b1;
+	H0111[2] = #250000 1'b0;
+end 
+// H0111[ 1 ]
+initial
+begin
+	H0111[1] = 1'b0;
+	# 62500;
+	repeat(3)
+	begin
+		H0111[1] = 1'b1;
+		H0111[1] = #125000 1'b0;
+		# 125000;
+	end
+	H0111[1] = 1'b1;
+	H0111[1] = #125000 1'b0;
+end 
+// H0111[ 0 ]
+always
+begin
+	H0111[0] = 1'b1;
+	H0111[0] = #62500 1'b0;
+	#62500;
+end 
+// I1000[ 7 ]
+initial
+begin
+	I1000[7] = 1'b0;
+end 
+// I1000[ 6 ]
+initial
+begin
+	I1000[6] = 1'b0;
+end 
+// I1000[ 5 ]
+initial
+begin
+	I1000[5] = 1'b0;
+end 
+// I1000[ 4 ]
+initial
+begin
+	I1000[4] = 1'b0;
+	I1000[4] = #937500 1'b1;
+end 
+// I1000[ 3 ]
+initial
+begin
+	I1000[3] = 1'b0;
+	I1000[3] = #437500 1'b1;
+	I1000[3] = #500000 1'b0;
+end 
+// I1000[ 2 ]
+initial
+begin
+	I1000[2] = 1'b0;
+	I1000[2] = #187500 1'b1;
+	I1000[2] = #250000 1'b0;
+	I1000[2] = #250000 1'b1;
+	I1000[2] = #250000 1'b0;
+end 
+// I1000[ 1 ]
+initial
+begin
+	I1000[1] = 1'b0;
+	# 62500;
+	repeat(3)
+	begin
+		I1000[1] = 1'b1;
+		I1000[1] = #125000 1'b0;
+		# 125000;
+	end
+	I1000[1] = 1'b1;
+	I1000[1] = #125000 1'b0;
+end 
+// I1000[ 0 ]
+always
+begin
+	I1000[0] = 1'b1;
+	I1000[0] = #62500 1'b0;
+	#62500;
+end 
+// J1100[ 7 ]
+initial
+begin
+	J1100[7] = 1'b0;
+end 
+// J1100[ 6 ]
+initial
+begin
+	J1100[6] = 1'b0;
+end 
+// J1100[ 5 ]
+initial
+begin
+	J1100[5] = 1'b0;
+end 
+// J1100[ 4 ]
+initial
+begin
+	J1100[4] = 1'b0;
+	J1100[4] = #875000 1'b1;
+end 
+// J1100[ 3 ]
+initial
+begin
+	J1100[3] = 1'b0;
+	J1100[3] = #375000 1'b1;
+	J1100[3] = #500000 1'b0;
+end 
+// J1100[ 2 ]
+initial
+begin
+	J1100[2] = 1'b0;
+	J1100[2] = #125000 1'b1;
+	J1100[2] = #250000 1'b0;
+	J1100[2] = #250000 1'b1;
+	J1100[2] = #250000 1'b0;
+end 
+// J1100[ 1 ]
+always
+begin
+	J1100[1] = 1'b1;
+	J1100[1] = #125000 1'b0;
+	#125000;
+end 
+// J1100[ 0 ]
+always
+begin
+	J1100[0] = 1'b0;
+	J1100[0] = #62500 1'b1;
+	#62500;
+end 
+// K1010[ 7 ]
+initial
+begin
+	K1010[7] = 1'b0;
+end 
+// K1010[ 6 ]
+initial
+begin
+	K1010[6] = 1'b0;
+end 
+// K1010[ 5 ]
+initial
+begin
+	K1010[5] = 1'b0;
+end 
+// K1010[ 4 ]
+initial
+begin
+	K1010[4] = 1'b0;
+	K1010[4] = #812500 1'b1;
+end 
+// K1010[ 3 ]
+initial
+begin
+	K1010[3] = 1'b0;
+	K1010[3] = #312500 1'b1;
+	K1010[3] = #500000 1'b0;
+end 
+// K1010[ 2 ]
+initial
+begin
+	K1010[2] = 1'b0;
+	K1010[2] = #62500 1'b1;
+	K1010[2] = #250000 1'b0;
+	K1010[2] = #250000 1'b1;
+	K1010[2] = #250000 1'b0;
+end 
+// K1010[ 1 ]
+initial
+begin
+	K1010[1] = 1'b1;
+	# 62500;
+	repeat(3)
+	begin
+		K1010[1] = 1'b0;
+		K1010[1] = #125000 1'b1;
+		# 125000;
+	end
+	K1010[1] = 1'b0;
+	K1010[1] = #125000 1'b1;
+end 
+// K1010[ 0 ]
+always
+begin
+	K1010[0] = 1'b1;
+	K1010[0] = #62500 1'b0;
+	#62500;
+end 
+// L1011[ 7 ]
+initial
+begin
+	L1011[7] = 1'b0;
+end 
+// L1011[ 6 ]
+initial
+begin
+	L1011[6] = 1'b0;
+end 
+// L1011[ 5 ]
+initial
+begin
+	L1011[5] = 1'b0;
+end 
+// L1011[ 4 ]
+initial
+begin
+	L1011[4] = 1'b0;
+	L1011[4] = #750000 1'b1;
+end 
+// L1011[ 3 ]
+initial
+begin
+	L1011[3] = 1'b0;
+	L1011[3] = #250000 1'b1;
+	L1011[3] = #500000 1'b0;
+end 
+// L1011[ 2 ]
+always
+begin
+	L1011[2] = 1'b1;
+	L1011[2] = #250000 1'b0;
+	#250000;
+end 
+// L1011[ 1 ]
+always
+begin
+	L1011[1] = 1'b0;
+	L1011[1] = #125000 1'b1;
+	#125000;
+end 
+// L1011[ 0 ]
+always
+begin
+	L1011[0] = 1'b0;
+	L1011[0] = #62500 1'b1;
+	#62500;
+end 
+// M1001[ 7 ]
+initial
+begin
+	M1001[7] = 1'b0;
+end 
+// M1001[ 6 ]
+initial
+begin
+	M1001[6] = 1'b0;
+end 
+// M1001[ 5 ]
+initial
+begin
+	M1001[5] = 1'b0;
+end 
+// M1001[ 4 ]
+initial
+begin
+	M1001[4] = 1'b0;
+	M1001[4] = #687500 1'b1;
+end 
+// M1001[ 3 ]
+initial
+begin
+	M1001[3] = 1'b0;
+	M1001[3] = #187500 1'b1;
+	M1001[3] = #500000 1'b0;
+end 
+// M1001[ 2 ]
+initial
+begin
+	M1001[2] = 1'b1;
+	M1001[2] = #187500 1'b0;
+	M1001[2] = #250000 1'b1;
+	M1001[2] = #250000 1'b0;
+	M1001[2] = #250000 1'b1;
+end 
+// M1001[ 1 ]
+initial
+begin
+	M1001[1] = 1'b0;
+	# 62500;
+	repeat(3)
+	begin
+		M1001[1] = 1'b1;
+		M1001[1] = #125000 1'b0;
+		# 125000;
+	end
+	M1001[1] = 1'b1;
+	M1001[1] = #125000 1'b0;
+end 
+// M1001[ 0 ]
+always
+begin
+	M1001[0] = 1'b1;
+	M1001[0] = #62500 1'b0;
+	#62500;
+end 
+// N1101[ 7 ]
+initial
+begin
+	N1101[7] = 1'b0;
+end 
+// N1101[ 6 ]
+initial
+begin
+	N1101[6] = 1'b0;
+end 
+// N1101[ 5 ]
+initial
+begin
+	N1101[5] = 1'b0;
+end 
+// N1101[ 4 ]
+initial
+begin
+	N1101[4] = 1'b0;
+	N1101[4] = #625000 1'b1;
+end 
+// N1101[ 3 ]
+initial
+begin
+	N1101[3] = 1'b0;
+	N1101[3] = #125000 1'b1;
+	N1101[3] = #500000 1'b0;
+end 
+// N1101[ 2 ]
+initial
+begin
+	N1101[2] = 1'b1;
+	N1101[2] = #125000 1'b0;
+	N1101[2] = #250000 1'b1;
+	N1101[2] = #250000 1'b0;
+	N1101[2] = #250000 1'b1;
+end 
+// N1101[ 1 ]
+always
+begin
+	N1101[1] = 1'b1;
+	N1101[1] = #125000 1'b0;
+	#125000;
+end 
+// N1101[ 0 ]
+always
+begin
+	N1101[0] = 1'b0;
+	N1101[0] = #62500 1'b1;
+	#62500;
+end 
+// O1110[ 7 ]
+initial
+begin
+	O1110[7] = 1'b0;
+end 
+// O1110[ 6 ]
+initial
+begin
+	O1110[6] = 1'b0;
+end 
+// O1110[ 5 ]
+initial
+begin
+	O1110[5] = 1'b0;
+end 
+// O1110[ 4 ]
+initial
+begin
+	O1110[4] = 1'b0;
+	O1110[4] = #562500 1'b1;
+end 
+// O1110[ 3 ]
+initial
+begin
+	O1110[3] = 1'b0;
+	O1110[3] = #62500 1'b1;
+	O1110[3] = #500000 1'b0;
+end 
+// O1110[ 2 ]
+initial
+begin
+	O1110[2] = 1'b1;
+	O1110[2] = #62500 1'b0;
+	O1110[2] = #250000 1'b1;
+	O1110[2] = #250000 1'b0;
+	O1110[2] = #250000 1'b1;
+end 
+// O1110[ 1 ]
+initial
+begin
+	O1110[1] = 1'b1;
+	# 62500;
+	repeat(3)
+	begin
+		O1110[1] = 1'b0;
+		O1110[1] = #125000 1'b1;
+		# 125000;
+	end
+	O1110[1] = 1'b0;
+	O1110[1] = #125000 1'b1;
+end 
+// O1110[ 0 ]
+always
+begin
+	O1110[0] = 1'b1;
+	O1110[0] = #62500 1'b0;
+	#62500;
+end 
+// P1111[ 7 ]
+initial
+begin
+	P1111[7] = 1'b0;
+end 
+// P1111[ 6 ]
+initial
+begin
+	P1111[6] = 1'b0;
+end 
+// P1111[ 5 ]
+initial
+begin
+	P1111[5] = 1'b0;
+end 
+// P1111[ 4 ]
+initial
+begin
+	P1111[4] = 1'b0;
+	P1111[4] = #500000 1'b1;
+end 
+// P1111[ 3 ]
+initial
+begin
+	P1111[3] = 1'b1;
+	P1111[3] = #500000 1'b0;
+end 
+// P1111[ 2 ]
+always
+begin
+	P1111[2] = 1'b0;
+	P1111[2] = #250000 1'b1;
+	#250000;
+end 
+// P1111[ 1 ]
+always
+begin
+	P1111[1] = 1'b0;
+	P1111[1] = #125000 1'b1;
+	#125000;
+end 
+// P1111[ 0 ]
+always
+begin
+	P1111[0] = 1'b0;
+	P1111[0] = #62500 1'b1;
+	#62500;
+end 
+// SEL[ 3 ]
+always
+begin
+	SEL[3] = 1'b0;
+	SEL[3] = #500000 1'b1;
+	#500000;
+end 
+// SEL[ 2 ]
+always
+begin
+	SEL[2] = 1'b0;
+	SEL[2] = #250000 1'b1;
+	#250000;
+end 
+// SEL[ 1 ]
+always
+begin
+	SEL[1] = 1'b0;
+	SEL[1] = #125000 1'b1;
+	#125000;
+end 
+// SEL[ 0 ]
+always
+begin
+	SEL[0] = 1'b0;
+	SEL[0] = #62500 1'b1;
+	#62500;
+end 
+endmodule
+

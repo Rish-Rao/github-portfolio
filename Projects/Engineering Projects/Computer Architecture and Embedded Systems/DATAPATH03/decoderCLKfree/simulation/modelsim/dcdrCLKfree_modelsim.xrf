@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, D:/desktop/comARCH/quartus/decoderCLKfree/dcdrCLKfree.bdf
+source_file = 1, D:/desktop/comARCH/quartus/decoderCLKfree/db/dcdrCLKfree.cbx.xml
+design_name = dcdrCLKfree
+instance = comp, \EN00~output , EN00~output, dcdrCLKfree, 1
+instance = comp, \EN01~output , EN01~output, dcdrCLKfree, 1
+instance = comp, \EN10~output , EN10~output, dcdrCLKfree, 1
+instance = comp, \EN11~output , EN11~output, dcdrCLKfree, 1
+instance = comp, \WA[0]~input , WA[0]~input, dcdrCLKfree, 1
+instance = comp, \WA[1]~input , WA[1]~input, dcdrCLKfree, 1
+instance = comp, \REGWRITE~input , REGWRITE~input, dcdrCLKfree, 1
+instance = comp, \INST9~0 , INST9~0, dcdrCLKfree, 1
+instance = comp, \inst1~0 , inst1~0, dcdrCLKfree, 1
+instance = comp, \INST10~0 , INST10~0, dcdrCLKfree, 1
+instance = comp, \inst1~1 , inst1~1, dcdrCLKfree, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, dcdrCLKfree, 1

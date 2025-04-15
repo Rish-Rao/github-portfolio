@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/desktop/comARCH/quartus/DEMUX8BIT2WAY/simulation/qsim
+vDEMUX8BIT2WAY
+Z1 !s110 1665178954
+!i10b 1
+!s100 2b>E8XLgYd@og=M9Eg?=31
+I6_h[_U5m_Ph_dO8aZJd5A3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1665178953
+8DEMUX8BIT2WAY.vo
+FDEMUX8BIT2WAY.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1665178954.000000
+!s107 DEMUX8BIT2WAY.vo|
+!s90 -work|work|DEMUX8BIT2WAY.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@d@e@m@u@x8@b@i@t2@w@a@y
+vDEMUX8BIT2WAY_vlg_vec_tst
+R1
+!i10b 1
+!s100 `nfmGQGh4dGfm@0i>A``n1
+IaCck?S1m_6@gl:oHQb2NU2
+R2
+R0
+w1665178951
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6
+n@d@e@m@u@x8@b@i@t2@w@a@y_vlg_vec_tst

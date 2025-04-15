@@ -1,0 +1,13 @@
+|Decoder
+EN0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+WA1 => inst.IN0
+WA1 => inst4.IN0
+WA1 => inst5.IN0
+WA2 => inst1.IN0
+WA2 => inst3.IN1
+WA2 => inst5.IN1
+EN1 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+EN2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+EN3 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+

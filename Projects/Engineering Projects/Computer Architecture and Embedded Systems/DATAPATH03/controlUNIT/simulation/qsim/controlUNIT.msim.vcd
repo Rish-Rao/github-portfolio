@@ -1,0 +1,151 @@
+$comment
+	File created using the following command:
+		vcd file controlUNIT.msim.vcd -direction
+$end
+$date
+	Thu Oct 13 14:29:05 2022
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module controlUNIT_vlg_vec_tst $end
+$var reg 4 ! OPCODE [3:0] $end
+$var wire 1 " branch $end
+$var wire 1 # BSel $end
+$var wire 1 $ DataMemEn $end
+$var wire 1 % InstrMemEN $end
+$var wire 1 & jump $end
+$var wire 1 ' PCWriteEN $end
+$var wire 1 ( RegWriteEN $end
+
+$scope module i1 $end
+$var wire 1 ) gnd $end
+$var wire 1 * vcc $end
+$var wire 1 + unknown $end
+$var tri1 1 , devclrn $end
+$var tri1 1 - devpor $end
+$var tri1 1 . devoe $end
+$var wire 1 / InstrMemEN~output_o $end
+$var wire 1 0 DataMemEn~output_o $end
+$var wire 1 1 RegWriteEN~output_o $end
+$var wire 1 2 branch~output_o $end
+$var wire 1 3 jump~output_o $end
+$var wire 1 4 PCWriteEN~output_o $end
+$var wire 1 5 BSel~output_o $end
+$var wire 1 6 OPCODE[3]~input_o $end
+$var wire 1 7 OPCODE[0]~input_o $end
+$var wire 1 8 OPCODE[2]~input_o $end
+$var wire 1 9 OPCODE[1]~input_o $end
+$var wire 1 : inst4~combout $end
+$var wire 1 ; inst5~combout $end
+$var wire 1 < inst12~0_combout $end
+$var wire 1 = inst7~combout $end
+$var wire 1 > inst8~combout $end
+$var wire 1 ? inst19~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+0"
+0#
+0$
+1%
+0&
+1'
+1(
+0)
+1*
+x+
+1,
+1-
+1.
+1/
+00
+11
+02
+03
+14
+05
+06
+07
+08
+09
+1:
+0;
+1<
+0=
+0>
+0?
+$end
+#1000000
+b1 !
+17
+1;
+10
+1$
+#2000000
+b101 !
+b100 !
+07
+18
+1?
+0;
+00
+15
+1#
+0$
+#3000000
+b1100 !
+b1000 !
+08
+16
+0?
+05
+0#
+#4000000
+b1100 !
+18
+1?
+15
+1#
+#5000000
+b1101 !
+b101 !
+17
+06
+1=
+0<
+0?
+05
+01
+12
+1"
+0(
+0#
+#6000000
+b111 !
+b11 !
+19
+08
+1>
+0=
+02
+13
+1&
+0"
+#7000000
+b1011 !
+16
+0>
+1<
+11
+03
+0&
+1(
+#8000000

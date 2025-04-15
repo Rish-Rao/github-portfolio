@@ -1,0 +1,79 @@
+﻿@model IPagedList<BillPay>
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using MCBA.Models;
+@using static MCBA.Utils.ConstValues;
+@using static MCBA.Utils.HelperMethods;
+
+@{
+    ViewData["Title"] = "BillPay";
+    var account = (Account)ViewBag.Account;
+}
+
+<a class="btn btn-outline-secondary"
+   asp-controller="Account" asp-action="Accounts" asp-route-id="@account.AccountNumber"><</a>
+
+<div style="padding-left:50px">
+    <h3>
+        @account.AccountType.AccountTypeToString() Account - @account.AccountNumber
+        <a class="btn btn-outline-primary float-end"
+           asp-action="AddBill">+ Add New Bill</a>
+    </h3>
+
+
+    <table class="table">
+
+        <tr>
+            <th class="text-left">@Html.DisplayNameFor(x => x[0].BillPayID)</th>
+            <th class="text-center">@Html.DisplayNameFor(x => x[0].AccountNumber)</th>
+            <th class="text-center">@Html.DisplayNameFor(x => x[0].PayeeID)</th>
+            <th class="text-center">@Html.DisplayNameFor(x => x[0].Amount)</th>
+            <th class="text-center">@Html.DisplayNameFor(x => x[0].ScheduleTimeUtc)</th>
+            <th class="text-center">@Html.DisplayNameFor(x => x[0].Period)</th>
+            <th class="text-center">@Html.DisplayNameFor(x => x[0].State)</th>
+            <th class="text-center">Option</th>
+        </tr>
+
+        @foreach (var billPay in Model)
+        {
+            <tr>
+                <td class="text-left">@Html.DisplayFor(x => billPay.BillPayID)</td>
+                <td class="text-center">@Html.DisplayFor(x => billPay.AccountNumber)</td>
+                <td class="text-center">@Html.DisplayFor(x => billPay.PayeeID)</td>
+                <td class="text-center">@Html.DisplayFor(x => billPay.Amount)</td>
+                <td class="text-center">@billPay.ScheduleTimeUtc.ToLocalTime()</td>
+                <td class="text-center">@billPay.Period.BillPayPeriodToString()</td>
+                <td class="text-center">@billPay.State.BillPayStateToString()</td>
+
+                @{
+                    if (@billPay.State == ((char)BillPayState.InsufficientFunds) || @billPay.State == ((char)BillPayState.Success))
+                    {
+                        <form asp-action="Remove">
+                        <td class="text-center">
+                            <input type="hidden" name="BillPayID" value="@billPay.BillPayID" />
+                            <input type="submit" value="Remove" class="btn btn-outline-secondary" />
+                        </td>
+                        </form>
+                    }
+                    else if (@billPay.State == ((char)BillPayState.Pending) || @billPay.State == ((char)BillPayState.Blocked))
+                    {
+                        <form asp-action="Remove">
+                        <td class="text-center">
+                            <input type="hidden" name="BillPayID" value="@billPay.BillPayID" />
+                            <input type="submit" value="Cancel" class="btn btn-outline-secondary" />
+                        </td>
+                        </form>
+                    }
+                }
+            </tr>
+         }
+    </table>
+
+    @Html.PagedListPager(Model, page => Url.Action("BillPay", new { page }),
+        new PagedListRenderOptions
+        {
+            LiElementClasses = new[] { "page-item" },
+            PageClasses = new[] { "page-link" }
+        }) 
+</div>

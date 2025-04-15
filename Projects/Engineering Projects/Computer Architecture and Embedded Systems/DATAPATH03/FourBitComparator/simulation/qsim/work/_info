@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/FourBitComparator/simulation/qsim
+vFourBitComparator
+Z1 !s110 1664857225
+!i10b 1
+!s100 a1OW0QA1ceUWE0dVZgk>U1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IQY6KMMKPVd@XN;UEJ0_an0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1664857224
+8FourBitComparator.vo
+FFourBitComparator.vo
+!i122 12
+L0 32 317
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1664857225.000000
+!s107 FourBitComparator.vo|
+!s90 -work|work|FourBitComparator.vo|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+n@four@bit@comparator
+vFourBitComparator_vlg_vec_tst
+R1
+!i10b 1
+!s100 0ADG<FG_7:?287_XI9OCC3
+R2
+I:GP;i@Ulj1PBVHL5O`6kV1
+R3
+R0
+R4
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 13
+L0 30 66
+R5
+r1
+!s85 0
+31
+R6
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R7
+R8
+n@four@bit@comparator_vlg_vec_tst

@@ -1,0 +1,32 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Accounts";
+}
+
+<div>
+    <h1 class="display-4">Welcome, @Model.Name</h1>
+    <br />
+    <h3>Your Accounts</h3>
+    <br />
+
+    <!-- Table -->
+    <table class="table table-sm table-striped">
+
+        <tr class="d-flex">
+            <th colspan="2" class="col-2">@Html.DisplayNameFor(x => x.Accounts[0].AccountNumber)</th>
+            <th class="col-1"></th class="col-1">
+        </tr>
+
+        @foreach (var account in Model.Accounts)
+        {
+            <tr class="d-flex">
+                <th class="col-2">@Html.DisplayFor(x => account.AccountNumber)</th>
+                <th class="col-1"> <a class="btn btn-outline-secondary"
+                    asp-controller="Account" asp-action="Accounts" asp-route-id="@account.AccountNumber">View</a> </th>
+            </tr>
+        }
+
+    </table>
+
+</div>
+

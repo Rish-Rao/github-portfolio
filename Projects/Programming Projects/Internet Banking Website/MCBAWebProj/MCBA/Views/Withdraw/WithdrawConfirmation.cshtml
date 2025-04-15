@@ -1,0 +1,70 @@
+﻿@model Account
+@using MCBA.Controllers;
+@using static MCBA.Utils.ConstValues;
+@using static MCBA.Utils.HelperMethods;
+@using static MCBA.Utils.TransactionHelperMethods;
+
+
+@{
+    ViewData["Title"] = "Withdraw";
+}
+
+<a class="btn btn-outline-secondary"
+   asp-action="Withdraw" asp-route-id="@Model.AccountNumber"><</a>
+
+<div style="padding-left:50px">
+    <h3>@Model.AccountType.AccountTypeToString() Account - @Model.AccountNumber</h3>
+
+    <table class="table table-sm table-striped">
+
+        <tr class="d-flex">
+            <th class="col-4 text-center" rowspan="2">Withdraw</th>
+        </tr>
+
+        <tr class="d-flex">
+            <th class="col-1">@Html.DisplayNameFor(x => x.Transaction.Amount)</th>
+            <td class="col-3 " style="text-align:center"> $@decimal.Parse(Context.Session.GetString(WithdrawController.SessionKey_Amount)).ToString("0.00")</td>
+        </tr>
+
+        @{
+          if (@Model.ServiceFeeRequired())
+          {
+              <tr class="d-flex">
+                  <th class="col-1">Service Fee</th>
+                  <td class="col-3 " style="text-align:center"> $@WithdrawFee</td>
+              </tr>
+          }
+        }
+
+        <tr class="d-flex">
+            <th class="col-1">@Html.DisplayNameFor(x => x.Transaction.Comment)</th>
+            @{
+                string commentVal = "n/a";
+                if (@Context.Session.GetString(DepositController.SessionKey_Comment) != string.Empty)
+                    commentVal = @Context.Session.GetString(WithdrawController.SessionKey_Comment);
+            }
+            <td class="col-3" style="text-align: center"> @commentVal</td>
+        </tr>
+
+    </table>
+
+    <table class="table table-sm table-borderless">
+
+
+        <tr class="d-flex">
+            <th class="col-1">
+                <form asp-action="WithdrawNow">
+                    <input type="hidden" name="id" value="@Model.AccountNumber" />
+                    <input type="submit" value="Confirm" class="btn btn-outline-secondary" />
+                </form>
+            </th>
+
+            <th class="col-1">
+                <a class="btn btn-outline-secondary"
+                   asp-controller="Account" asp-action="Accounts" asp-route-id="@Model.AccountNumber">Cancel</a>
+            </th>
+        </tr>
+
+    </table>
+</div>
+

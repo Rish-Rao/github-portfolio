@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/desktop/comARCH/quartus/decoderCLKfree/simulation/qsim
+vdcdrCLKfree
+Z1 !s110 1663994656
+!i10b 1
+!s100 AlmNCAL4KfbEEDTH3BgMW0
+Ia8:WhFVJbHEMOc8YcJBGD3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1663994653
+8dcdrCLKfree.vo
+FdcdrCLKfree.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1663994655.000000
+!s107 dcdrCLKfree.vo|
+!s90 -work|work|dcdrCLKfree.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+ndcdr@c@l@kfree
+vdcdrCLKfree_vlg_vec_tst
+R1
+!i10b 1
+!s100 EzKZOVASQ^T8SMflXNB3G1
+In9e8EGC=haQaSKCnODJWR3
+R2
+R0
+w1663994649
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1663994656.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+R5
+ndcdr@c@l@kfree_vlg_vec_tst

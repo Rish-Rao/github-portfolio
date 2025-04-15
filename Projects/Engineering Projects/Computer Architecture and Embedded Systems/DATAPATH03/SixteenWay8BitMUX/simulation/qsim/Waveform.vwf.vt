@@ -1,0 +1,748 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/14/2022 07:11:56"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          SixteenWay8BitMUX
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module SixteenWay8BitMUX_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [7:0] A;
+reg [7:0] B;
+reg [7:0] C;
+reg [7:0] D;
+reg [7:0] E;
+reg [7:0] F;
+reg [7:0] G;
+reg [7:0] H;
+reg [7:0] I;
+reg [7:0] J;
+reg [7:0] K;
+reg [7:0] L;
+reg [7:0] M;
+reg [7:0] N;
+reg [7:0] O;
+reg [7:0] P;
+reg [3:0] S;
+// wires                                               
+wire [7:0] Q;
+
+// assign statements (if any)                          
+SixteenWay8BitMUX i1 (
+// port map - connection between master ports and signals/registers   
+	.A(A),
+	.B(B),
+	.C(C),
+	.D(D),
+	.E(E),
+	.F(F),
+	.G(G),
+	.H(H),
+	.I(I),
+	.J(J),
+	.K(K),
+	.L(L),
+	.M(M),
+	.N(N),
+	.O(O),
+	.P(P),
+	.Q(Q),
+	.S(S)
+);
+initial 
+begin 
+#16000000 $finish;
+end 
+// S[ 3 ]
+always
+begin
+	S[3] = 1'b0;
+	S[3] = #8000000 1'b1;
+	#8000000;
+end 
+// S[ 2 ]
+always
+begin
+	S[2] = 1'b0;
+	S[2] = #4000000 1'b1;
+	#4000000;
+end 
+// S[ 1 ]
+always
+begin
+	S[1] = 1'b0;
+	S[1] = #2000000 1'b1;
+	#2000000;
+end 
+// S[ 0 ]
+always
+begin
+	S[0] = 1'b0;
+	S[0] = #1000000 1'b1;
+	#1000000;
+end 
+// A[ 7 ]
+initial
+begin
+	A[7] = 1'b0;
+end 
+// A[ 6 ]
+initial
+begin
+	A[6] = 1'b0;
+end 
+// A[ 5 ]
+initial
+begin
+	A[5] = 1'b0;
+end 
+// A[ 4 ]
+initial
+begin
+	A[4] = 1'b0;
+end 
+// A[ 3 ]
+initial
+begin
+	A[3] = 1'b0;
+end 
+// A[ 2 ]
+initial
+begin
+	A[2] = 1'b0;
+end 
+// A[ 1 ]
+initial
+begin
+	A[1] = 1'b0;
+end 
+// A[ 0 ]
+initial
+begin
+	A[0] = 1'b1;
+end 
+// B[ 7 ]
+initial
+begin
+	B[7] = 1'b0;
+end 
+// B[ 6 ]
+initial
+begin
+	B[6] = 1'b0;
+end 
+// B[ 5 ]
+initial
+begin
+	B[5] = 1'b0;
+end 
+// B[ 4 ]
+initial
+begin
+	B[4] = 1'b0;
+end 
+// B[ 3 ]
+initial
+begin
+	B[3] = 1'b0;
+end 
+// B[ 2 ]
+initial
+begin
+	B[2] = 1'b0;
+end 
+// B[ 1 ]
+initial
+begin
+	B[1] = 1'b1;
+end 
+// B[ 0 ]
+initial
+begin
+	B[0] = 1'b0;
+end 
+// C[ 7 ]
+initial
+begin
+	C[7] = 1'b0;
+end 
+// C[ 6 ]
+initial
+begin
+	C[6] = 1'b0;
+end 
+// C[ 5 ]
+initial
+begin
+	C[5] = 1'b0;
+end 
+// C[ 4 ]
+initial
+begin
+	C[4] = 1'b0;
+end 
+// C[ 3 ]
+initial
+begin
+	C[3] = 1'b0;
+end 
+// C[ 2 ]
+initial
+begin
+	C[2] = 1'b0;
+end 
+// C[ 1 ]
+initial
+begin
+	C[1] = 1'b1;
+end 
+// C[ 0 ]
+initial
+begin
+	C[0] = 1'b1;
+end 
+// D[ 7 ]
+initial
+begin
+	D[7] = 1'b0;
+end 
+// D[ 6 ]
+initial
+begin
+	D[6] = 1'b0;
+end 
+// D[ 5 ]
+initial
+begin
+	D[5] = 1'b0;
+end 
+// D[ 4 ]
+initial
+begin
+	D[4] = 1'b0;
+end 
+// D[ 3 ]
+initial
+begin
+	D[3] = 1'b0;
+end 
+// D[ 2 ]
+initial
+begin
+	D[2] = 1'b1;
+end 
+// D[ 1 ]
+initial
+begin
+	D[1] = 1'b0;
+end 
+// D[ 0 ]
+initial
+begin
+	D[0] = 1'b0;
+end 
+// E[ 7 ]
+initial
+begin
+	E[7] = 1'b0;
+end 
+// E[ 6 ]
+initial
+begin
+	E[6] = 1'b0;
+end 
+// E[ 5 ]
+initial
+begin
+	E[5] = 1'b0;
+end 
+// E[ 4 ]
+initial
+begin
+	E[4] = 1'b0;
+end 
+// E[ 3 ]
+initial
+begin
+	E[3] = 1'b0;
+end 
+// E[ 2 ]
+initial
+begin
+	E[2] = 1'b1;
+end 
+// E[ 1 ]
+initial
+begin
+	E[1] = 1'b0;
+end 
+// E[ 0 ]
+initial
+begin
+	E[0] = 1'b1;
+end 
+// F[ 7 ]
+initial
+begin
+	F[7] = 1'b0;
+end 
+// F[ 6 ]
+initial
+begin
+	F[6] = 1'b0;
+end 
+// F[ 5 ]
+initial
+begin
+	F[5] = 1'b0;
+end 
+// F[ 4 ]
+initial
+begin
+	F[4] = 1'b0;
+end 
+// F[ 3 ]
+initial
+begin
+	F[3] = 1'b0;
+end 
+// F[ 2 ]
+initial
+begin
+	F[2] = 1'b1;
+end 
+// F[ 1 ]
+initial
+begin
+	F[1] = 1'b1;
+end 
+// F[ 0 ]
+initial
+begin
+	F[0] = 1'b0;
+end 
+// G[ 7 ]
+initial
+begin
+	G[7] = 1'b0;
+end 
+// G[ 6 ]
+initial
+begin
+	G[6] = 1'b0;
+end 
+// G[ 5 ]
+initial
+begin
+	G[5] = 1'b0;
+end 
+// G[ 4 ]
+initial
+begin
+	G[4] = 1'b0;
+end 
+// G[ 3 ]
+initial
+begin
+	G[3] = 1'b0;
+end 
+// G[ 2 ]
+initial
+begin
+	G[2] = 1'b1;
+end 
+// G[ 1 ]
+initial
+begin
+	G[1] = 1'b1;
+end 
+// G[ 0 ]
+initial
+begin
+	G[0] = 1'b1;
+end 
+// H[ 7 ]
+initial
+begin
+	H[7] = 1'b0;
+end 
+// H[ 6 ]
+initial
+begin
+	H[6] = 1'b0;
+end 
+// H[ 5 ]
+initial
+begin
+	H[5] = 1'b0;
+end 
+// H[ 4 ]
+initial
+begin
+	H[4] = 1'b0;
+end 
+// H[ 3 ]
+initial
+begin
+	H[3] = 1'b1;
+end 
+// H[ 2 ]
+initial
+begin
+	H[2] = 1'b0;
+end 
+// H[ 1 ]
+initial
+begin
+	H[1] = 1'b0;
+end 
+// H[ 0 ]
+initial
+begin
+	H[0] = 1'b0;
+end 
+// I[ 7 ]
+initial
+begin
+	I[7] = 1'b0;
+end 
+// I[ 6 ]
+initial
+begin
+	I[6] = 1'b0;
+end 
+// I[ 5 ]
+initial
+begin
+	I[5] = 1'b0;
+end 
+// I[ 4 ]
+initial
+begin
+	I[4] = 1'b0;
+end 
+// I[ 3 ]
+initial
+begin
+	I[3] = 1'b1;
+end 
+// I[ 2 ]
+initial
+begin
+	I[2] = 1'b0;
+end 
+// I[ 1 ]
+initial
+begin
+	I[1] = 1'b0;
+end 
+// I[ 0 ]
+initial
+begin
+	I[0] = 1'b1;
+end 
+// J[ 7 ]
+initial
+begin
+	J[7] = 1'b0;
+end 
+// J[ 6 ]
+initial
+begin
+	J[6] = 1'b0;
+end 
+// J[ 5 ]
+initial
+begin
+	J[5] = 1'b0;
+end 
+// J[ 4 ]
+initial
+begin
+	J[4] = 1'b0;
+end 
+// J[ 3 ]
+initial
+begin
+	J[3] = 1'b1;
+end 
+// J[ 2 ]
+initial
+begin
+	J[2] = 1'b0;
+end 
+// J[ 1 ]
+initial
+begin
+	J[1] = 1'b1;
+end 
+// J[ 0 ]
+initial
+begin
+	J[0] = 1'b0;
+end 
+// K[ 7 ]
+initial
+begin
+	K[7] = 1'b0;
+end 
+// K[ 6 ]
+initial
+begin
+	K[6] = 1'b0;
+end 
+// K[ 5 ]
+initial
+begin
+	K[5] = 1'b0;
+end 
+// K[ 4 ]
+initial
+begin
+	K[4] = 1'b0;
+end 
+// K[ 3 ]
+initial
+begin
+	K[3] = 1'b1;
+end 
+// K[ 2 ]
+initial
+begin
+	K[2] = 1'b0;
+end 
+// K[ 1 ]
+initial
+begin
+	K[1] = 1'b1;
+end 
+// K[ 0 ]
+initial
+begin
+	K[0] = 1'b1;
+end 
+// L[ 7 ]
+initial
+begin
+	L[7] = 1'b0;
+end 
+// L[ 6 ]
+initial
+begin
+	L[6] = 1'b0;
+end 
+// L[ 5 ]
+initial
+begin
+	L[5] = 1'b0;
+end 
+// L[ 4 ]
+initial
+begin
+	L[4] = 1'b0;
+end 
+// L[ 3 ]
+initial
+begin
+	L[3] = 1'b1;
+end 
+// L[ 2 ]
+initial
+begin
+	L[2] = 1'b1;
+end 
+// L[ 1 ]
+initial
+begin
+	L[1] = 1'b0;
+end 
+// L[ 0 ]
+initial
+begin
+	L[0] = 1'b0;
+end 
+// M[ 7 ]
+initial
+begin
+	M[7] = 1'b0;
+end 
+// M[ 6 ]
+initial
+begin
+	M[6] = 1'b0;
+end 
+// M[ 5 ]
+initial
+begin
+	M[5] = 1'b0;
+end 
+// M[ 4 ]
+initial
+begin
+	M[4] = 1'b0;
+end 
+// M[ 3 ]
+initial
+begin
+	M[3] = 1'b1;
+end 
+// M[ 2 ]
+initial
+begin
+	M[2] = 1'b1;
+end 
+// M[ 1 ]
+initial
+begin
+	M[1] = 1'b0;
+end 
+// M[ 0 ]
+initial
+begin
+	M[0] = 1'b1;
+end 
+// N[ 7 ]
+initial
+begin
+	N[7] = 1'b0;
+end 
+// N[ 6 ]
+initial
+begin
+	N[6] = 1'b0;
+end 
+// N[ 5 ]
+initial
+begin
+	N[5] = 1'b0;
+end 
+// N[ 4 ]
+initial
+begin
+	N[4] = 1'b0;
+end 
+// N[ 3 ]
+initial
+begin
+	N[3] = 1'b1;
+end 
+// N[ 2 ]
+initial
+begin
+	N[2] = 1'b1;
+end 
+// N[ 1 ]
+initial
+begin
+	N[1] = 1'b1;
+end 
+// N[ 0 ]
+initial
+begin
+	N[0] = 1'b0;
+end 
+// O[ 7 ]
+initial
+begin
+	O[7] = 1'b0;
+end 
+// O[ 6 ]
+initial
+begin
+	O[6] = 1'b0;
+end 
+// O[ 5 ]
+initial
+begin
+	O[5] = 1'b0;
+end 
+// O[ 4 ]
+initial
+begin
+	O[4] = 1'b1;
+end 
+// O[ 3 ]
+initial
+begin
+	O[3] = 1'b1;
+end 
+// O[ 2 ]
+initial
+begin
+	O[2] = 1'b1;
+end 
+// O[ 1 ]
+initial
+begin
+	O[1] = 1'b1;
+end 
+// O[ 0 ]
+initial
+begin
+	O[0] = 1'b1;
+end 
+// P[ 7 ]
+initial
+begin
+	P[7] = 1'b1;
+end 
+// P[ 6 ]
+initial
+begin
+	P[6] = 1'b0;
+end 
+// P[ 5 ]
+initial
+begin
+	P[5] = 1'b0;
+end 
+// P[ 4 ]
+initial
+begin
+	P[4] = 1'b0;
+end 
+// P[ 3 ]
+initial
+begin
+	P[3] = 1'b0;
+end 
+// P[ 2 ]
+initial
+begin
+	P[2] = 1'b0;
+end 
+// P[ 1 ]
+initial
+begin
+	P[1] = 1'b0;
+end 
+// P[ 0 ]
+initial
+begin
+	P[0] = 1'b0;
+end 
+endmodule
+

@@ -1,0 +1,87 @@
+|FourWayFourBitMultiplexer
+F[3] <= FourWayOneBitMultiplexer:inst1.pin_name1
+F[2] <= FourWayOneBitMultiplexer:inst.pin_name1
+F[1] <= FourWayOneBitMultiplexer:inst2.pin_name1
+F[0] <= FourWayOneBitMultiplexer:inst3.pin_name1
+S[1] => FourWayOneBitMultiplexer:inst3.S2
+S[1] => FourWayOneBitMultiplexer:inst2.S2
+S[1] => FourWayOneBitMultiplexer:inst.S2
+S[1] => FourWayOneBitMultiplexer:inst1.S2
+S[0] => FourWayOneBitMultiplexer:inst3.S1
+S[0] => FourWayOneBitMultiplexer:inst2.S1
+S[0] => FourWayOneBitMultiplexer:inst.S1
+S[0] => FourWayOneBitMultiplexer:inst1.S1
+A[3] => FourWayOneBitMultiplexer:inst1.A
+A[2] => FourWayOneBitMultiplexer:inst.A
+A[1] => FourWayOneBitMultiplexer:inst2.A
+A[0] => FourWayOneBitMultiplexer:inst3.A
+B[3] => FourWayOneBitMultiplexer:inst1.B
+B[2] => FourWayOneBitMultiplexer:inst.B
+B[1] => FourWayOneBitMultiplexer:inst2.B
+B[0] => FourWayOneBitMultiplexer:inst3.B
+C[3] => FourWayOneBitMultiplexer:inst1.C
+C[2] => FourWayOneBitMultiplexer:inst.C
+C[1] => FourWayOneBitMultiplexer:inst2.C
+C[0] => FourWayOneBitMultiplexer:inst3.C
+D[3] => FourWayOneBitMultiplexer:inst1.D
+D[2] => FourWayOneBitMultiplexer:inst.D
+D[1] => FourWayOneBitMultiplexer:inst2.D
+D[0] => FourWayOneBitMultiplexer:inst3.D
+
+
+|FourWayFourBitMultiplexer|FourWayOneBitMultiplexer:inst3
+pin_name1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+S2 => inst6.IN0
+S2 => inst5.IN2
+S2 => inst2.IN2
+S1 => inst1.IN0
+S1 => inst3.IN1
+S1 => inst5.IN1
+C => inst3.IN0
+D => inst5.IN0
+B => inst2.IN0
+
+
+|FourWayFourBitMultiplexer|FourWayOneBitMultiplexer:inst2
+pin_name1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+S2 => inst6.IN0
+S2 => inst5.IN2
+S2 => inst2.IN2
+S1 => inst1.IN0
+S1 => inst3.IN1
+S1 => inst5.IN1
+C => inst3.IN0
+D => inst5.IN0
+B => inst2.IN0
+
+
+|FourWayFourBitMultiplexer|FourWayOneBitMultiplexer:inst
+pin_name1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+S2 => inst6.IN0
+S2 => inst5.IN2
+S2 => inst2.IN2
+S1 => inst1.IN0
+S1 => inst3.IN1
+S1 => inst5.IN1
+C => inst3.IN0
+D => inst5.IN0
+B => inst2.IN0
+
+
+|FourWayFourBitMultiplexer|FourWayOneBitMultiplexer:inst1
+pin_name1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+S2 => inst6.IN0
+S2 => inst5.IN2
+S2 => inst2.IN2
+S1 => inst1.IN0
+S1 => inst3.IN1
+S1 => inst5.IN1
+C => inst3.IN0
+D => inst5.IN0
+B => inst2.IN0
+
+

@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, D:/desktop/comARCH/quartus/DEMUX1I_2O/DEMUX1I_2O.bdf
+source_file = 1, D:/desktop/comARCH/quartus/DEMUX1I_2O/Waveform.vwf
+source_file = 1, D:/desktop/comARCH/quartus/DEMUX1I_2O/db/DEMUX1I_2O.cbx.xml
+design_name = DEMUX1I_2O
+instance = comp, \A~output , A~output, DEMUX1I_2O, 1
+instance = comp, \B~output , B~output, DEMUX1I_2O, 1
+instance = comp, \SEL~input , SEL~input, DEMUX1I_2O, 1
+instance = comp, \C~input , C~input, DEMUX1I_2O, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, DEMUX1I_2O, 1

@@ -1,0 +1,27 @@
+|MUX2bit2way
+C[0] <= MUX1BITS2WAY:inst1.C
+C[1] <= MUX1BITS2WAY:inst.C
+A[0] => MUX1BITS2WAY:inst1.A
+A[1] => MUX1BITS2WAY:inst.A
+SEL => MUX1BITS2WAY:inst.SEL
+SEL => MUX1BITS2WAY:inst1.SEL
+B[0] => MUX1BITS2WAY:inst1.B
+B[1] => MUX1BITS2WAY:inst.B
+
+
+|MUX2bit2way|MUX1BITS2WAY:inst
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+
+|MUX2bit2way|MUX1BITS2WAY:inst1
+C <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL => inst.IN0
+SEL => inst3.IN0
+B => inst.IN1
+A => inst1.IN0
+
+

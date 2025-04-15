@@ -1,0 +1,783 @@
+Analysis & Synthesis report for DATAPATH03
+Fri Oct 14 16:06:15 2022
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. General Register Statistics
+ 10. Source assignments for LPM_ROM:inst|altrom:srom|altsyncram:rom_block|altsyncram_3191:auto_generated
+ 11. Source assignments for LPM_ROM:inst8|altrom:srom|altsyncram:rom_block|altsyncram_3r81:auto_generated
+ 12. Parameter Settings for User Entity Instance: LPM_ROM:inst
+ 13. Parameter Settings for User Entity Instance: LPM_ROM:inst8
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Oct 14 16:06:15 2022       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; DATAPATH03                                  ;
+; Top-level Entity Name           ; DATAPATH03                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 136                                         ;
+; Total pins                      ; 144                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 896                                         ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEBA6U23I7       ;                    ;
+; Top-level entity name                                                           ; DATAPATH03         ; DATAPATH03         ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                       ;
++------------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                                     ; Library ;
++------------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; DATAPATH03.bdf                     ; yes             ; User Block Diagram/Schematic File        ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/DATAPATH03/DATAPATH03.bdf                                       ;         ;
+; ../../../../Downloads/InstrMem.mif ; yes             ; User Memory Initialization File          ; C:/Users/sneha/Downloads/InstrMem.mif                                                                            ;         ;
+; ../../../../Downloads/DataMem.mif  ; yes             ; User Memory Initialization File          ; C:/Users/sneha/Downloads/DataMem.mif                                                                             ;         ;
+; controlunit.bdf                    ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/controlunit/controlunit.bdf                                     ;         ;
+; lpm_rom.tdf                        ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf                                               ;         ;
+; altrom.inc                         ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                ;         ;
+; aglobal201.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                            ;         ;
+; altrom.tdf                         ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.tdf                                                ;         ;
+; memmodes.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/others/maxplus2/memmodes.inc                                            ;         ;
+; lpm_decode.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                            ;         ;
+; lpm_mux.inc                        ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                               ;         ;
+; altsyncram.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.inc                                            ;         ;
+; altsyncram.tdf                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                            ;         ;
+; stratix_ram_block.inc              ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                     ;         ;
+; a_rdenreg.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                             ;         ;
+; altram.inc                         ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                ;         ;
+; altdpram.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                              ;         ;
+; db/altsyncram_3191.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/DATAPATH03/db/altsyncram_3191.tdf                               ;         ;
+; pc8bit.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/pc8bit/pc8bit.bdf                                               ;         ;
+; reg8bit.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/reg8bit/reg8bit.bdf                                             ;         ;
+; mux8bit2way.bdf                    ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/mux8bit2way/mux8bit2way.bdf                                     ;         ;
+; mux_bus.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/mux_bus/mux_bus.bdf                                             ;         ;
+; mux1bits2way.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/mux1bits2way/mux1bits2way.bdf                                   ;         ;
+; eightbitadder.bdf                  ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/eightbitadder/eightbitadder.bdf                                 ;         ;
+; fulladder.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/lab2fulladder/fulladder.bdf                                     ;         ;
+; halfadder.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/lab2/halfadder.bdf                                              ;         ;
+; alu.bdf                            ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/alu/alu.bdf                                                     ;         ;
+; eightbitcomparator.bdf             ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/eightbitcomparator/eightbitcomparator.bdf                       ;         ;
+; fourbitcomparator.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/fourbitcomparator/fourbitcomparator.bdf                         ;         ;
+; comparator.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/comparator/comparator.bdf                                       ;         ;
+; fourwayeightbitmultiplexer.bdf     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/fourwayeightbitmultiplexer/fourwayeightbitmultiplexer.bdf       ;         ;
+; fourwayfourbitmultiplexer.bdf      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/fourwayfourbitmultiplexer/fourwayfourbitmultiplexer.bdf         ;         ;
+; fourwayonebitmultiplexer.bdf       ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/fourwayonebitmultiplexer/fourwayonebitmultiplexer.bdf           ;         ;
+; eightbitxor.bdf                    ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/bitwisexor/eightbitxor.bdf                                      ;         ;
+; rightshift.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/rightarithmeticshift/rightshift.bdf                             ;         ;
+; sixteenbyeightrf.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/sixteenbyeightrf/sixteenbyeightrf.bdf                           ;         ;
+; sixteenway8bitmux.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/sixteenway8bitmux/sixteenway8bitmux.bdf                         ;         ;
+; sixteenwayeightbitmultiplexer.bdf  ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/sixteenwayeightbitmultiplexer/sixteenwayeightbitmultiplexer.bdf ;         ;
+; fourtosixteendecoder.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/fourtosixteendecoder/fourtosixteendecoder.bdf                   ;         ;
+; decoder.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/decoder/decoder.bdf                                             ;         ;
+; db/altsyncram_3r81.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/DATAPATH03/db/altsyncram_3r81.tdf                               ;         ;
+; subtractor.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/subtractor/subtractor.bdf                                       ;         ;
++------------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 166       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 221       ;
+;     -- 7 input functions                    ; 2         ;
+;     -- 6 input functions                    ; 95        ;
+;     -- 5 input functions                    ; 55        ;
+;     -- 4 input functions                    ; 33        ;
+;     -- <=3 input functions                  ; 36        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 136       ;
+;                                             ;           ;
+; I/O pins                                    ; 144       ;
+; Total MLAB memory bits                      ; 0         ;
+; Total block memory bits                     ; 896       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 164       ;
+; Total fan-out                               ; 1948      ;
+; Average fan-out                             ; 2.89      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                            ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Entity Name                   ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
+; |DATAPATH03                                    ; 221 (1)             ; 136 (0)                   ; 896               ; 0          ; 144  ; 0            ; |DATAPATH03                                                                                                           ; DATAPATH03                    ; work         ;
+;    |ALU:inst7|                                 ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7                                                                                                 ; ALU                           ; work         ;
+;       |EightBitAdder:inst|                     ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst                                                                              ; EightBitAdder                 ; work         ;
+;          |fullAdder:inst1|                     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst1                                                              ; fullAdder                     ; work         ;
+;          |fullAdder:inst2|                     ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst2                                                              ; fullAdder                     ; work         ;
+;             |halfAdder:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst2|halfAdder:inst                                               ; halfAdder                     ; work         ;
+;          |fullAdder:inst3|                     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst3                                                              ; fullAdder                     ; work         ;
+;             |halfAdder:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst3|halfAdder:inst                                               ; halfAdder                     ; work         ;
+;          |fullAdder:inst4|                     ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst4                                                              ; fullAdder                     ; work         ;
+;             |halfAdder:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst4|halfAdder:inst                                               ; halfAdder                     ; work         ;
+;          |fullAdder:inst5|                     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst5                                                              ; fullAdder                     ; work         ;
+;             |halfAdder:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst5|halfAdder:inst                                               ; halfAdder                     ; work         ;
+;          |fullAdder:inst6|                     ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst6                                                              ; fullAdder                     ; work         ;
+;             |halfAdder:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst6|halfAdder:inst                                               ; halfAdder                     ; work         ;
+;          |fullAdder:inst7|                     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst7                                                              ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst7|halfAdder:inst2                                              ; halfAdder                     ; work         ;
+;          |fullAdder:inst|                      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitAdder:inst|fullAdder:inst                                                               ; fullAdder                     ; work         ;
+;       |EightBitComparator:inst2|               ; 11 (5)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitComparator:inst2                                                                        ; EightBitComparator            ; work         ;
+;          |FourBitComparator:inst1|             ; 3 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitComparator:inst2|FourBitComparator:inst1                                                ; FourBitComparator             ; work         ;
+;             |comparator:inst3|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitComparator:inst2|FourBitComparator:inst1|comparator:inst3                               ; comparator                    ; work         ;
+;          |FourBitComparator:inst|              ; 3 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitComparator:inst2|FourBitComparator:inst                                                 ; FourBitComparator             ; work         ;
+;             |comparator:inst3|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitComparator:inst2|FourBitComparator:inst|comparator:inst3                                ; comparator                    ; work         ;
+;       |EightBitXOR:inst8|                      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|EightBitXOR:inst8                                                                               ; EightBitXOR                   ; work         ;
+;       |FourWayEightBitMultiplexer:inst5|       ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|FourWayEightBitMultiplexer:inst5                                                                ; FourWayEightBitMultiplexer    ; work         ;
+;          |FourWayFourBitMultiplexer:inst2|     ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst2                                ; FourWayFourBitMultiplexer     ; work         ;
+;             |FourWayOneBitMultiplexer:inst1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst1 ; FourWayOneBitMultiplexer      ; work         ;
+;             |FourWayOneBitMultiplexer:inst2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst2 ; FourWayOneBitMultiplexer      ; work         ;
+;             |FourWayOneBitMultiplexer:inst3|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst3 ; FourWayOneBitMultiplexer      ; work         ;
+;             |FourWayOneBitMultiplexer:inst|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst  ; FourWayOneBitMultiplexer      ; work         ;
+;          |FourWayFourBitMultiplexer:inst|      ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst                                 ; FourWayFourBitMultiplexer     ; work         ;
+;             |FourWayOneBitMultiplexer:inst1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst|FourWayOneBitMultiplexer:inst1  ; FourWayOneBitMultiplexer      ; work         ;
+;             |FourWayOneBitMultiplexer:inst2|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst|FourWayOneBitMultiplexer:inst2  ; FourWayOneBitMultiplexer      ; work         ;
+;             |FourWayOneBitMultiplexer:inst3|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst|FourWayOneBitMultiplexer:inst3  ; FourWayOneBitMultiplexer      ; work         ;
+;             |FourWayOneBitMultiplexer:inst|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|ALU:inst7|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst|FourWayOneBitMultiplexer:inst   ; FourWayOneBitMultiplexer      ; work         ;
+;    |FourWayEightBitMultiplexer:inst5|          ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|FourWayEightBitMultiplexer:inst5                                                                          ; FourWayEightBitMultiplexer    ; work         ;
+;       |FourWayFourBitMultiplexer:inst2|        ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst2                                          ; FourWayFourBitMultiplexer     ; work         ;
+;          |FourWayOneBitMultiplexer:inst1|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst1           ; FourWayOneBitMultiplexer      ; work         ;
+;          |FourWayOneBitMultiplexer:inst2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst2           ; FourWayOneBitMultiplexer      ; work         ;
+;          |FourWayOneBitMultiplexer:inst3|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst3           ; FourWayOneBitMultiplexer      ; work         ;
+;          |FourWayOneBitMultiplexer:inst|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst            ; FourWayOneBitMultiplexer      ; work         ;
+;       |FourWayFourBitMultiplexer:inst|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst                                           ; FourWayFourBitMultiplexer     ; work         ;
+;          |FourWayOneBitMultiplexer:inst1|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst|FourWayOneBitMultiplexer:inst1            ; FourWayOneBitMultiplexer      ; work         ;
+;          |FourWayOneBitMultiplexer:inst2|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst|FourWayOneBitMultiplexer:inst2            ; FourWayOneBitMultiplexer      ; work         ;
+;          |FourWayOneBitMultiplexer:inst3|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst|FourWayOneBitMultiplexer:inst3            ; FourWayOneBitMultiplexer      ; work         ;
+;          |FourWayOneBitMultiplexer:inst|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst|FourWayOneBitMultiplexer:inst             ; FourWayOneBitMultiplexer      ; work         ;
+;    |MUX8bit2way:inst13|                        ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst13                                                                                        ; MUX8bit2way                   ; work         ;
+;       |MUX_bus:inst1|                          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst13|MUX_bus:inst1                                                                          ; MUX_bus                       ; work         ;
+;          |MUX1BITS2WAY:inst1|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst13|MUX_bus:inst1|MUX1BITS2WAY:inst1                                                       ; MUX1BITS2WAY                  ; work         ;
+;          |MUX1BITS2WAY:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst13|MUX_bus:inst1|MUX1BITS2WAY:inst2                                                       ; MUX1BITS2WAY                  ; work         ;
+;          |MUX1BITS2WAY:inst3|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst13|MUX_bus:inst1|MUX1BITS2WAY:inst3                                                       ; MUX1BITS2WAY                  ; work         ;
+;          |MUX1BITS2WAY:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst13|MUX_bus:inst1|MUX1BITS2WAY:inst                                                        ; MUX1BITS2WAY                  ; work         ;
+;       |MUX_bus:inst|                           ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst13|MUX_bus:inst                                                                           ; MUX_bus                       ; work         ;
+;          |MUX1BITS2WAY:inst1|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst13|MUX_bus:inst|MUX1BITS2WAY:inst1                                                        ; MUX1BITS2WAY                  ; work         ;
+;          |MUX1BITS2WAY:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst13|MUX_bus:inst|MUX1BITS2WAY:inst2                                                        ; MUX1BITS2WAY                  ; work         ;
+;          |MUX1BITS2WAY:inst3|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst13|MUX_bus:inst|MUX1BITS2WAY:inst3                                                        ; MUX1BITS2WAY                  ; work         ;
+;          |MUX1BITS2WAY:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst13|MUX_bus:inst|MUX1BITS2WAY:inst                                                         ; MUX1BITS2WAY                  ; work         ;
+;    |MUX8bit2way:inst6|                         ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst6                                                                                         ; MUX8bit2way                   ; work         ;
+;       |MUX_bus:inst1|                          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst6|MUX_bus:inst1                                                                           ; MUX_bus                       ; work         ;
+;          |MUX1BITS2WAY:inst1|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst6|MUX_bus:inst1|MUX1BITS2WAY:inst1                                                        ; MUX1BITS2WAY                  ; work         ;
+;          |MUX1BITS2WAY:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst6|MUX_bus:inst1|MUX1BITS2WAY:inst2                                                        ; MUX1BITS2WAY                  ; work         ;
+;          |MUX1BITS2WAY:inst3|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst6|MUX_bus:inst1|MUX1BITS2WAY:inst3                                                        ; MUX1BITS2WAY                  ; work         ;
+;          |MUX1BITS2WAY:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst6|MUX_bus:inst1|MUX1BITS2WAY:inst                                                         ; MUX1BITS2WAY                  ; work         ;
+;       |MUX_bus:inst|                           ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst6|MUX_bus:inst                                                                            ; MUX_bus                       ; work         ;
+;          |MUX1BITS2WAY:inst1|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst6|MUX_bus:inst|MUX1BITS2WAY:inst1                                                         ; MUX1BITS2WAY                  ; work         ;
+;          |MUX1BITS2WAY:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst6|MUX_bus:inst|MUX1BITS2WAY:inst2                                                         ; MUX1BITS2WAY                  ; work         ;
+;          |MUX1BITS2WAY:inst3|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst6|MUX_bus:inst|MUX1BITS2WAY:inst3                                                         ; MUX1BITS2WAY                  ; work         ;
+;          |MUX1BITS2WAY:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|MUX8bit2way:inst6|MUX_bus:inst|MUX1BITS2WAY:inst                                                          ; MUX1BITS2WAY                  ; work         ;
+;    |PC8bit:inst2|                              ; 12 (0)              ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2                                                                                              ; PC8bit                        ; work         ;
+;       |EightBitAdder:inst3|                    ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3                                                                          ; EightBitAdder                 ; work         ;
+;          |fullAdder:inst1|                     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst1                                                          ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst1|halfAdder:inst2                                          ; halfAdder                     ; work         ;
+;          |fullAdder:inst2|                     ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst2                                                          ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst2|halfAdder:inst2                                          ; halfAdder                     ; work         ;
+;          |fullAdder:inst3|                     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst3                                                          ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst3|halfAdder:inst2                                          ; halfAdder                     ; work         ;
+;          |fullAdder:inst4|                     ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst4                                                          ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst4|halfAdder:inst2                                          ; halfAdder                     ; work         ;
+;          |fullAdder:inst5|                     ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst5                                                          ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst5|halfAdder:inst2                                          ; halfAdder                     ; work         ;
+;             |halfAdder:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst5|halfAdder:inst                                           ; halfAdder                     ; work         ;
+;          |fullAdder:inst6|                     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst6                                                          ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst6|halfAdder:inst2                                          ; halfAdder                     ; work         ;
+;          |fullAdder:inst7|                     ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst7                                                          ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst7|halfAdder:inst2                                          ; halfAdder                     ; work         ;
+;          |fullAdder:inst|                      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst                                                           ; fullAdder                     ; work         ;
+;             |halfAdder:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst|halfAdder:inst                                            ; halfAdder                     ; work         ;
+;       |reg8bit:inst|                           ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|PC8bit:inst2|reg8bit:inst                                                                                 ; reg8bit                       ; work         ;
+;    |SixteenByEightRF:inst1|                    ; 114 (16)            ; 128 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1                                                                                    ; SixteenByEightRF              ; work         ;
+;       |SixteenWay8BitMUX:inst61|               ; 46 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61                                                           ; SixteenWay8BitMUX             ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst3| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst3                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst4| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst4                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst5| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst5                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst6| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst6                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst7| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst7                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst8| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst8                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst9| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst9                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst|  ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst                        ; SixteenWayEightBitMultiplexer ; work         ;
+;       |SixteenWay8BitMUX:inst62|               ; 52 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62                                                           ; SixteenWay8BitMUX             ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst3| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62|SixteenWayEightBitMultiplexer:inst3                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst4| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62|SixteenWayEightBitMultiplexer:inst4                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst5| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62|SixteenWayEightBitMultiplexer:inst5                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst6| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62|SixteenWayEightBitMultiplexer:inst6                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst7| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62|SixteenWayEightBitMultiplexer:inst7                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst8| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62|SixteenWayEightBitMultiplexer:inst8                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst9| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62|SixteenWayEightBitMultiplexer:inst9                       ; SixteenWayEightBitMultiplexer ; work         ;
+;          |SixteenWayEightBitMultiplexer:inst|  ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62|SixteenWayEightBitMultiplexer:inst                        ; SixteenWayEightBitMultiplexer ; work         ;
+;       |reg8bit:inst66|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst66                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst67|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst67                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst68|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst68                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst69|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst69                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst70|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst70                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst71|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst71                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst73|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst73                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst75|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst75                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst76|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst76                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst77|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst77                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst78|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst78                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst79|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst79                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst80|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst80                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst81|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst81                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst83|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst83                                                                     ; reg8bit                       ; work         ;
+;       |reg8bit:inst|                           ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|SixteenByEightRF:inst1|reg8bit:inst                                                                       ; reg8bit                       ; work         ;
+;    |Subtractor:inst10|                         ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10                                                                                         ; Subtractor                    ; work         ;
+;       |EightBitAdder:inst|                     ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst                                                                      ; EightBitAdder                 ; work         ;
+;          |fullAdder:inst1|                     ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst1                                                      ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst1|halfAdder:inst2                                      ; halfAdder                     ; work         ;
+;          |fullAdder:inst2|                     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst2                                                      ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst2|halfAdder:inst2                                      ; halfAdder                     ; work         ;
+;          |fullAdder:inst3|                     ; 3 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst3                                                      ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst3|halfAdder:inst2                                      ; halfAdder                     ; work         ;
+;             |halfAdder:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst3|halfAdder:inst                                       ; halfAdder                     ; work         ;
+;          |fullAdder:inst4|                     ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst4                                                      ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst4|halfAdder:inst2                                      ; halfAdder                     ; work         ;
+;             |halfAdder:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst4|halfAdder:inst                                       ; halfAdder                     ; work         ;
+;          |fullAdder:inst5|                     ; 3 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst5                                                      ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst5|halfAdder:inst2                                      ; halfAdder                     ; work         ;
+;             |halfAdder:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst5|halfAdder:inst                                       ; halfAdder                     ; work         ;
+;          |fullAdder:inst6|                     ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst6                                                      ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst6|halfAdder:inst2                                      ; halfAdder                     ; work         ;
+;             |halfAdder:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst6|halfAdder:inst                                       ; halfAdder                     ; work         ;
+;          |fullAdder:inst7|                     ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst7                                                      ; fullAdder                     ; work         ;
+;             |halfAdder:inst2|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst7|halfAdder:inst2                                      ; halfAdder                     ; work         ;
+;          |fullAdder:inst|                      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst                                                       ; fullAdder                     ; work         ;
+;             |halfAdder:inst|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitAdder:inst|fullAdder:inst|halfAdder:inst                                        ; halfAdder                     ; work         ;
+;       |EightBitXOR:inst2|                      ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|Subtractor:inst10|EightBitXOR:inst2                                                                       ; EightBitXOR                   ; work         ;
+;    |controlUNIT:inst3|                         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DATAPATH03|controlUNIT:inst3                                                                                         ; controlUNIT                   ; work         ;
+;    |lpm_rom:inst8|                             ; 0 (0)               ; 0 (0)                     ; 256               ; 0          ; 0    ; 0            ; |DATAPATH03|lpm_rom:inst8                                                                                             ; lpm_rom                       ; work         ;
+;       |altrom:srom|                            ; 0 (0)               ; 0 (0)                     ; 256               ; 0          ; 0    ; 0            ; |DATAPATH03|lpm_rom:inst8|altrom:srom                                                                                 ; altrom                        ; work         ;
+;          |altsyncram:rom_block|                ; 0 (0)               ; 0 (0)                     ; 256               ; 0          ; 0    ; 0            ; |DATAPATH03|lpm_rom:inst8|altrom:srom|altsyncram:rom_block                                                            ; altsyncram                    ; work         ;
+;             |altsyncram_3r81:auto_generated|   ; 0 (0)               ; 0 (0)                     ; 256               ; 0          ; 0    ; 0            ; |DATAPATH03|lpm_rom:inst8|altrom:srom|altsyncram:rom_block|altsyncram_3r81:auto_generated                             ; altsyncram_3r81               ; work         ;
+;    |lpm_rom:inst|                              ; 0 (0)               ; 0 (0)                     ; 640               ; 0          ; 0    ; 0            ; |DATAPATH03|lpm_rom:inst                                                                                              ; lpm_rom                       ; work         ;
+;       |altrom:srom|                            ; 0 (0)               ; 0 (0)                     ; 640               ; 0          ; 0    ; 0            ; |DATAPATH03|lpm_rom:inst|altrom:srom                                                                                  ; altrom                        ; work         ;
+;          |altsyncram:rom_block|                ; 0 (0)               ; 0 (0)                     ; 640               ; 0          ; 0    ; 0            ; |DATAPATH03|lpm_rom:inst|altrom:srom|altsyncram:rom_block                                                             ; altsyncram                    ; work         ;
+;             |altsyncram_3191:auto_generated|   ; 0 (0)               ; 0 (0)                     ; 640               ; 0          ; 0    ; 0            ; |DATAPATH03|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3191:auto_generated                              ; altsyncram_3191               ; work         ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                  ;
++------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------------------+
+; Name                                                                                     ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                   ;
++------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------------------+
+; lpm_rom:inst8|altrom:srom|altsyncram:rom_block|altsyncram_3r81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 32           ; 8            ; --           ; --           ; 256  ; C:/Users/sneha/Downloads/DataMem.mif  ;
+; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3191:auto_generated|ALTSYNCRAM  ; AUTO ; ROM  ; 32           ; 20           ; --           ; --           ; 640  ; C:/Users/sneha/Downloads/InstrMem.mif ;
++------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 136   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 136   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for LPM_ROM:inst|altrom:srom|altsyncram:rom_block|altsyncram_3191:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------+
+; Assignment                      ; Value              ; From ; To                                    ;
++---------------------------------+--------------------+------+---------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
++---------------------------------+--------------------+------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Source assignments for LPM_ROM:inst8|altrom:srom|altsyncram:rom_block|altsyncram_3r81:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                     ;
++---------------------------------+--------------------+------+----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                      ;
++---------------------------------+--------------------+------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_ROM:inst                       ;
++------------------------+---------------------------------------+----------------+
+; Parameter Name         ; Value                                 ; Type           ;
++------------------------+---------------------------------------+----------------+
+; LPM_WIDTH              ; 20                                    ; Untyped        ;
+; LPM_WIDTHAD            ; 5                                     ; Untyped        ;
+; LPM_NUMWORDS           ; 32                                    ; Untyped        ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED                            ; Untyped        ;
+; LPM_OUTDATA            ; UNREGISTERED                          ; Untyped        ;
+; LPM_FILE               ; C:/Users/sneha/Downloads/InstrMem.mif ; Untyped        ;
+; DEVICE_FAMILY          ; Cyclone V                             ; Untyped        ;
+; AUTO_CARRY_CHAINS      ; ON                                    ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS   ; OFF                                   ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS    ; ON                                    ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS ; OFF                                   ; IGNORE_CASCADE ;
++------------------------+---------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_ROM:inst8                     ;
++------------------------+--------------------------------------+----------------+
+; Parameter Name         ; Value                                ; Type           ;
++------------------------+--------------------------------------+----------------+
+; LPM_WIDTH              ; 8                                    ; Untyped        ;
+; LPM_WIDTHAD            ; 5                                    ; Untyped        ;
+; LPM_NUMWORDS           ; 32                                   ; Untyped        ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED                           ; Untyped        ;
+; LPM_OUTDATA            ; UNREGISTERED                         ; Untyped        ;
+; LPM_FILE               ; C:/Users/sneha/Downloads/DataMem.mif ; Untyped        ;
+; DEVICE_FAMILY          ; Cyclone V                            ; Untyped        ;
+; AUTO_CARRY_CHAINS      ; ON                                   ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS   ; OFF                                  ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS    ; ON                                   ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS ; OFF                                  ; IGNORE_CASCADE ;
++------------------------+--------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 136                         ;
+;     ENA               ; 128                         ;
+;     ENA SLD           ; 8                           ;
+; arriav_lcell_comb     ; 223                         ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 221                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 21                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 33                          ;
+;         5 data inputs ; 55                          ;
+;         6 data inputs ; 95                          ;
+; boundary_port         ; 144                         ;
+; stratixv_ram_block    ; 28                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 5.13                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Fri Oct 14 16:06:03 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DATAPATH03 -c DATAPATH03
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file datapath03.bdf
+    Info (12023): Found entity 1: DATAPATH03
+Info (12127): Elaborating entity "DATAPATH03" for the top level hierarchy
+Warning (275085): Found inconsistent dimensions for element "branch"
+Warning (275080): Converted elements in bus name "BRANCH" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "BRANCH[7..0]" to "BRANCH7..0"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/controlunit/controlunit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: controlUNIT
+Info (12128): Elaborating entity "controlUNIT" for hierarchy "controlUNIT:inst3"
+Info (12128): Elaborating entity "LPM_ROM" for hierarchy "LPM_ROM:inst"
+Info (12130): Elaborated megafunction instantiation "LPM_ROM:inst"
+Info (12133): Instantiated megafunction "LPM_ROM:inst" with the following parameter:
+    Info (12134): Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info (12134): Parameter "LPM_FILE" = "C:/Users/sneha/Downloads/InstrMem.mif"
+    Info (12134): Parameter "LPM_NUMWORDS" = "32"
+    Info (12134): Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info (12134): Parameter "LPM_WIDTH" = "20"
+    Info (12134): Parameter "LPM_WIDTHAD" = "5"
+Info (12128): Elaborating entity "altrom" for hierarchy "LPM_ROM:inst|altrom:srom" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
+Info (12131): Elaborated megafunction instantiation "LPM_ROM:inst|altrom:srom", which is child of megafunction instantiation "LPM_ROM:inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
+Info (12128): Elaborating entity "altsyncram" for hierarchy "LPM_ROM:inst|altrom:srom|altsyncram:rom_block" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.tdf Line: 89
+Info (12131): Elaborated megafunction instantiation "LPM_ROM:inst|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "LPM_ROM:inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.tdf Line: 89
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3191.tdf
+    Info (12023): Found entity 1: altsyncram_3191 File: C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/DATAPATH03/db/altsyncram_3191.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_3191" for hierarchy "LPM_ROM:inst|altrom:srom|altsyncram:rom_block|altsyncram_3191:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/pc8bit/pc8bit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: PC8bit
+Info (12128): Elaborating entity "PC8bit" for hierarchy "PC8bit:inst2"
+Warning (275008): Primitive "GND" of instance "inst4" not used
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/reg8bit/reg8bit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: reg8bit
+Info (12128): Elaborating entity "reg8bit" for hierarchy "PC8bit:inst2|reg8bit:inst"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/mux8bit2way/mux8bit2way.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MUX8bit2way
+Info (12128): Elaborating entity "MUX8bit2way" for hierarchy "PC8bit:inst2|MUX8bit2way:inst2"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/mux_bus/mux_bus.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MUX_bus
+Info (12128): Elaborating entity "MUX_bus" for hierarchy "PC8bit:inst2|MUX8bit2way:inst2|MUX_bus:inst"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/mux1bits2way/mux1bits2way.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MUX1BITS2WAY
+Info (12128): Elaborating entity "MUX1BITS2WAY" for hierarchy "PC8bit:inst2|MUX8bit2way:inst2|MUX_bus:inst|MUX1BITS2WAY:inst"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/eightbitadder/eightbitadder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: EightBitAdder
+Info (12128): Elaborating entity "EightBitAdder" for hierarchy "PC8bit:inst2|EightBitAdder:inst3"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/lab2fulladder/fulladder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: fullAdder
+Info (12128): Elaborating entity "fullAdder" for hierarchy "PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst7"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/lab2/halfadder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: halfAdder
+Info (12128): Elaborating entity "halfAdder" for hierarchy "PC8bit:inst2|EightBitAdder:inst3|fullAdder:inst7|halfAdder:inst2"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/alu/alu.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALU
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst7"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/eightbitcomparator/eightbitcomparator.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: EightBitComparator
+Info (12128): Elaborating entity "EightBitComparator" for hierarchy "ALU:inst7|EightBitComparator:inst2"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/fourbitcomparator/fourbitcomparator.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: FourBitComparator
+Info (12128): Elaborating entity "FourBitComparator" for hierarchy "ALU:inst7|EightBitComparator:inst2|FourBitComparator:inst"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/comparator/comparator.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: comparator
+Info (12128): Elaborating entity "comparator" for hierarchy "ALU:inst7|EightBitComparator:inst2|FourBitComparator:inst|comparator:inst"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/fourwayeightbitmultiplexer/fourwayeightbitmultiplexer.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: FourWayEightBitMultiplexer
+Info (12128): Elaborating entity "FourWayEightBitMultiplexer" for hierarchy "ALU:inst7|FourWayEightBitMultiplexer:inst5"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/fourwayfourbitmultiplexer/fourwayfourbitmultiplexer.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: FourWayFourBitMultiplexer
+Info (12128): Elaborating entity "FourWayFourBitMultiplexer" for hierarchy "ALU:inst7|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst2"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/fourwayonebitmultiplexer/fourwayonebitmultiplexer.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: FourWayOneBitMultiplexer
+Info (12128): Elaborating entity "FourWayOneBitMultiplexer" for hierarchy "ALU:inst7|FourWayEightBitMultiplexer:inst5|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst3"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/bitwisexor/eightbitxor.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: EightBitXOR
+Info (12128): Elaborating entity "EightBitXOR" for hierarchy "ALU:inst7|EightBitXOR:inst8"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/rightarithmeticshift/rightshift.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: RightShift
+Info (12128): Elaborating entity "RightShift" for hierarchy "ALU:inst7|RightShift:inst4"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/sixteenbyeightrf/sixteenbyeightrf.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: SixteenByEightRF
+Info (12128): Elaborating entity "SixteenByEightRF" for hierarchy "SixteenByEightRF:inst1"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/sixteenway8bitmux/sixteenway8bitmux.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: SixteenWay8BitMUX
+Info (12128): Elaborating entity "SixteenWay8BitMUX" for hierarchy "SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61"
+Warning (275011): Block or symbol "SixteenWayEightBitMultiplexer" of instance "inst7" overlaps another block or symbol
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/sixteenwayeightbitmultiplexer/sixteenwayeightbitmultiplexer.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: SixteenWayEightBitMultiplexer
+Info (12128): Elaborating entity "SixteenWayEightBitMultiplexer" for hierarchy "SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst"
+Warning (275011): Block or symbol "AND2" of instance "inst25" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst30" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst31" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst33" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst35" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst38" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst41" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst44" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst47" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst50" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst53" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst56" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst59" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst62" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst65" overlaps another block or symbol
+Warning (275011): Block or symbol "AND3" of instance "inst68" overlaps another block or symbol
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/fourtosixteendecoder/fourtosixteendecoder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: FourToSixteenDecoder
+Info (12128): Elaborating entity "FourToSixteenDecoder" for hierarchy "SixteenByEightRF:inst1|FourToSixteenDecoder:inst100"
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/decoder/decoder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Decoder
+Info (12128): Elaborating entity "Decoder" for hierarchy "SixteenByEightRF:inst1|FourToSixteenDecoder:inst100|Decoder:inst"
+Info (12128): Elaborating entity "LPM_ROM" for hierarchy "LPM_ROM:inst8"
+Info (12130): Elaborated megafunction instantiation "LPM_ROM:inst8"
+Info (12133): Instantiated megafunction "LPM_ROM:inst8" with the following parameter:
+    Info (12134): Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info (12134): Parameter "LPM_FILE" = "C:/Users/sneha/Downloads/DataMem.mif"
+    Info (12134): Parameter "LPM_NUMWORDS" = "32"
+    Info (12134): Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_WIDTHAD" = "5"
+Info (12128): Elaborating entity "altrom" for hierarchy "LPM_ROM:inst8|altrom:srom" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
+Info (12131): Elaborated megafunction instantiation "LPM_ROM:inst8|altrom:srom", which is child of megafunction instantiation "LPM_ROM:inst8" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
+Info (12128): Elaborating entity "altsyncram" for hierarchy "LPM_ROM:inst8|altrom:srom|altsyncram:rom_block" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.tdf Line: 89
+Info (12131): Elaborated megafunction instantiation "LPM_ROM:inst8|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "LPM_ROM:inst8" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.tdf Line: 89
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3r81.tdf
+    Info (12023): Found entity 1: altsyncram_3r81 File: C:/Users/sneha/OneDrive/Documents/DATAPATH01comp/DATAPATH03/db/altsyncram_3r81.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_3r81" for hierarchy "LPM_ROM:inst8|altrom:srom|altsyncram:rom_block|altsyncram_3r81:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (12125): Using design file /users/sneha/onedrive/documents/datapath01comp/subtractor/subtractor.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Subtractor
+Info (12128): Elaborating entity "Subtractor" for hierarchy "Subtractor:inst10"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "lpm_rom:inst8|otri[7]" feeding internal logic into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:inst8|otri[6]" feeding internal logic into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:inst8|otri[5]" feeding internal logic into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:inst8|otri[4]" feeding internal logic into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:inst8|otri[3]" feeding internal logic into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:inst8|otri[2]" feeding internal logic into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:inst8|otri[1]" feeding internal logic into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:inst8|otri[0]" feeding internal logic into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+Warning (13044): Always-enabled tri-state buffer(s) removed
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[3]" to the node "INSTRUCTION[3]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[3]" to the node "OPCODE[3]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[2]" to the node "INSTRUCTION[2]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[2]" to the node "OPCODE[2]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[1]" to the node "INSTRUCTION[1]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[1]" to the node "OPCODE[1]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[1]" to the node "WDSEL[1]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[0]" to the node "INSTRUCTION[0]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[0]" to the node "OPCODE[0]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[0]" to the node "WDSEL[0]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[13]" to the node "INSTRUCTION[13]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[13]" to the node "LUI[5]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[13]" to the node "RA1[3]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[12]" to the node "INSTRUCTION[12]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[12]" to the node "LUI[4]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[12]" to the node "RA1[2]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[11]" to the node "INSTRUCTION[11]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[11]" to the node "LUI[3]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[11]" to the node "RA1[1]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[10]" to the node "INSTRUCTION[10]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[10]" to the node "LUI[2]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[10]" to the node "RA1[0]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[17]" to the node "BIMM[3]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[17]" to the node "INSTRUCTION[17]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[17]" to the node "RA2[3]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[16]" to the node "BIMM[2]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[16]" to the node "INSTRUCTION[16]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[16]" to the node "RA2[2]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "BIMM[1]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "INSTRUCTION[15]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "LUI[7]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "RA2[1]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[14]" to the node "BIMM[0]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[14]" to the node "INSTRUCTION[14]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[14]" to the node "LUI[6]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[14]" to the node "RA2[0]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[19]" to the node "ADDORSUB" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[19]" to the node "BIMM[5]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[19]" to the node "INSTRUCTION[19]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[18]" to the node "BIMM[4]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[18]" to the node "INSTRUCTION[18]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[18]" to the node "BRIMM[6]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[9]" to the node "ALUSEL[1]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[9]" to the node "INSTRUCTION[9]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[9]" to the node "LUI[1]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[9]" to the node "BRIMM[5]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[8]" to the node "ALUSEL[0]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[8]" to the node "INSTRUCTION[8]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[8]" to the node "LUI[0]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[8]" to the node "BRIMM[4]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[7]" to the node "INSTRUCTION[7]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[7]" to the node "WA[3]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[7]" to the node "BRIMM[3]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[6]" to the node "INSTRUCTION[6]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[6]" to the node "WA[2]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[6]" to the node "BRIMM[2]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[5]" to the node "INSTRUCTION[5]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[5]" to the node "WA[1]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[5]" to the node "BRIMM[1]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[4]" to the node "INSTRUCTION[4]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[4]" to the node "WA[0]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[4]" to the node "BRIMM[0]" into a wire File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[3]" to the node "controlUNIT:inst3|inst4" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[2]" to the node "controlUNIT:inst3|inst7" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[1]" to the node "controlUNIT:inst3|inst8" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[0]" to the node "controlUNIT:inst3|inst5" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[13]" to the node "SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst|inst43" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[12]" to the node "SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst|inst43" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[11]" to the node "SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst5|inst25" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[10]" to the node "SixteenByEightRF:inst1|SixteenWay8BitMUX:inst61|SixteenWayEightBitMultiplexer:inst5|inst25" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[17]" to the node "SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62|SixteenWayEightBitMultiplexer:inst|inst43" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[16]" to the node "SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62|SixteenWayEightBitMultiplexer:inst|inst43" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[15]" to the node "SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62|SixteenWayEightBitMultiplexer:inst9|inst36" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[14]" to the node "SixteenByEightRF:inst1|SixteenWay8BitMUX:inst62|SixteenWayEightBitMultiplexer:inst9|inst36" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[19]" to the node "Subtractor:inst10|EightBitXOR:inst2|inst1" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[18]" to the node "Subtractor:inst10|EightBitXOR:inst2|inst1" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[9]" to the node "Subtractor:inst10|EightBitXOR:inst2|inst2" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[8]" to the node "ALU:inst7|EightBitXOR:inst8|inst1" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[7]" to the node "Subtractor:inst10|EightBitXOR:inst2|inst4" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[6]" to the node "Subtractor:inst10|EightBitXOR:inst2|inst5" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[5]" to the node "Subtractor:inst10|EightBitXOR:inst2|inst6" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[4]" to the node "SixteenByEightRF:inst1|FourToSixteenDecoder:inst100|Decoder:inst2|inst2" into an OR gate File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "BRIMM[7]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 521 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 135 output pins
+    Info (21061): Implemented 349 logic cells
+    Info (21064): Implemented 28 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 141 warnings
+    Info: Peak virtual memory: 4839 megabytes
+    Info: Processing ended: Fri Oct 14 16:06:15 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:24
+
+

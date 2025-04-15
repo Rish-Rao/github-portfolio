@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/desktop/comARCH/quartus/MUX16/simulation/qsim
+vMUX16
+Z1 !s110 1665143627
+!i10b 1
+!s100 BQGFMkTzdSX@<PaCJ3lbT2
+I=kCz4Ccz6d0`C@m2SHC_U1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1665143623
+8MUX16.vo
+FMUX16.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1665143627.000000
+!s107 MUX16.vo|
+!s90 -work|work|MUX16.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@m@u@x16
+vMUX16_vlg_vec_tst
+R1
+!i10b 1
+!s100 5d<VLP9B4?cgmzRKk:d5`0
+IB>m3?PSiUPl4R<b[T>FWX2
+R2
+R0
+w1665143620
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6
+n@m@u@x16_vlg_vec_tst

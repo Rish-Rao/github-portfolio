@@ -1,0 +1,332 @@
+$comment
+	File created using the following command:
+		vcd file dcdr4bit.msim.vcd -direction
+$end
+$date
+	Tue Oct 04 16:24:03 2022
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module dcdr4bit_vlg_vec_tst $end
+$var reg 4 ! ADDR [3:0] $end
+$var reg 1 " REGWRITE $end
+$var wire 1 # EN0000 $end
+$var wire 1 $ EN0001 $end
+$var wire 1 % EN0010 $end
+$var wire 1 & EN0011 $end
+$var wire 1 ' EN0100 $end
+$var wire 1 ( EN0101 $end
+$var wire 1 ) EN0110 $end
+$var wire 1 * EN0111 $end
+$var wire 1 + EN1000 $end
+$var wire 1 , EN1001 $end
+$var wire 1 - EN1010 $end
+$var wire 1 . EN1011 $end
+$var wire 1 / EN1100 $end
+$var wire 1 0 EN1101 $end
+$var wire 1 1 EN1110 $end
+$var wire 1 2 EN1111 $end
+
+$scope module i1 $end
+$var wire 1 3 gnd $end
+$var wire 1 4 vcc $end
+$var wire 1 5 unknown $end
+$var tri1 1 6 devclrn $end
+$var tri1 1 7 devpor $end
+$var tri1 1 8 devoe $end
+$var wire 1 9 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 : ADDR[1]~input_o $end
+$var wire 1 ; ADDR[2]~input_o $end
+$var wire 1 < ADDR[3]~input_o $end
+$var wire 1 = REGWRITE~input_o $end
+$var wire 1 > ADDR[0]~input_o $end
+$var wire 1 ? inst10~combout $end
+$var wire 1 @ inst11~0_combout $end
+$var wire 1 A inst12~combout $end
+$var wire 1 B inst13~0_combout $end
+$var wire 1 C inst14~0_combout $end
+$var wire 1 D inst15~0_combout $end
+$var wire 1 E inst16~0_combout $end
+$var wire 1 F inst17~0_combout $end
+$var wire 1 G inst18~combout $end
+$var wire 1 H inst19~0_combout $end
+$var wire 1 I inst20~combout $end
+$var wire 1 J inst21~0_combout $end
+$var wire 1 K inst22~0_combout $end
+$var wire 1 L inst23~0_combout $end
+$var wire 1 M inst24~0_combout $end
+$var wire 1 N inst25~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+1"
+1#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+0,
+0-
+0.
+0/
+00
+01
+02
+03
+14
+x5
+16
+17
+18
+09
+0:
+0;
+0<
+1=
+0>
+0?
+0@
+1A
+0B
+0C
+0D
+0E
+0F
+1G
+0H
+1I
+0J
+0K
+0L
+0M
+0N
+$end
+#31250
+b1 !
+1>
+1?
+1@
+1$
+0#
+#62500
+b11 !
+b10 !
+0>
+1:
+0A
+0@
+0$
+1%
+#93750
+b11 !
+1>
+1A
+1B
+1&
+0%
+#125000
+b111 !
+b101 !
+b100 !
+0>
+0:
+1;
+1C
+0B
+0&
+1'
+#156250
+b101 !
+1>
+1D
+0C
+0'
+1(
+#187500
+b111 !
+b110 !
+0>
+1:
+1E
+0D
+0(
+1)
+#218750
+b111 !
+1>
+1F
+0E
+0)
+1*
+#250000
+b1111 !
+b1011 !
+b1001 !
+b1000 !
+0>
+0:
+0;
+1<
+0G
+0F
+0*
+1+
+#281250
+b1001 !
+1>
+1G
+1H
+1,
+0+
+#312500
+b1011 !
+b1010 !
+0>
+1:
+0I
+0H
+0,
+1-
+#343750
+b1011 !
+1>
+1I
+1J
+1.
+0-
+#375000
+b1111 !
+b1101 !
+b1100 !
+0>
+0:
+1;
+1K
+0J
+0.
+1/
+#406250
+b1101 !
+1>
+1L
+0K
+0/
+10
+#437500
+b1111 !
+b1110 !
+0>
+1:
+1M
+0L
+00
+11
+#468750
+b1111 !
+1>
+1N
+0M
+01
+12
+#500000
+b111 !
+b11 !
+b1 !
+b0 !
+0>
+0:
+0;
+0<
+0?
+0N
+02
+1#
+#531250
+b1 !
+1>
+1?
+1@
+1$
+0#
+#550000
+0"
+0=
+0@
+0$
+#562500
+b11 !
+b10 !
+0>
+1:
+#593750
+b11 !
+1>
+#625000
+b111 !
+b101 !
+b100 !
+0>
+0:
+1;
+#656250
+b101 !
+1>
+#687500
+b111 !
+b110 !
+0>
+1:
+#718750
+b111 !
+1>
+#750000
+b1111 !
+b1011 !
+b1001 !
+b1000 !
+0>
+0:
+0;
+1<
+#781250
+b1001 !
+1>
+#812500
+b1011 !
+b1010 !
+0>
+1:
+#843750
+b1011 !
+1>
+#875000
+b1111 !
+b1101 !
+b1100 !
+0>
+0:
+1;
+#906250
+b1101 !
+1>
+#937500
+b1111 !
+b1110 !
+0>
+1:
+#968750
+b1111 !
+1>
+#1000000

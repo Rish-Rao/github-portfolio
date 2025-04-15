@@ -1,0 +1,70 @@
+﻿@model List<Customer>
+@using MCBAAdmin.Models;
+@using static MCBAAdmin.Utils.HelperMethods;
+@{
+    ViewData["Title"] = "Customer";
+}
+
+
+<div style="padding-left:50px">
+
+    <h3>Customers</h3>
+
+    <p>
+        <!-- Account Details -->
+        <table class="table table-sm table-striped">
+
+            <tr>
+                <th class="text-left">@Html.DisplayNameFor(x => x[0].CustomerID)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].Name)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].TFN)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].Address)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].City)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].State)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].Postcode)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].Mobile)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].AccountState)</th>
+                <th class="text-center">Option</th>
+            </tr>
+
+            @foreach (var customer in Model)
+             {
+                <tr>
+                    @{
+                        var tfn = customer.TFN == null ? "n/a" : customer.TFN;
+                        var address = customer.Address == null ? "n/a" : customer.Address;
+                        var city = customer.City == null ? "n/a" : customer.City;
+                        var state = customer.State == null ? "n/a" : customer.State;
+                        var postcode = customer.Postcode == null ? "n/a" : customer.Postcode;
+                        var mobile = customer.Mobile == null ? "n/a" : customer.Mobile;
+
+                    }
+                    <td class="text-left">@customer.CustomerID</td>
+                    <td class="text-center">@customer.Name</td>
+                    <td class="text-center">@tfn</td>
+                    <td class="text-center">@address</td>
+                    <td class="text-center">@city</td>
+                    <td class="text-center">@state</td>
+                    <td class="text-center">@postcode</td>
+                    <td class="text-center">@mobile</td>
+                    <td class="text-center">@customer.AccountState.AccountstateToString()</td>
+
+                    <td class="col-2" text-center">
+
+                        <a class="btn btn-outline-secondary"
+                           asp-action="Edit" asp-route-id="@customer.CustomerID">Edit</a>
+
+                        <form asp-action="LockUnlock" style="display:inline;">
+                            <input type="hidden" name="customerID" value="@customer.CustomerID" />
+                            <input type="submit" value="Lock/Unlock" class="btn btn-outline-secondary" />
+                        </form>
+
+                    </td>
+
+                </tr>
+             }
+
+        </table>
+
+    </p>
+</div>

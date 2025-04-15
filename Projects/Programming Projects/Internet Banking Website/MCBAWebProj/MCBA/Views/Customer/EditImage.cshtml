@@ -1,0 +1,59 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Accounts";
+}
+
+<div>
+    <h3>Edit Image</h3>
+    <br />
+
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <form asp-action="EditImage" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <h3><label>Choose Image:</label></h3>
+                    <input class="form-control" asp-for="@Model.Image" id="imageFile"
+                           name="ImageFile" type="file" accept="image/*" />
+                    <span asp-validation-for="@Model.Image" class="text-danger"></span>
+
+                    @Html.ValidationMessage("ImageFile", new { @class = "text-danger" })
+                </div>
+
+                <br />
+
+                <div class="form-group">
+                    <input type="submit" value="Upload" class="btn btn-outline-secondary" />
+                </div>
+
+            </form>
+
+            <br />
+
+            @{
+                string? imageBytes = Context.Session.GetString(nameof(Customer.Image));
+                string? imgSrc = null;
+
+                @if (imageBytes != null && !imageBytes.Equals(string.Empty))
+                {
+                    imgSrc = String.Format("data:image/gif;base64,{0}", imageBytes);
+
+                    // Displays in default aspect ratio
+                    <img src="@imgSrc" alt="ProfileImage" />
+
+
+                    <br /> <br />
+
+                    <form asp-action="RemoveCurrentImage">
+                        <input type="submit" value="Reset to Default" class="btn btn-outline-secondary" />
+                    </form>
+                 }
+
+            }
+
+        </div>
+    </div>
+
+</div>

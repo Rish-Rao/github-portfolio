@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/desktop/comARCH/quartus/controlUNIT/simulation/qsim
+vcontrolUNIT
+Z0 !s110 1665631745
+!i10b 1
+!s100 ?mTVDi;FLJiP9b4a0XQK33
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I<oES1D`fo3?co^[^2=NVT0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/sneha/OneDrive/Documents/DATAPATH01comp/controlUNIT/simulation/qsim
+w1665631744
+8controlUNIT.vo
+FcontrolUNIT.vo
+!i122 6
+L0 32 346
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1665631745.000000
+!s107 controlUNIT.vo|
+!s90 -work|work|controlUNIT.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+ncontrol@u@n@i@t
+vcontrolUNIT_vlg_vec_tst
+R0
+!i10b 1
+!s100 ILR;03iAT;SN3>;6Cj?IU1
+R1
+IZYX;WTENYfF]HbF2Tn:2K2
+R2
+R3
+w1665631743
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 7
+L0 30 61
+R4
+r1
+!s85 0
+31
+R5
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R6
+R7
+ncontrol@u@n@i@t_vlg_vec_tst

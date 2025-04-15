@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/comparator/comparator.bdf
+source_file = 1, C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/comparator/Waveform.vwf
+source_file = 1, C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/comparator/db/comparator.cbx.xml
+design_name = comparator
+instance = comp, \lesserA~output , lesserA~output, comparator, 1
+instance = comp, \equal~output , equal~output, comparator, 1
+instance = comp, \lesserB~output , lesserB~output, comparator, 1
+instance = comp, \A~input , A~input, comparator, 1
+instance = comp, \B~input , B~input, comparator, 1
+instance = comp, \inst32~0 , inst32~0, comparator, 1

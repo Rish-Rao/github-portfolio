@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/Lab/Laboratory 3/Decoder/Decoder.bdf
+source_file = 1, C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/Lab/Laboratory 3/Decoder/Waveform.vwf
+source_file = 1, C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/Lab/Laboratory 3/Decoder/db/Decoder.cbx.xml
+design_name = Decoder
+instance = comp, \EN0~output , EN0~output, Decoder, 1
+instance = comp, \EN1~output , EN1~output, Decoder, 1
+instance = comp, \EN2~output , EN2~output, Decoder, 1
+instance = comp, \EN3~output , EN3~output, Decoder, 1
+instance = comp, \WA1~input , WA1~input, Decoder, 1
+instance = comp, \WA2~input , WA2~input, Decoder, 1
+instance = comp, \inst3~0 , inst3~0, Decoder, 1
+instance = comp, \inst3~1 , inst3~1, Decoder, 1
+instance = comp, \inst3~2 , inst3~2, Decoder, 1

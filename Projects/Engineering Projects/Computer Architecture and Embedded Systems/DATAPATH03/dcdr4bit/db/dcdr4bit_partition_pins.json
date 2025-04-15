@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "EN0000",
+					"strict" : false
+				},
+				{
+					"name" : "EN0001",
+					"strict" : false
+				},
+				{
+					"name" : "EN0010",
+					"strict" : false
+				},
+				{
+					"name" : "EN0011",
+					"strict" : false
+				},
+				{
+					"name" : "EN0100",
+					"strict" : false
+				},
+				{
+					"name" : "EN0101",
+					"strict" : false
+				},
+				{
+					"name" : "EN0110",
+					"strict" : false
+				},
+				{
+					"name" : "EN0111",
+					"strict" : false
+				},
+				{
+					"name" : "EN1000",
+					"strict" : false
+				},
+				{
+					"name" : "EN1001",
+					"strict" : false
+				},
+				{
+					"name" : "EN1010",
+					"strict" : false
+				},
+				{
+					"name" : "EN1011",
+					"strict" : false
+				},
+				{
+					"name" : "EN1100",
+					"strict" : false
+				},
+				{
+					"name" : "EN1101",
+					"strict" : false
+				},
+				{
+					"name" : "EN1110",
+					"strict" : false
+				},
+				{
+					"name" : "EN1111",
+					"strict" : false
+				},
+				{
+					"name" : "REGWRITE",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

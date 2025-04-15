@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/desktop/comARCH/quartus/MUX8bit2way/simulation/qsim
+vMUX8bit2way
+!s110 1664873371
+!i10b 1
+!s100 mRoe[N4b;HFR4B?38LdR_0
+I[]=IMgd8_zzfPmJ>m28KV1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1664873369
+8MUX8bit2way.vo
+FMUX8bit2way.vo
+L0 31
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z3 !s108 1664873371.000000
+!s107 MUX8bit2way.vo|
+!s90 -work|work|MUX8bit2way.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@m@u@x8bit2way
+vMUX8bit2way_vlg_vec_tst
+!s110 1664873372
+!i10b 1
+!s100 3jm_R0aFL2^n:lcm_4A?`1
+I7ZfA;O@Aab`AcljgY`zEL1
+R1
+R0
+w1664873366
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R2
+r1
+!s85 0
+31
+R3
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+R5
+n@m@u@x8bit2way_vlg_vec_tst

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Subscription Area</title>
+</head>
+<body>
+	<div th:fragment="subscription">
+		<section id="subscription" style="display: block;">
+			<h2>Subscription Area</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Artist</th>
+						<th>Year</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="song : ${songs}">
+						<td th:text="${song.title}"></td>
+						<td th:text="${song.artist}"></td>
+						<td th:text="${song.year}"></td>
+						<td><img th:src="${song.imageUrl}" width="100" height="100"/></td>
+						<td>
+							<form method="post" th:action="@{/subscription/remove}">
+							<input type="hidden" name="email" th:value="${song.email}" />
+							<input type="hidden" name="title" th:value="${song.title}" />
+							<button type="submit">Delete</button>
+							</form>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</div>
+</body>
+</html>

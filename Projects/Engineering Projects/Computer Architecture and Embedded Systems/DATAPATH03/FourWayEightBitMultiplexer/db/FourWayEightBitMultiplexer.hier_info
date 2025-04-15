@@ -1,0 +1,221 @@
+|FourWayEightBitMultiplexer
+F[7] <= FourWayFourBitMultiplexer:inst.F[3]
+F[6] <= FourWayFourBitMultiplexer:inst.F[2]
+F[5] <= FourWayFourBitMultiplexer:inst.F[1]
+F[4] <= FourWayFourBitMultiplexer:inst.F[0]
+F[3] <= FourWayFourBitMultiplexer:inst2.F[3]
+F[2] <= FourWayFourBitMultiplexer:inst2.F[2]
+F[1] <= FourWayFourBitMultiplexer:inst2.F[1]
+F[0] <= FourWayFourBitMultiplexer:inst2.F[0]
+A[7] => FourWayFourBitMultiplexer:inst.A[3]
+A[6] => FourWayFourBitMultiplexer:inst.A[2]
+A[5] => FourWayFourBitMultiplexer:inst.A[1]
+A[4] => FourWayFourBitMultiplexer:inst.A[0]
+A[3] => FourWayFourBitMultiplexer:inst2.A[3]
+A[2] => FourWayFourBitMultiplexer:inst2.A[2]
+A[1] => FourWayFourBitMultiplexer:inst2.A[1]
+A[0] => FourWayFourBitMultiplexer:inst2.A[0]
+B[7] => FourWayFourBitMultiplexer:inst.B[3]
+B[6] => FourWayFourBitMultiplexer:inst.B[2]
+B[5] => FourWayFourBitMultiplexer:inst.B[1]
+B[4] => FourWayFourBitMultiplexer:inst.B[0]
+B[3] => FourWayFourBitMultiplexer:inst2.B[3]
+B[2] => FourWayFourBitMultiplexer:inst2.B[2]
+B[1] => FourWayFourBitMultiplexer:inst2.B[1]
+B[0] => FourWayFourBitMultiplexer:inst2.B[0]
+C[7] => FourWayFourBitMultiplexer:inst.C[3]
+C[6] => FourWayFourBitMultiplexer:inst.C[2]
+C[5] => FourWayFourBitMultiplexer:inst.C[1]
+C[4] => FourWayFourBitMultiplexer:inst.C[0]
+C[3] => FourWayFourBitMultiplexer:inst2.C[3]
+C[2] => FourWayFourBitMultiplexer:inst2.C[2]
+C[1] => FourWayFourBitMultiplexer:inst2.C[1]
+C[0] => FourWayFourBitMultiplexer:inst2.C[0]
+D[7] => FourWayFourBitMultiplexer:inst.D[3]
+D[6] => FourWayFourBitMultiplexer:inst.D[2]
+D[5] => FourWayFourBitMultiplexer:inst.D[1]
+D[4] => FourWayFourBitMultiplexer:inst.D[0]
+D[3] => FourWayFourBitMultiplexer:inst2.D[3]
+D[2] => FourWayFourBitMultiplexer:inst2.D[2]
+D[1] => FourWayFourBitMultiplexer:inst2.D[1]
+D[0] => FourWayFourBitMultiplexer:inst2.D[0]
+S[1] => FourWayFourBitMultiplexer:inst2.S[1]
+S[1] => FourWayFourBitMultiplexer:inst.S[1]
+S[0] => FourWayFourBitMultiplexer:inst2.S[0]
+S[0] => FourWayFourBitMultiplexer:inst.S[0]
+
+
+|FourWayEightBitMultiplexer|FourWayFourBitMultiplexer:inst2
+F[3] <= FourWayOneBitMultiplexer:inst1.pin_name1
+F[2] <= FourWayOneBitMultiplexer:inst.pin_name1
+F[1] <= FourWayOneBitMultiplexer:inst2.pin_name1
+F[0] <= FourWayOneBitMultiplexer:inst3.pin_name1
+S[1] => FourWayOneBitMultiplexer:inst3.S2
+S[1] => FourWayOneBitMultiplexer:inst2.S2
+S[1] => FourWayOneBitMultiplexer:inst.S2
+S[1] => FourWayOneBitMultiplexer:inst1.S2
+S[0] => FourWayOneBitMultiplexer:inst3.S1
+S[0] => FourWayOneBitMultiplexer:inst2.S1
+S[0] => FourWayOneBitMultiplexer:inst.S1
+S[0] => FourWayOneBitMultiplexer:inst1.S1
+A[3] => FourWayOneBitMultiplexer:inst1.A
+A[2] => FourWayOneBitMultiplexer:inst.A
+A[1] => FourWayOneBitMultiplexer:inst2.A
+A[0] => FourWayOneBitMultiplexer:inst3.A
+B[3] => FourWayOneBitMultiplexer:inst1.B
+B[2] => FourWayOneBitMultiplexer:inst.B
+B[1] => FourWayOneBitMultiplexer:inst2.B
+B[0] => FourWayOneBitMultiplexer:inst3.B
+C[3] => FourWayOneBitMultiplexer:inst1.C
+C[2] => FourWayOneBitMultiplexer:inst.C
+C[1] => FourWayOneBitMultiplexer:inst2.C
+C[0] => FourWayOneBitMultiplexer:inst3.C
+D[3] => FourWayOneBitMultiplexer:inst1.D
+D[2] => FourWayOneBitMultiplexer:inst.D
+D[1] => FourWayOneBitMultiplexer:inst2.D
+D[0] => FourWayOneBitMultiplexer:inst3.D
+
+
+|FourWayEightBitMultiplexer|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst3
+pin_name1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+S2 => inst6.IN0
+S2 => inst5.IN2
+S2 => inst2.IN2
+S1 => inst1.IN0
+S1 => inst3.IN1
+S1 => inst5.IN1
+C => inst3.IN0
+D => inst5.IN0
+B => inst2.IN0
+
+
+|FourWayEightBitMultiplexer|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst2
+pin_name1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+S2 => inst6.IN0
+S2 => inst5.IN2
+S2 => inst2.IN2
+S1 => inst1.IN0
+S1 => inst3.IN1
+S1 => inst5.IN1
+C => inst3.IN0
+D => inst5.IN0
+B => inst2.IN0
+
+
+|FourWayEightBitMultiplexer|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst
+pin_name1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+S2 => inst6.IN0
+S2 => inst5.IN2
+S2 => inst2.IN2
+S1 => inst1.IN0
+S1 => inst3.IN1
+S1 => inst5.IN1
+C => inst3.IN0
+D => inst5.IN0
+B => inst2.IN0
+
+
+|FourWayEightBitMultiplexer|FourWayFourBitMultiplexer:inst2|FourWayOneBitMultiplexer:inst1
+pin_name1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+S2 => inst6.IN0
+S2 => inst5.IN2
+S2 => inst2.IN2
+S1 => inst1.IN0
+S1 => inst3.IN1
+S1 => inst5.IN1
+C => inst3.IN0
+D => inst5.IN0
+B => inst2.IN0
+
+
+|FourWayEightBitMultiplexer|FourWayFourBitMultiplexer:inst
+F[3] <= FourWayOneBitMultiplexer:inst1.pin_name1
+F[2] <= FourWayOneBitMultiplexer:inst.pin_name1
+F[1] <= FourWayOneBitMultiplexer:inst2.pin_name1
+F[0] <= FourWayOneBitMultiplexer:inst3.pin_name1
+S[1] => FourWayOneBitMultiplexer:inst3.S2
+S[1] => FourWayOneBitMultiplexer:inst2.S2
+S[1] => FourWayOneBitMultiplexer:inst.S2
+S[1] => FourWayOneBitMultiplexer:inst1.S2
+S[0] => FourWayOneBitMultiplexer:inst3.S1
+S[0] => FourWayOneBitMultiplexer:inst2.S1
+S[0] => FourWayOneBitMultiplexer:inst.S1
+S[0] => FourWayOneBitMultiplexer:inst1.S1
+A[3] => FourWayOneBitMultiplexer:inst1.A
+A[2] => FourWayOneBitMultiplexer:inst.A
+A[1] => FourWayOneBitMultiplexer:inst2.A
+A[0] => FourWayOneBitMultiplexer:inst3.A
+B[3] => FourWayOneBitMultiplexer:inst1.B
+B[2] => FourWayOneBitMultiplexer:inst.B
+B[1] => FourWayOneBitMultiplexer:inst2.B
+B[0] => FourWayOneBitMultiplexer:inst3.B
+C[3] => FourWayOneBitMultiplexer:inst1.C
+C[2] => FourWayOneBitMultiplexer:inst.C
+C[1] => FourWayOneBitMultiplexer:inst2.C
+C[0] => FourWayOneBitMultiplexer:inst3.C
+D[3] => FourWayOneBitMultiplexer:inst1.D
+D[2] => FourWayOneBitMultiplexer:inst.D
+D[1] => FourWayOneBitMultiplexer:inst2.D
+D[0] => FourWayOneBitMultiplexer:inst3.D
+
+
+|FourWayEightBitMultiplexer|FourWayFourBitMultiplexer:inst|FourWayOneBitMultiplexer:inst3
+pin_name1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+S2 => inst6.IN0
+S2 => inst5.IN2
+S2 => inst2.IN2
+S1 => inst1.IN0
+S1 => inst3.IN1
+S1 => inst5.IN1
+C => inst3.IN0
+D => inst5.IN0
+B => inst2.IN0
+
+
+|FourWayEightBitMultiplexer|FourWayFourBitMultiplexer:inst|FourWayOneBitMultiplexer:inst2
+pin_name1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+S2 => inst6.IN0
+S2 => inst5.IN2
+S2 => inst2.IN2
+S1 => inst1.IN0
+S1 => inst3.IN1
+S1 => inst5.IN1
+C => inst3.IN0
+D => inst5.IN0
+B => inst2.IN0
+
+
+|FourWayEightBitMultiplexer|FourWayFourBitMultiplexer:inst|FourWayOneBitMultiplexer:inst
+pin_name1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+S2 => inst6.IN0
+S2 => inst5.IN2
+S2 => inst2.IN2
+S1 => inst1.IN0
+S1 => inst3.IN1
+S1 => inst5.IN1
+C => inst3.IN0
+D => inst5.IN0
+B => inst2.IN0
+
+
+|FourWayEightBitMultiplexer|FourWayFourBitMultiplexer:inst|FourWayOneBitMultiplexer:inst1
+pin_name1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+S2 => inst6.IN0
+S2 => inst5.IN2
+S2 => inst2.IN2
+S1 => inst1.IN0
+S1 => inst3.IN1
+S1 => inst5.IN1
+C => inst3.IN0
+D => inst5.IN0
+B => inst2.IN0
+
+

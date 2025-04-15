@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/Lab/Laboratory 3/Decoder/simulation/qsim
+vDecoder
+Z1 !s110 1663937612
+!i10b 1
+!s100 O4fLVz`DVN0_^lkIK^?cK1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IjE^9Sj<QZVS7?>MUCW`cP0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1663937611
+8Decoder.vo
+FDecoder.vo
+!i122 6
+L0 32 218
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1663937612.000000
+!s107 Decoder.vo|
+!s90 -work|work|Decoder.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@decoder
+vDecoder_vlg_vec_tst
+R1
+!i10b 1
+!s100 ;L>e_`b01_^io5OkC4U@@0
+R2
+Ic717bGdaPRO52:cA@4Jo<0
+R3
+R0
+w1663937610
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 7
+L0 30 42
+R4
+r1
+!s85 0
+31
+R5
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R6
+R7
+n@decoder_vlg_vec_tst

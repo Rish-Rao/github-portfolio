@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Main Page</title>
+	<link rel="stylesheet" type="text/css" href="/mainStyle.css">
+	
+</head>
+<body>
+
+	<!-- Navigation -->
+	<nav>
+		<ul>
+			<li><a href="/user" onclick="showSection('user')">User Area</a></li>
+        	<li><a href="/subscription" onclick="showSection('subscription')">Subscription Area</a></li>
+        	<li><a href="/query" onclick="showSection('query')">Query Area</a></li>
+        	<li style="float:right"><a href="/logout">Logout</a></li>
+		</ul>
+	</nav>
+
+	<!-- User area -->
+	<section id="user" style="display: block;">
+		<div th:replace="user :: user"></div>
+	</section>
+
+	<!-- Subscription area -->
+	<section id="subscription" style="display: none;">
+		<div th:replace="subscription :: subscription"></div>
+	</section>
+
+	<!-- Query area -->
+	<section id="query" style="display: none;">
+		<div th:replace="query :: query"></div>
+	</section>
+<script>
+	function showSection(id) {
+	    // hide all sections
+	    // hide all sections
+	   /*  document.getElementById('user-section').style.display = 'none';
+	    document.getElementById('subscription-section').style.display = 'none';
+	    document.getElementById('query-section').style.display = 'none';
+	    
+	    // show selected section
+	    document.getElementById(id + '-section').style.display = 'block'; */
+	    /* function showSection(id) {
+	        console.log('id:', id);
+	        // hide all sections
+	        var sections = document.getElementsByTagName('section');
+	        for (var i = 0; i < sections.length; i++) {
+	            sections[i].style.display = 'none';
+	        }
+
+	        // show selected section
+	        var section = document.getElementById(id + '-section');
+	        console.log('section:', section);
+	        if (section) {
+	            section.style.display = 'block';
+	        }
+	    } */
+
+	      var sections = document.getElementsByTagName('section');
+	    for (var i = 0; i < sections.length; i++) {
+	    	sections[i].style.display = 'none';
+	    }
+	   
+	    if (id == 'user') {
+    		sections[0].style.display = 'block';
+    		sections[1].style.display = 'block';
+    	} else if (id == 'subscription') {
+    		sections[2].style.display = 'block';
+        	sections[3].style.display = 'block';
+    	} else if (id == 'query') {
+    		sections[4].style.display = 'block';
+            sections[5].style.display = 'block';
+            sections[6].style.display = 'block';
+            sections[7].style.display = 'block';
+        }
+	    var section = document.getElementById(id);
+	    section.style.display = 'block'; 
+	    
+	    // show selected section
+	}
+	
+	 var url = window.location.href;
+     if (url.includes('/user')) {
+         showSection('user');
+     } else if (url.includes('/subscription')) {
+         showSection('subscription');
+     } else if (url.includes('/query')) {
+         showSection('query');
+     }
+
+	document.addEventListener('DOMContentLoaded', function(event) {
+	    // add event listeners to navigation links
+	    document.querySelector('a[href="#user"]').addEventListener('click', function(event) {
+	    	event.preventDefault();
+	        showSection('user');
+	    });
+	    document.querySelector('a[href="#subscription"]').addEventListener('click', function(event) {
+	    	event.preventDefault();
+	        showSection('subscription');
+	    });
+	    document.querySelector('a[href="#query"]').addEventListener('click', function(event) {
+	    	event.preventDefault();
+	        showSection('query');
+	    });
+	    
+	   
+
+		});
+	
+</script>
+</body>
+</html>

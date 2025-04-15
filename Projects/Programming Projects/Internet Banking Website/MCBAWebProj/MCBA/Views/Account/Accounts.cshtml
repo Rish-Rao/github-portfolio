@@ -1,0 +1,72 @@
+﻿@model Account
+@using static MCBA.Utils.HelperMethods;
+@using static MCBA.Utils.TransactionHelperMethods;
+
+@{
+    ViewData["Title"] = "Account No:" + Model.AccountNumber;
+}
+
+<a class="btn btn-outline-secondary"
+   asp-controller="Customer" asp-action="Index" asp-route-id="@Model.AccountNumber"><</a>
+
+<div style="padding-left:50px">
+
+    <h3>Account Details</h3>
+
+    <p>
+        <!-- Account Details -->
+        <table class="table table-sm table-striped">
+
+            <tr class="d-flex">
+                <th class="col-2">@Html.DisplayNameFor(x => x.AccountNumber)</th>
+                <td class="col-1" style="text-align:center"> @Html.DisplayFor(x => x.AccountNumber)</td>
+            </tr>
+
+            <tr class="d-flex">
+                <th class="col-2">Balance</th>
+                <td class="col-1" style="text-align: center">$@Model.Balance.ToString("0.00") </td>
+            </tr>
+
+            <tr class="d-flex">
+                <th class="col-2">@Html.DisplayNameFor(x => x.AccountType)</th>
+                <td class="col-1" style="text-align: center"> @Model.AccountType.AccountTypeToString()</td>
+            </tr>
+
+        </table>
+
+        <table class="table table-sm table-borderless">
+
+            <tr class="d-flex">
+                <th class="col-1">
+                    <a class="btn btn-outline-secondary"
+                       asp-controller="Deposit" asp-action="Deposit">Deposit</a>
+                </th>
+
+                <th class="col-1">
+                    <a class="btn btn-outline-secondary"
+                       asp-controller="Withdraw" asp-action="Withdraw">Withdraw</a>
+                </th>
+            </tr>
+
+            <tr class="d-flex">
+                <th class="col-1">
+                    <a class="btn btn-outline-secondary"
+                       asp-controller="Transfer" asp-action="Transfer">Transfer</a>
+                </th>
+
+                <th class="col-1">
+                    <a class="btn btn-outline-secondary"
+                       asp-controller="MyStatement" asp-action="MyStatement">MyStatements</a>
+                </th>
+            </tr>
+
+            <tr class="d-flex">
+                <th class="col-1">
+                    <a class="btn btn-outline-secondary"
+                       asp-controller="BillPay" asp-action="BillPay">BillPay</a>
+                </th>
+
+            </tr>
+        </table>
+    </p>
+</div>

@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/Lab/Laboratory 3/Register/simulation/qsim
+vFourBitRegister
+!s110 1665434401
+!i10b 1
+!s100 CMmTc0m2<W56_KBoUKUHb1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IM?ZEY?0Tc?RSf2K0Zam7F2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1665434400
+8FourBitRegister.vo
+FFourBitRegister.vo
+!i122 0
+L0 32 238
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1665434401.000000
+!s107 FourBitRegister.vo|
+!s90 -work|work|FourBitRegister.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@four@bit@register
+vFourBitRegister_vlg_vec_tst
+!s110 1665434402
+!i10b 1
+!s100 ^l8JzdkhIIQn6^c_5_Y9;0
+R1
+I_4P6G[QX_X33HfP6f@d^g3
+R2
+R0
+w1665434399
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 1
+L0 30 69
+R3
+r1
+!s85 0
+31
+!s108 1665434402.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+R5
+n@four@bit@register_vlg_vec_tst

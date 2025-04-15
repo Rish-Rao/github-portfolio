@@ -1,0 +1,35 @@
+|reg8bit
+C[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+C[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+D[7] => inst7.DATAIN
+D[6] => inst5.DATAIN
+D[5] => inst4.DATAIN
+D[4] => inst6.DATAIN
+D[3] => inst3.DATAIN
+D[2] => inst2.DATAIN
+D[1] => inst1.DATAIN
+D[0] => inst.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+CLK => inst6.CLK
+CLK => inst4.CLK
+CLK => inst5.CLK
+CLK => inst7.CLK
+EN => inst.ENA
+EN => inst1.ENA
+EN => inst2.ENA
+EN => inst3.ENA
+EN => inst6.ENA
+EN => inst4.ENA
+EN => inst5.ENA
+EN => inst7.ENA
+
+

@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/desktop/comARCH/quartus/DEMUX1I_2O/simulation/qsim
+vDEMUX1I_2O
+Z1 !s110 1665445553
+!i10b 1
+!s100 R@idl5XUEb1DX_;LN_O]T0
+ILk2I6HP]kFl3^Wf<M=IjP0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1665445549
+8DEMUX1I_2O.vo
+FDEMUX1I_2O.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1665445553.000000
+!s107 DEMUX1I_2O.vo|
+!s90 -work|work|DEMUX1I_2O.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@d@e@m@u@x1@i_2@o
+vDEMUX1I_2O_vlg_vec_tst
+R1
+!i10b 1
+!s100 dFHS?cl_4O]HEMGnc9z0C0
+ICS_S8;]6QlIAI8l=G_aQ^3
+R2
+R0
+w1665445547
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6
+n@d@e@m@u@x1@i_2@o_vlg_vec_tst

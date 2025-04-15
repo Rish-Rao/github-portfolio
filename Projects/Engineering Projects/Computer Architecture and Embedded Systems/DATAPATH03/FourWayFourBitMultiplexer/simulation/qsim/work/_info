@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/Lab/FourWayFourBitMultiplexer/simulation/qsim
+vFourWayFourBitMultiplexer
+Z0 !s110 1663933165
+!i10b 1
+!s100 =GX1MlHhi[n9bZ`>MzdZG3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I0?ezMkzT9;iS@a0l:3Saz0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/Lab/s3838647-lab2/FourWayFourBitMultiplexer/simulation/qsim
+w1663933164
+8FourWayFourBitMultiplexer.vo
+FFourWayFourBitMultiplexer.vo
+!i122 10
+L0 32 398
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1663933165.000000
+!s107 FourWayFourBitMultiplexer.vo|
+!s90 -work|work|FourWayFourBitMultiplexer.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@four@way@four@bit@multiplexer
+vFourWayFourBitMultiplexer_vlg_vec_tst
+R0
+!i10b 1
+!s100 8dNFWaHbnO@DGHd0fd2Zn0
+R1
+Iob2JO?k[0VT3]Pz<Ta_a01
+R2
+R3
+w1663933163
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 11
+L0 30 120
+R4
+r1
+!s85 0
+31
+R5
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R6
+R7
+n@four@way@four@bit@multiplexer_vlg_vec_tst

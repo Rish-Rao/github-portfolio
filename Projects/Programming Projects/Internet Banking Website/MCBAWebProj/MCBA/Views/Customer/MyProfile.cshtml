@@ -1,0 +1,69 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "MyProfile";
+}
+
+<a class="btn btn-outline-secondary"
+   asp-controller="Customer" asp-action="Index" asp-route-id="@Model.CustomerID"><</a>
+
+<div style="padding-left:50px">
+
+    <h3>My Profile</h3>
+
+    <p>
+        <!-- Account Details -->
+        <table class="table table-sm table-striped">
+
+            <tr class="d-flex">
+                <th class="col-2">@Html.DisplayNameFor(x => x.Name)</th>
+                <td class="col-3" style="text-align:center"> @Html.DisplayFor(x => x.Name)</td>
+            </tr>
+
+            <tr class="d-flex">
+                <th class="col-2">@Html.DisplayNameFor(x => x.TFN)</th>
+                <td class="col-3" style="text-align: center"> @Html.DisplayFor(x => x.TFN) </td>
+            </tr>
+
+            <tr class="d-flex">
+                <th class="col-2">@Html.DisplayNameFor(x => x.Address)</th>
+                <td class="col-3" style="text-align: center"> @Html.DisplayFor(x => x.Address)</td>
+            </tr>
+
+            <tr class="d-flex">
+                <th class="col-2">@Html.DisplayNameFor(x => x.City)</th>
+                <td class="col-3" style="text-align: center"> @Html.DisplayFor(x => x.City)</td>
+            </tr>
+
+            <tr class="d-flex">
+                <th class="col-2">@Html.DisplayNameFor(x => x.State)</th>
+                <td class="col-3" style="text-align: center"> @Html.DisplayFor(x => x.State)</td>
+            </tr>
+
+            <tr class="d-flex">
+                <th class="col-2">@Html.DisplayNameFor(x => x.Postcode)</th>
+                <td class="col-3" style="text-align: center"> @Html.DisplayFor(x => x.Postcode)</td>
+            </tr>
+
+            <tr class="d-flex">
+                <th class="col-2">@Html.DisplayNameFor(x => x.Mobile)</th>
+                <td class="col-3" style="text-align: center"> @Html.DisplayFor(x => x.Mobile)</td>
+            </tr>
+        </table>
+
+        <table class="table table-sm table-borderless">
+
+            <tr class="d-flex">
+                <th class="col-2 text-center">
+                    <a class="btn btn-outline-secondary"
+                       asp-action="EditProfile">Edit Profile</a>
+                </th>
+
+                <th class="col-3 text-center">
+                    <a class="btn btn-outline-secondary"
+                       asp-action="EditPassword">Change Password</a>
+                </th>
+            </tr>
+
+        </table>
+    </p>
+</div>

@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sneha/OneDrive/Documents/DATAPATH01comp/DATAPATH03/simulation/qsim
+vDATAPATH03
+!s110 1665723987
+!i10b 1
+!s100 ]>ao[8RzECldzU6:o305a2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IAzz:>L:=kKY]lOkF82zbY1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1665723986
+8DATAPATH03.vo
+FDATAPATH03.vo
+!i122 119
+L0 32 12553
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1665723987.000000
+!s107 DATAPATH03.vo|
+!s90 -work|work|DATAPATH03.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@d@a@t@a@p@a@t@h03
+vDATAPATH03_vlg_vec_tst
+!s110 1665723988
+!i10b 1
+!s100 UW_E3L6OWgb1[5W3HkgFO3
+R1
+Io7ZLU]oL_574F64CRRGV<3
+R2
+R0
+w1665723985
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 120
+L0 30 139
+R3
+r1
+!s85 0
+31
+!s108 1665723988.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+R5
+n@d@a@t@a@p@a@t@h03_vlg_vec_tst

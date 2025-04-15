@@ -1,0 +1,86 @@
+$comment
+	File created using the following command:
+		vcd file RightShift.msim.vcd -direction
+$end
+$date
+	Tue Oct 04 15:45:15 2022
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module RightShift_vlg_vec_tst $end
+$var reg 8 ! A [7:0] $end
+$var wire 1 " B [7] $end
+$var wire 1 # B [6] $end
+$var wire 1 $ B [5] $end
+$var wire 1 % B [4] $end
+$var wire 1 & B [3] $end
+$var wire 1 ' B [2] $end
+$var wire 1 ( B [1] $end
+$var wire 1 ) B [0] $end
+
+$scope module i1 $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var tri1 1 - devclrn $end
+$var tri1 1 . devpor $end
+$var tri1 1 / devoe $end
+$var wire 1 0 A[0]~input_o $end
+$var wire 1 1 B[7]~output_o $end
+$var wire 1 2 B[6]~output_o $end
+$var wire 1 3 B[5]~output_o $end
+$var wire 1 4 B[4]~output_o $end
+$var wire 1 5 B[3]~output_o $end
+$var wire 1 6 B[2]~output_o $end
+$var wire 1 7 B[1]~output_o $end
+$var wire 1 8 B[0]~output_o $end
+$var wire 1 9 A[7]~input_o $end
+$var wire 1 : A[6]~input_o $end
+$var wire 1 ; A[5]~input_o $end
+$var wire 1 < A[4]~input_o $end
+$var wire 1 = A[3]~input_o $end
+$var wire 1 > A[2]~input_o $end
+$var wire 1 ? A[1]~input_o $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10000000 !
+0)
+0(
+0'
+0&
+0%
+0$
+1#
+1"
+0*
+1+
+x,
+1-
+1.
+1/
+00
+11
+12
+03
+04
+05
+06
+07
+08
+19
+0:
+0;
+0<
+0=
+0>
+0?
+$end
+#1000000

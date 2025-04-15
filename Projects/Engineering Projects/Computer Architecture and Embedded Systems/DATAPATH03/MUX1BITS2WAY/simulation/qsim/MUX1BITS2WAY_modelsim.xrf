@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, D:/desktop/comARCH/quartus/MUX1BITS2WAY/MUX1BITS2WAY.bdf
+source_file = 1, D:/desktop/comARCH/quartus/MUX1BITS2WAY/Waveform.vwf
+source_file = 1, D:/desktop/comARCH/quartus/MUX1BITS2WAY/db/MUX1BITS2WAY.cbx.xml
+design_name = MUX1BITS2WAY
+instance = comp, \C~output , C~output, MUX1BITS2WAY, 1
+instance = comp, \SEL~input , SEL~input, MUX1BITS2WAY, 1
+instance = comp, \B~input , B~input, MUX1BITS2WAY, 1
+instance = comp, \A~input , A~input, MUX1BITS2WAY, 1
+instance = comp, \inst2~0 , inst2~0, MUX1BITS2WAY, 1

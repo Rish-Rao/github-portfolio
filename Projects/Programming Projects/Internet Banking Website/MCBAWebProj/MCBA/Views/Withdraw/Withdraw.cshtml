@@ -1,0 +1,66 @@
+﻿@model Account
+@using static MCBA.Utils.ConstValues;
+@using static MCBA.Utils.HelperMethods;
+@using static MCBA.Utils.TransactionHelperMethods;
+
+@{
+    ViewData["Title"] = "Account No:" + Model.AccountNumber;
+}
+
+<a class="btn btn-outline-secondary"
+   asp-controller="Account" asp-action="Accounts" asp-route-id="@Model.AccountNumber"><</a>
+
+<div style="padding-left:50px">
+    <h3>@Model.AccountType.AccountTypeToString() Account - @Model.AccountNumber</h3>
+
+    <p>
+        <!-- Account Details -->
+        <table class="table table-sm table-striped">
+
+            <tr class="d-flex">
+                <th class="col-3 text-center">Withdraw</th>
+            </tr>
+
+            <tr class="d-flex">
+                <th class="col-2">Balance</th>
+                <td class="col-1" style="text-align: center">$@Model.Balance.ToString("0.00") </td>
+            </tr>
+
+            <tr class="d-flex">
+                <th class="col-2">Available Balance</th>
+                <td class="col-1" style="text-align: center">$@Model.ComputeAvailableBalance(TransactionType.Withdraw).ToString("0.00") </td>
+            </tr>
+
+        </table>
+
+        <div class="row col-md-3">
+
+            <!-- Withdraw form-->
+            <form asp-action="Withdraw">
+
+                <div class="form-group">
+                    <label asp-for="@Model.Transaction.Amount" class="control-label"></label>
+                    <input asp-for="@Model.Transaction.Amount" name="Amount" class="form-control"
+                           value="@ViewBag.Amount?.ToString("0.00")" />
+                    <span asp-validation-for="@Model.Transaction.Amount" class="text-danger"></span>
+
+                    @Html.ValidationMessage("Amount", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="@Model.Transaction.Comment" class="control-label"></label>
+                    <input asp-for="@Model.Transaction.Comment" name="Comment" class="form-control" />
+                    <span asp-validation-for="@Model.Transaction.Comment" class="text-danger"></span>
+                </div>
+
+                <br />
+
+                <div class="form-group">
+                    <input type="submit" value="Withdraw" class="btn btn-outline-secondary" />
+                </div>
+            </form>
+
+        </div>
+
+    </p>
+</div>

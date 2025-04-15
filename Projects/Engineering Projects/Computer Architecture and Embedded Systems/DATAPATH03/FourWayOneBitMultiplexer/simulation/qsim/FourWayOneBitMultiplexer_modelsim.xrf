@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/Lab/s3838647-lab2/FourWayOneBitMultiplexer/FourWayOneBitMultiplexer.bdf
+source_file = 1, C:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/Lab/s3838647-lab2/FourWayOneBitMultiplexer/db/FourWayOneBitMultiplexer.cbx.xml
+design_name = FourWayOneBitMultiplexer
+instance = comp, \pin_name1~output , pin_name1~output, FourWayOneBitMultiplexer, 1
+instance = comp, \A~input , A~input, FourWayOneBitMultiplexer, 1
+instance = comp, \C~input , C~input, FourWayOneBitMultiplexer, 1
+instance = comp, \B~input , B~input, FourWayOneBitMultiplexer, 1
+instance = comp, \D~input , D~input, FourWayOneBitMultiplexer, 1
+instance = comp, \S1~input , S1~input, FourWayOneBitMultiplexer, 1
+instance = comp, \S2~input , S2~input, FourWayOneBitMultiplexer, 1
+instance = comp, \inst4~0 , inst4~0, FourWayOneBitMultiplexer, 1

@@ -1,0 +1,54 @@
+|FourBitComparator
+lesserA <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A[3] => comparator:inst3.A
+A[2] => comparator:inst2.A
+A[1] => comparator:inst1.A
+A[0] => comparator:inst.A
+B[3] => comparator:inst3.B
+B[2] => comparator:inst2.B
+B[1] => comparator:inst1.B
+B[0] => comparator:inst.B
+equal <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+lesserB <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitComparator|comparator:inst
+lesserA <= inst30.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst31.IN0
+B => inst30.IN1
+B => inst29.IN0
+equal <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+lesserB <= inst31.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitComparator|comparator:inst1
+lesserA <= inst30.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst31.IN0
+B => inst30.IN1
+B => inst29.IN0
+equal <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+lesserB <= inst31.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitComparator|comparator:inst2
+lesserA <= inst30.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst31.IN0
+B => inst30.IN1
+B => inst29.IN0
+equal <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+lesserB <= inst31.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitComparator|comparator:inst3
+lesserA <= inst30.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst31.IN0
+B => inst30.IN1
+B => inst29.IN0
+equal <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+lesserB <= inst31.DB_MAX_OUTPUT_PORT_TYPE
+
+

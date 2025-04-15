@@ -1,0 +1,58 @@
+﻿@model List<BillPay>
+@using MCBAAdmin.Models;
+@using static MCBAAdmin.Utils.HelperMethods;
+@{
+    ViewData["Title"] = "BillPay";
+}
+
+<div style="padding-left:50px">
+
+    <h3>BillPays</h3>
+
+    <p>
+        <!-- Account Details -->
+        <table class="table table-sm table-striped">
+
+            <tr>
+                <th class="text-left">@Html.DisplayNameFor(x => x[0].BillPayID)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].AccountNumber)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].PayeeID)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].Amount)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].ScheduleTimeUtc)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].Period)</th>
+                <th class="text-center">@Html.DisplayNameFor(x => x[0].State)</th>
+                <th class="text-center">Option</th>
+            </tr>
+
+            @foreach (var billPay in Model)
+            {
+                <tr>
+                    <td class="text-left">@billPay.BillPayID</td>
+                    <td class="text-center">@billPay.AccountNumber</td>
+                    <td class="text-center">@billPay.PayeeID</td>
+                    <td class="text-center">$@billPay.Amount.ToString("0.00")</td>
+                    <td class="text-center">@billPay.ScheduleTimeUtc.ToLocalTime()</td>
+                    <td class="text-center">@billPay.Period.BillPayPeriodToString()</td>
+                    <td class="text-center">@billPay.State.BillPayStateToString()</td>
+
+                    <td class="col-1" text-center">
+
+                        @if (billPay.State == ((char)BillPayState.Blocked) ||
+                        billPay.State == ((char)BillPayState.InsufficientFunds) ||
+                        billPay.State == ((char)BillPayState.Pending))
+                        {
+                            <form asp-action="BlockUnblock">
+                                <input type="hidden" name="billPayID" value="@billPay.BillPayID" />
+                                <input type="submit" value="Block/Unblock" class="btn btn-outline-secondary" />
+                            </form>
+                        }
+
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+
+    </p>
+</div>

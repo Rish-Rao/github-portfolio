@@ -1,0 +1,30 @@
+|controlUNIT
+InstrMemEN <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+OPCODE[0] => inst3.IN0
+OPCODE[0] => inst5.IN3
+OPCODE[0] => inst13.IN3
+OPCODE[0] => inst18.IN3
+OPCODE[0] => inst7.IN3
+OPCODE[0] => inst8.IN3
+OPCODE[1] => inst2.IN0
+OPCODE[1] => inst18.IN2
+OPCODE[1] => inst8.IN2
+OPCODE[2] => inst1.IN0
+OPCODE[2] => inst15.IN1
+OPCODE[2] => inst17.IN1
+OPCODE[2] => inst7.IN1
+OPCODE[2] => inst21.IN1
+OPCODE[2] => inst20.IN1
+OPCODE[3] => inst.IN0
+OPCODE[3] => inst16.IN0
+OPCODE[3] => inst17.IN0
+OPCODE[3] => inst18.IN0
+OPCODE[3] => inst21.IN0
+DataMemEn <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+RegWriteEN <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+branch <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+jump <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+PCWriteEN <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+BSel <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+
+

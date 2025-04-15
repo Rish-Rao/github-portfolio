@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/desktop/comARCH/quartus/reg4bit/simulation/qsim
+vreg4bit
+!s110 1663930948
+!i10b 1
+!s100 ZOJie1ijE;?RJn[]jV]Sm0
+Id9IYPJZW8Aa<L4LUa3NFe1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1663930947
+8reg4bit.vo
+Freg4bit.vo
+L0 31
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1663930948.000000
+!s107 reg4bit.vo|
+!s90 -work|work|reg4bit.vo|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+vreg4bit_vlg_vec_tst
+!s110 1663930949
+!i10b 1
+!s100 mDa8oWW^LfkDRF@oSL]?[0
+I07?T;S0OCLX21SGeE9bzN2
+R1
+R0
+w1663930944
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+L0 29
+R2
+r1
+!s85 0
+31
+!s108 1663930949.000000
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R3
+R4

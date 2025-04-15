@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sneha/OneDrive - RMIT University/RMIT/05 Semester 2, 2022/EEET2261 Computer Architecture and Organisation/assignment-components/ALU/simulation/qsim
+vALU
+Z1 !s110 1665175619
+!i10b 1
+!s100 V;GMBG8c^dI96Yc80bjIh0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ImaiW;c89izPkYP]32<H5`2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1665175618
+8ALU.vo
+FALU.vo
+!i122 12
+L0 32 1443
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1665175619.000000
+!s107 ALU.vo|
+!s90 -work|work|ALU.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@a@l@u
+vALU_vlg_vec_tst
+R1
+!i10b 1
+!s100 O>BlAX7ahCo`WTcABLl7g2
+R2
+I7PJ;TX7REd2>OC=fEfl[n0
+R3
+R0
+w1665175617
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 13
+L0 30 118
+R4
+r1
+!s85 0
+31
+R5
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R6
+R7
+n@a@l@u_vlg_vec_tst

@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sneha/OneDrive/Documents/DATAPATH01comp/SixteenWay8BitMUX/simulation/qsim
+vSixteenWay8BitMUX
+!s110 1665691917
+!i10b 1
+!s100 Jc^a`GOiinGL<eNWm4QzT2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I3Q_MW_7aPWY_Vdc7LM<nR0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1665691916
+8SixteenWay8BitMUX.vo
+FSixteenWay8BitMUX.vo
+!i122 6
+L0 32 3232
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1665691917.000000
+!s107 SixteenWay8BitMUX.vo|
+!s90 -work|work|SixteenWay8BitMUX.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@sixteen@way8@bit@m@u@x
+vSixteenWay8BitMUX_vlg_vec_tst
+!s110 1665691918
+!i10b 1
+!s100 eE^BVPeNE_]ck1aT;@NCY3
+R1
+I;]PkaznbIj8Rj86d74jZj2
+R2
+R0
+R3
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 7
+L0 30 718
+R4
+r1
+!s85 0
+31
+!s108 1665691918.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6
+n@sixteen@way8@bit@m@u@x_vlg_vec_tst

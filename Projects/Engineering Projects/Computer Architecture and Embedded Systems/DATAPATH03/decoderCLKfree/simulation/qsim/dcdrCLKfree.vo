@@ -1,0 +1,292 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+
+// DATE "09/24/2022 14:44:13"
+
+// 
+// Device: Altera 5CEBA2F17A7 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module dcdrCLKfree (
+	EN00,
+	REGWRITE,
+	WA,
+	EN01,
+	EN10,
+	EN11);
+output 	EN00;
+input 	REGWRITE;
+input 	[1:0] WA;
+output 	EN01;
+output 	EN10;
+output 	EN11;
+
+// Design Ports Information
+// EN00	=>  Location: PIN_C16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// EN01	=>  Location: PIN_G13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// EN10	=>  Location: PIN_B16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// EN11	=>  Location: PIN_D13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// REGWRITE	=>  Location: PIN_E12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// WA[1]	=>  Location: PIN_E16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// WA[0]	=>  Location: PIN_F14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \WA[0]~input_o ;
+wire \WA[1]~input_o ;
+wire \REGWRITE~input_o ;
+wire \INST9~0_combout ;
+wire \inst1~0_combout ;
+wire \INST10~0_combout ;
+wire \inst1~1_combout ;
+
+
+// Location: IOOBUF_X54_Y19_N56
+cyclonev_io_obuf \EN00~output (
+	.i(\INST9~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(EN00),
+	.obar());
+// synopsys translate_off
+defparam \EN00~output .bus_hold = "false";
+defparam \EN00~output .open_drain_output = "false";
+defparam \EN00~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X54_Y20_N22
+cyclonev_io_obuf \EN01~output (
+	.i(\inst1~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(EN01),
+	.obar());
+// synopsys translate_off
+defparam \EN01~output .bus_hold = "false";
+defparam \EN01~output .open_drain_output = "false";
+defparam \EN01~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X54_Y19_N39
+cyclonev_io_obuf \EN10~output (
+	.i(\INST10~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(EN10),
+	.obar());
+// synopsys translate_off
+defparam \EN10~output .bus_hold = "false";
+defparam \EN10~output .open_drain_output = "false";
+defparam \EN10~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X54_Y19_N22
+cyclonev_io_obuf \EN11~output (
+	.i(\inst1~1_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(EN11),
+	.obar());
+// synopsys translate_off
+defparam \EN11~output .bus_hold = "false";
+defparam \EN11~output .open_drain_output = "false";
+defparam \EN11~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X54_Y21_N4
+cyclonev_io_ibuf \WA[0]~input (
+	.i(WA[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\WA[0]~input_o ));
+// synopsys translate_off
+defparam \WA[0]~input .bus_hold = "false";
+defparam \WA[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X54_Y18_N78
+cyclonev_io_ibuf \WA[1]~input (
+	.i(WA[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\WA[1]~input_o ));
+// synopsys translate_off
+defparam \WA[1]~input .bus_hold = "false";
+defparam \WA[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X54_Y19_N4
+cyclonev_io_ibuf \REGWRITE~input (
+	.i(REGWRITE),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\REGWRITE~input_o ));
+// synopsys translate_off
+defparam \REGWRITE~input .bus_hold = "false";
+defparam \REGWRITE~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X53_Y19_N0
+cyclonev_lcell_comb \INST9~0 (
+// Equation(s):
+// \INST9~0_combout  = ( \REGWRITE~input_o  & ( (!\WA[0]~input_o  & !\WA[1]~input_o ) ) )
+
+	.dataa(!\WA[0]~input_o ),
+	.datab(gnd),
+	.datac(!\WA[1]~input_o ),
+	.datad(gnd),
+	.datae(!\REGWRITE~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\INST9~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \INST9~0 .extended_lut = "off";
+defparam \INST9~0 .lut_mask = 64'h0000A0A00000A0A0;
+defparam \INST9~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X53_Y19_N39
+cyclonev_lcell_comb \inst1~0 (
+// Equation(s):
+// \inst1~0_combout  = ( \REGWRITE~input_o  & ( (!\WA[1]~input_o  & \WA[0]~input_o ) ) )
+
+	.dataa(!\WA[1]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\WA[0]~input_o ),
+	.datae(!\REGWRITE~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst1~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst1~0 .extended_lut = "off";
+defparam \inst1~0 .lut_mask = 64'h000000AA000000AA;
+defparam \inst1~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X53_Y19_N12
+cyclonev_lcell_comb \INST10~0 (
+// Equation(s):
+// \INST10~0_combout  = ( \REGWRITE~input_o  & ( (!\WA[0]~input_o  & \WA[1]~input_o ) ) )
+
+	.dataa(!\WA[0]~input_o ),
+	.datab(gnd),
+	.datac(!\WA[1]~input_o ),
+	.datad(gnd),
+	.datae(!\REGWRITE~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\INST10~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \INST10~0 .extended_lut = "off";
+defparam \INST10~0 .lut_mask = 64'h00000A0A00000A0A;
+defparam \INST10~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X53_Y19_N51
+cyclonev_lcell_comb \inst1~1 (
+// Equation(s):
+// \inst1~1_combout  = ( \REGWRITE~input_o  & ( (\WA[1]~input_o  & \WA[0]~input_o ) ) )
+
+	.dataa(!\WA[1]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\WA[0]~input_o ),
+	.datae(!\REGWRITE~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst1~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst1~1 .extended_lut = "off";
+defparam \inst1~1 .lut_mask = 64'h0000005500000055;
+defparam \inst1~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X9_Y25_N3
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule
